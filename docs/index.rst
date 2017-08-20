@@ -6,11 +6,20 @@
 Welcome to LU Documentation's documentation!
 ============================================
 
+The purpose of this documentation is to list and protocol all the information about the network packets of the game LEGO Universe. For organization purposes the contents of the documentation is extended to the following documents:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   intro
+   client
+   server
+   replica
+
+   game-messages
+   game-mechanics
+
+   file-structures
 
 
 
@@ -18,5 +27,4 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
