@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to LU Documentation's documentation!
-============================================
+Welcome to the Lego Universe technical documentation!
+=====================================================
 
 The purpose of this documentation is to list and protocol all the information about the network packets of the game LEGO Universe. For organization purposes the contents of the documentation is extended to the following documents:
 
