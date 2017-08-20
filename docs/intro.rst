@@ -406,11 +406,11 @@ Server-to-Client
 :[wstring]:		Recipient name
 :[bool]:		is recipient a mythran, if true, chat shows “Mythran” instead of real name
 :[u8]:			return code
-    				values:
-				    	:0: Success
-				    	:1: Not online
-				    	:2: Error/Failure
-				    	:3: Occurred in packets but i have no idea what it does (seems like success), seems like this always is in incoming packets (not sent from local char)
+    			values:
+			    	:0: Success
+			    	:1: Not online
+			    	:2: Error/Failure
+			    	:3: Occurred in packets but i have no idea what it does (seems like success), seems like this always is in incoming packets (not sent from local char)
 
 :[wstring variable length]: Chat message
 
@@ -455,3 +455,77 @@ Client-to-Server
 :[u64]:		???, always 0?
 :[bool]:	is invite denied
 :[s64]:		Inviter's object ID
+
+
+Appendix A: LEGO data format and data type IDs
+----------------------------------------------
+
+LDF is used in boot.cfg, client xml settings, .luz and .lvl files, and the binary part of the chardata packet.
+
+This binary data format is used in various packets, for example the chardata packet.
+
+:[u32]: number of keys
+
+	:[u8]: key length in bytes
+	:[wchar]: key
+	:[u8]: data type (see below)
+	:[according to data type]: data
+
+The text format has the format: :samp:`key=type:value`
+
+:0:   String (variable wstring?)
+:1:   s32
+:2:   ??? (haven’t found an occurrence of this type so far)
+:3:   Float (32bit, signed)
+:4:   ??? (Location&Size, appeared on lwo_override.xml)
+:5:   u32
+:6:   ??? (haven’t found an occurrence of this type so far)
+:7:   Boolean (8bit, 0 or 1)
+:8:   s64
+:9:   s64, Used only for (object?) IDs?
+:10:  ??? (haven’t found an occurrence of this type so far)
+:11:  ??? (haven’t found an occurrence of this type so far)
+:12:  ??? (haven’t found an occurrence of this type so far)
+:13:  in chardata this was XML data, in client settings checksum, in lvl files strings/GUIDs (maybe it's for bytes)
+
+Appendix B: Maps info and checksum
+----------------------------------
+
+Here are the checksums I found.  Probably need to go back through and find the different map instances if I can.
+
+==========================  ==========  ==================================
+Map Name                    Zone ID     Checksum
+==========================  ==========  ==================================
+Venture Explorer            1000        7c 08 b8 20
+Return to Venture Explorer  1001        3c 0a 68 26
+Avant Gardens               1100        11 55 52 49
+Avant Gardens Survival      1101        e2 14 82 53
+Spider Queen Battle         1102        da 03 d4 0f
+Block Yard                  1150        da 03 d4 0f
+Avant Grove                 1151        03 03 89 0a
+Nimbus Station              1200        30 6b 1e da
+Pet Cove                    1201        30 13 6e 47
+Vertigo Loop Racetrack      1203        02 05 fc 10
+Battle of Nimbus Station    1204        58 02 d4 07
+Nimbus Rock                 1250        91 01 8d 05
+Nimbus Isle                 1251        5d 04 4f 09
+Frostburgh                  1260        currently disabled in the client
+Gnarled Forest              1300        90 c2 ea 12
+Canyon Cove                 1302        ef 02 77 0b
+Keelhaul Canyon             1303        todo
+Chantey Shantey             1350        5c 01 b6 04
+Forbidden Valley            1400        0d 76 19 85
+Forbidden Valley Dragon     1402        87 01 f5 02
+Dragonmaw Chasm             1403        4e 0f 85 81
+Raven Bluff                 1450        26 01 f0 03
+Starbase 3001               1600        ee 02 c2 07
+Deep Freeze                 1601        06 01 32 02
+Robot City                  1602        7f 03 93 07
+Moon Base                   1603        ad 01 3b 04
+Portabello                  1604        dd 07 15 18
+LEGO Club                   1700        38 01 04 02
+Crux Prime                  1800        99 a3 17 4b
+Nexus Tower                 1900        3c f4 4a 9e
+Ninjago                     2000        74 2c 69 4d
+Frakjaw Battle              2001        ef 00 eb 09
+==========================  ==========  ==================================
