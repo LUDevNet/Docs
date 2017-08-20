@@ -21,6 +21,25 @@ The purpose of this documentation is to list and protocol all the information ab
 
    file-structures
 
+If any of these documents helped you in some way or another for one of your projects then please credit us and/or include a direct link to this document.
+
+.. warning ::
+
+	LEGO is in no way affiliated with the content of this and the aforementioned documents.
+	Furthermore the creators of the just mentioned documents are not associated or involved with LEGO or any existing “official” private server websites for the game.
+
+
+Contact Info
+------------
+Feel free to visit us on our IRC channel on freenode for a discussion about the game and its inner workings.
+
+.. glossary::
+
+	Channel
+		##luserver on irc.freenode.net
+
+	Time frame
+	    if not otherwise occupied we are online between 6:30 PM and 9:30 PM UTC
 
 
 Indices and tables
