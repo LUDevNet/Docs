@@ -20,7 +20,7 @@ The purpose of this documentation is to list and protocol all the information ab
    file-structures
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Packets:
 
    packets

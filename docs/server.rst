@@ -1,4 +1,4 @@
-Server packets
+Server Packets
 ==============
 
 .. note ::
