@@ -54,29 +54,28 @@ LDF is used in boot.cfg, client xml settings, .luz and .lvl files, and the binar
 
 This binary data format is used in various packets, for example the chardata packet.
 
-:[u32]: number of keys
+| **[u32]** - number of keys
+| 	**[u8]** - key length in bytes
+| 	**[wchar]** - key
+| 	**[u8]** - data type (see below)
+| 	**[according to data type]** - data
 
-	:[u8]: key length in bytes
-	:[wchar]: key
-	:[u8]: data type (see below)
-	:[according to data type]: data
+The text format has the format: ``key=type:value``
 
-The text format has the format: :samp:`key=type:value`
-
-:0:   String (variable wstring?)
-:1:   s32
-:2:   ??? (haven’t found an occurrence of this type so far)
-:3:   Float (32bit, signed)
-:4:   ??? (Location&Size, appeared on lwo_override.xml)
-:5:   u32
-:6:   ??? (haven’t found an occurrence of this type so far)
-:7:   Boolean (8bit, 0 or 1)
-:8:   s64
-:9:   s64, Used only for (object?) IDs?
-:10:  ??? (haven’t found an occurrence of this type so far)
-:11:  ??? (haven’t found an occurrence of this type so far)
-:12:  ??? (haven’t found an occurrence of this type so far)
-:13:  in chardata this was XML data, in client settings checksum, in lvl files strings/GUIDs (maybe it's for bytes)
+- 0:   String (variable wstring?)
+- 1:   s32
+- 2:   ??? (haven’t found an occurrence of this type so far)
+- 3:   Float (32bit, signed)
+- 4:   ??? (Location&Size, appeared on lwo_override.xml)
+- 5:   u32
+- 6:   ??? (haven’t found an occurrence of this type so far)
+- 7:   Boolean (8bit, 0 or 1)
+- 8:   s64
+- 9:   s64, Used only for (object?) IDs?
+- 10:  ??? (haven’t found an occurrence of this type so far)
+- 11:  ??? (haven’t found an occurrence of this type so far)
+- 12:  ??? (haven’t found an occurrence of this type so far)
+- 13:  in chardata this was XML data, in client settings checksum, in lvl files strings/GUIDs (maybe it's for bytes)
 
 Appendix B: Maps info and checksum
 ----------------------------------
