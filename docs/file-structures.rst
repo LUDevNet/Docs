@@ -2,7 +2,7 @@ File Structures
 ===============
 
 .. note ::
-	This is a read-the-docs port of the original google docs `lu_file_structs <https://docs.google.com/document/d/1ZlgGv5gVI7Rx6kGNUwoXDHhOKJNjHkfQcuzpCL_fgjw>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+	This is a read-the-docs port of the original google docs `lu_file_structs <https://docs.google.com/document/d/1ZlgGv5gVI7Rx6kGNUwoXDHhOKJNjHkfQcuzpCL_fgjw>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
 Introduction
 ------------

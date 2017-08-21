@@ -1,8 +1,8 @@
-Server
-======
+Server packets
+==============
 
 .. note ::
-	This is a read-the-docs port of the original google docs `lu_server_packets <https://docs.google.com/document/d/1D1Ao6SPkbqLExXyFUIVyXL3OnUe5JOmAQJRJei7OfA0>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+	This is a read-the-docs port of the original google docs `lu_server_packets <https://docs.google.com/document/d/1D1Ao6SPkbqLExXyFUIVyXL3OnUe5JOmAQJRJei7OfA0>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
 General
 -------
