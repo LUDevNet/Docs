@@ -1,6 +1,9 @@
 Client packets
 ==============
 
+.. note ::
+	This is a read-the-docs port of the original google docs `lu_client_packets <https://docs.google.com/document/d/1CoZJGGYMld_D05iNtFUs4q6HeG9sUVYvqe-5F1yN2QY>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+
 General
 -------
 
@@ -63,9 +66,7 @@ automatically sent from the client when it connects from auth, also sent wheneve
 :[u32]:		First part of predef name, taken from minifigname_first.txt (line number-1)
 :[u32]:		Second part of predef name, taken from minifigname_middle.txt
 :[u32]:		Third part of predef name, taken from minifigname_last.txt
-
-:[L:9]:		???
-
+:[L\:9]:	???
 :[u32]:		Shirt color
 :[u32]:		Shirt style
 :[u32]:		Pants color
