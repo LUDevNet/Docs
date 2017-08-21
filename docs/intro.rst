@@ -1,6 +1,9 @@
 Introduction
 ============
 
+.. note ::
+	This is a read-the-docs port of the original google docs `lu_packet_structs <https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+
 Quick notes to get started
 --------------------------
 
@@ -9,7 +12,7 @@ Client
 
 * This documentation is targeted towards the latest publicly released client (1.10.64) which you can download in its original form `here <https://mega.nz/#!zpQyzAyA!az8Omzz-mH-03nOT1-H5jpjm75x2ZyDAv9BikCUHxG8>`_ (recommended) or in its unpacked form `here <https://mega.nz/#!zhRzBa4C!B5eY94-6vYmjJYqXkDXDM5hiqkPhZ7yb9ShCHG3Lgo8>`_.
 * To redirect the client to a different server simply change the :samp:`AUTHSERVERIP` host info in the :file:`boot.cfg` file to a new host.
-* The client stores an additional config and a log file from the last session in the :file:`[SystemDrive]:\\Users\\[User]\\AppData\\Local\\LEGO Software\\LEGO Universe\\` folder.
+* The client stores an additional config and a log file from the last session in the :file:`{SystemDrive}:\\Users\\{User}\\AppData\\Local\\LEGO Software\\LEGO Universe\\` folder.
 
 Server
 ^^^^^^
