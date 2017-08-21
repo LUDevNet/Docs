@@ -54,59 +54,39 @@ Manifest (.txt)
 
 Catalog (.pki)
 ^^^^^^^^^^^^^^
-:[u32]: version?, has to be 3
-
-:[u32]: count
-
-		:[u32]:	length
-
-				:[char]:	pk filename, char
-
-:[u32]: count
-    	
-		:[s32]:	pk index (from pk file)
-
-		:[s32]:	index of a binary tree node (-1 for no child, root node is [count] / 2)
-
-		:[s32]:	index of a binary tree node (-1 for no child, root node is [count] / 2)
-		
-		:[u32]:	0-based index of file in the file list above
-		
-		:[u32]:	mostly 268515584, sometimes 1
+| **[u32]** - version?, has to be 3
+| **[u32]** - count
+| 	**[u32]** - length
+| 		**[char]** - pk filename, char
+| 	**[u32]** - count
+| 		**[s32]** - pk index (from pk file)
+| 		**[s32]** - index of a binary tree node (-1 for no child, root node is [count] / 2)
+| 		**[s32]** - index of a binary tree node (-1 for no child, root node is [count] / 2)
+| 		**[u32]** - 0-based index of file in the file list above
+| 		**[u32]** - mostly 268515584, sometimes 1
 
 Pack (.pk)
 ^^^^^^^^^^
-:[L\:7]:			header info (are the last 3 bytes part of it?), seems to be always [‘n’-‘d’-‘p’-‘k’-01-ff-00]
-:[L\:V+5]*#Files:	raw file data, it seems that every packed file is always terminated with [ff-00-00-dd-00] (obviously not part of the packed file but the pk structure)
-:[u32]:	number of records (and with that, number of files packed in the pk file)
-    	
-		:[s32]:		pk index
-    	
-		:[s32]:		index of a binary tree node (-1 for no child, root node is [number of records] / 2)
-    	
-		:[s32]:		index of a binary tree node (-1 for no child, root node is [number of records] / 2)
-    	
-		:[u32]:		original file size
-    
-		:[L\:32]:	md5 hash of original file, string
-    
-		:[L\:4]:	??? (could be padding caused by a possible null character of the previous string?)
-
-		:[u32]:		compressed file size
-
-		:[L\:32]:	md5 hash of compressed file, string
-
-		:[L\:4]:	??? (could be padding caused by a possible null character of the previous string?)
-
-		:[u32]:		pointer to file data in the pk file, u32
-
-		:[bool]:	flag whether packed file is compressed or not (if true the packed data should match with the compressed size/hash)
-
-		:[L\:3]:	???
-
-:[u32]:		pointer to [number of records] in the pk file (only reliable way to obtain useful info about the pk file?)
-
-:[u32]:		???
+| **[L\:7]** - header info (are the last 3 bytes part of it?), seems to be always [‘n’-‘d’-‘p’-‘k’-01-ff-00]
+| **[L:V+5]**\*#Files: - raw file data
+| 	it seems that every packed file is always terminated with [ff-00-00-dd-00] (obviously not part of the packed file but the pk structure)
+| **[u32]** - number of records (and with that, number of files packed in the pk file)
+| 	**[s32]** - pk index
+| 	**[s32]** - index of a binary tree node (-1 for no child, root node is [number of records] / 2)
+| 	**[s32]** - index of a binary tree node (-1 for no child, root node is [number of records] / 2)
+| 	**[u32]** - original file size
+| 	**[L:32]** - md5 hash of original file, string
+| 	**[L:4]** - ??? (could be padding caused by a possible null character of the previous string?)
+| 	**[u32]** - compressed file size
+| 	**[L:32]** - md5 hash of compressed file, string
+| 	**[L:4]** - ??? (could be padding caused by a possible null character of the previous string?)
+| 	**[u32]** - pointer to file data in the pk file, u32
+| 	**[bool]** - flag whether packed file is compressed or not
+| 		(if true the packed data should match with the compressed size/hash)
+| 	**[L:3]** - ???
+| **[u32]** - pointer to [number of records] in the pk file
+| 	(only reliable way to obtain useful info about the pk file?)
+| **[u32]** - ???
 
 Database (.fdb)
 ^^^^^^^^^^^^^^^
@@ -114,67 +94,63 @@ Database (.fdb)
 .. note ::
 	There is a converter from fdb to sqlite available, see the tools section. This file type has no relation to firebird database files of the same extension.
 
-:table_count=[u32]:		number of tables
-:[u32]:					address pointer to table header in file
+| table_count=**[u32]** - number of tables
+| **[u32]** - address pointer to table header in file
 
 -> table header
 """""""""""""""
 
-:[table_count]:
-:[u32]:					address pointer to column header in file
+| **[table_count]**
+| **[u32]** - address pointer to column header in file
 
 -> column header
 """"""""""""""""
-:column_count=[u32]:	number of columns
-:[L\:4]:				name of table, DATA_TYPE::TEXT
-:[u32]:					address pointer to column data in file
+| column_count=**[u32]** - number of columns
+| **[L\:4]** - name of table, DATA_TYPE::TEXT
+| **[u32]** - address pointer to column data in file
 
 -> column data
 """"""""""""""
-:[column_count]:	
-    
-    	:[u32]:			data type of column
-    
-    	:[L\:4]:		name of column, DATA_TYPE::TEXT
-
-:[u32]:					address pointer to row top header in file
+| **[column_count]** - 
+| 	**[u32]** - data type of column
+| 	**[L\:4]** - name of column, DATA_TYPE::TEXT
+| **[u32]** - address pointer to row top header in file
 
 -> row top header
 """""""""""""""""
-:row_count=[u32]:		row count, an allocated number
-:[s32]:					address pointer to row header in file (-1 means invalid there are a lot of those)
+| row_count=**[u32]** - row count, an allocated number
+| **[s32]** - address pointer to row header in file (-1 means invalid there are a lot of those)
 
 -> row header
 """""""""""""
-:[row_count]:
-		:[s32]:			address pointer to row info in file
+| **[row_count]** - 
+| **[s32]** - address pointer to row info in file
 
 -> row info
 """""""""""
-:[s32]:					address pointer to row data header in file
-:[s32]:					address pointer to a linked row info in file, doesn’t count as a row in row_count and it seems that all rows with a key id greater than row_count get linked to the row with a key id modulo row_count, rows with the same key id also get linked together, otherwise this is an invalid pointer
+| **[s32]** - address pointer to row data header in file
+| **[s32]** - address pointer to a linked row info in file
+| 	doesn’t count as a row in row_count and it seems that all rows with a key id greater than row_count get linked to the row with a key id modulo row_count, rows with the same key id also get linked together, otherwise this is an invalid pointer
 
 -> row data header
 """"""""""""""""""
-:column_count=[s32]:	number of columns (that’s right, this is included again for every row, what a waste of space)
-:[s32]:					address pointer to row data in file (finally)
+| column_count=[s32]	number of columns (that’s right, this is included again for every row, what a waste of space)
+| **[s32]** - address pointer to row data in file (finally)
 
 -> row data
 """""""""""
-:[column_count]:
-        
-        :[s32]:			data type of column, s32
-   		
-   		:[s32]:			data, DATA_TYPE
+| **[column_count]** - 
+| 	**[s32]** - data type of column, s32
+| 	**[s32]** - data, DATA_TYPE
 
+.. todo :: Write some notes regarding the weird block allocation sizes for the structures
 
-extra notes for fdb format
-""""""""""""""""""""""""""
-* todo: write some notes regarding the weird block allocation sizes for the structures
-* since our conventional format wasn’t exactly suited for documenting this format I introduced the “address following” which basically first gets defined by name in a structure description (as underlined text) and is afterwards mentioned whenever that address should be accessed in the file structure when parsing the structure (indicated by an arrow prefix to the underlined name)
-* address pointers can be -1 which most likely means an invalid address (just skip those)
-* strings types (TEXT and VARCHAR) are always null-terminated (with some over allocated bytes afterwards it seems, apparently string length are filled to be modulo 4 = 0?)
-* strings and int64 (BIGINT) types are always stored with an additional address pointer, like this: [pointer]->[data]
+.. note :: Since our conventional format wasn’t exactly suited for documenting this format I introduced the “address following” which basically first gets defined by name in a structure description (as underlined text) and is afterwards mentioned whenever that address should be accessed in the file structure when parsing the structure (indicated by an arrow prefix to the underlined name)
+
+.. note ::
+	* Address pointers can be -1 which most likely means an invalid address (just skip those)
+	* Strings types (TEXT and VARCHAR) are always null-terminated (with some over allocated bytes afterwards it seems, apparently string length are filled to be modulo 4 = 0?)
+	* Strings and int64 (BIGINT) types are always stored with an additional address pointer, like this: [pointer]->[data]
 
 .. code-block :: c
 
@@ -203,39 +179,41 @@ plain text, xml structure, environment-config?
 ^^^^^^^^^^^
 plain text, xml structure
 
-:trigger: 	A trigger
-
-	:id: 	as referenced in in the .lvl
-
-	:event: event type on which the trigger should fire 
-
-		:id:		One EventID value
-		:command:	command to be executed on trigger
-            
-			:id: command type todo: document possible values
-			:target: “self” for the trigger, “target” for the object that triggered it, “objGroup” which instantiates another attribute called targetName
-			:args: command-specific arguments todo:
-    		
+| **trigger** - A trigger
+| 	**id** - as referenced in in the .lvl
+| 	**event** - event type on which the trigger should fire 
+| 		**id** - A EventID value
+| 		**command** - command to be executed on trigger
+| 			**id** - command type todo: document possible values
+| 			**target**
+| 				``self`` for the trigger,
+|				``target`` for the object that triggered it,
+|				``objGroup`` which instantiates another attribute called targetName
+| 			**args** - command-specific arguments todo:
 
 Possible Values (EventIDs)
 """"""""""""""""""""""""""
-* OnDestroy
-* OnCustomEvent
-* OnEnter
-* OnExit
-* OnCreate
-* OnHit
-* OnTimerDone
-* OnRebuildComplete
-* OnActivated
-* OnDeactivated
-* OnArrived
-* OnArrivedAtEndOfPath
-* OnZoneSummaryDismissed
-* OnArrivedAtDesiredWaypoint
-* OnPetOnSwitch
-* OnPetOffSwitch
-* OnInteract
+
+.. hlist ::
+	:columns: 3
+
+	* OnDestroy
+	* OnCustomEvent
+	* OnEnter
+	* OnExit
+	* OnCreate
+	* OnHit
+	* OnTimerDone
+	* OnRebuildComplete
+	* OnActivated
+	* OnDeactivated
+	* OnArrived
+	* OnArrivedAtEndOfPath
+	* OnZoneSummaryDismissed
+	* OnArrivedAtDesiredWaypoint
+	* OnPetOnSwitch
+	* OnPetOffSwitch
+	* OnInteract
 
 Possible Values (Commands)
 """"""""""""""""""""""""""
