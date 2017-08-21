@@ -49,4 +49,4 @@ Feel free to visit us on our IRC channel on freenode for a discussion about the 
 		`##luserver <https://webchat.freenode.net/?channels=%23%23luserver>`_ on irc.freenode.net
 
 	Time frame
-	    if not otherwise occupied we are online between 6:30 PM and 9:30 PM UTC
+		if not otherwise occupied we are online between 6:30 PM and 9:30 PM UTC
