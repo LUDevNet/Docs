@@ -7,7 +7,7 @@ Welcome to the Lego Universe technical documentation!
 =====================================================
 
 .. note ::
-	This is a read-the-docs port of the original google docs `lu_packet_structs <https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+	This is a read-the-docs port of the original google docs `lu_packet_structs <https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
 The purpose of this documentation is to list and protocol all the information about the network packets of the game LEGO Universe. For organization purposes the contents of the documentation is extended to the following documents:
 
@@ -16,15 +16,20 @@ The purpose of this documentation is to list and protocol all the information ab
    :caption: Contents:
 
    intro
+   game-mechanics
+   file-structures
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Packets:
+
+   packets
+   chat
    client
    server
    replica
-
    game-messages
-   game-mechanics
 
-   file-structures
 
 If any of these documents helped you in some way or another for one of your projects then please credit us and/or include a direct link to this document.
 

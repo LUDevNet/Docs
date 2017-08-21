@@ -2,7 +2,7 @@ Client packets
 ==============
 
 .. note ::
-	This is a read-the-docs port of the original google docs `lu_client_packets <https://docs.google.com/document/d/1CoZJGGYMld_D05iNtFUs4q6HeG9sUVYvqe-5F1yN2QY>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiposeer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
+	This is a read-the-docs port of the original google docs `lu_client_packets <https://docs.google.com/document/d/1CoZJGGYMld_D05iNtFUs4q6HeG9sUVYvqe-5F1yN2QY>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
 General
 -------
