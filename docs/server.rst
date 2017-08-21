@@ -154,42 +154,45 @@ Theoretical packet, this seems to have no effect at all?
 All keys (and datatypes) from this packet in the captured traffics
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-* ``accountID``: ``8``,
-* ``bbbAutosaveDirty``: ``7``,
-* ``chatmode``: ``1``,
-* ``editor_enabled``: ``7``,
-* ``editor_level``: ``1``,
-* ``freetrial``: ``7``,
-* ``gmlevel``: ``1``,
-* ``legoclub``: ``7``,
-* ``levelid``: ``8``,
-* ``matchTeam``: ``1``,
-* ``matching.droppedItem``: ``9``,
-* ``matching.matchKey``: ``8``,
-* ``matching.matchPlayers``: ``1``,
-* ``matching.matchStamp``: ``8``,
-* ``matching.matchTeam``: ``1``,
-* ``name``: ``0``,
-* ``objid``: ``9``,
-* ``position.x``: ``3``,
-* ``position.y``: ``3``,
-* ``position.z``: ``3``,
-* ``propertycloneid``: ``1``,
-* ``propertycloneid``: ``5``,
-* ``reputation``: ``8``,
-* ``requiresrename``: ``7``,
-* ``rotation.w``: ``3``,
-* ``rotation.x``: ``3``,
-* ``rotation.y``: ``3``,
-* ``rotation.z``: ``3``,
-* ``rspPosX``: ``3``,
-* ``rspPosY``: ``3``,
-* ``rspPosZ``: ``3``,
-* ``template``: ``1``,
-* ``transfer_use_pos``: ``7``,
-* ``transferspawnpoint``: ``0``,
-* ``txfring``: ``7``,
-* ``xmlData``: ``13``
+.. hlist ::
+	:columns: 3
+
+	* ``accountID``: ``8``
+	* ``bbbAutosaveDirty``: ``7``
+	* ``chatmode``: ``1``
+	* ``editor_enabled``: ``7``
+	* ``editor_level``: ``1``
+	* ``freetrial``: ``7``
+	* ``gmlevel``: ``1``
+	* ``legoclub``: ``7``
+	* ``levelid``: ``8``
+	* ``matchTeam``: ``1``
+	* ``matching.droppedItem``: ``9``
+	* ``matching.matchKey``: ``8``
+	* ``matching.matchPlayers``: ``1``
+	* ``matching.matchStamp``: ``8``
+	* ``matching.matchTeam``: ``1``
+	* ``name``: ``0``
+	* ``objid``: ``9``
+	* ``position.x``: ``3``
+	* ``position.y``: ``3``
+	* ``position.z``: ``3``
+	* ``propertycloneid``: ``1``
+	* ``propertycloneid``: ``5``
+	* ``reputation``: ``8``
+	* ``requiresrename``: ``7``
+	* ``rotation.w``: ``3``
+	* ``rotation.x``: ``3``
+	* ``rotation.y``: ``3``
+	* ``rotation.z``: ``3``
+	* ``rspPosX``: ``3``
+	* ``rspPosY``: ``3``
+	* ``rspPosZ``: ``3``
+	* ``template``: ``1``
+	* ``transfer_use_pos``: ``7``
+	* ``transferspawnpoint``: ``0``
+	* ``txfring``: ``7``
+	* ``xmlData``: ``13``
 
 
 [53-05-00-05] (“create character extended”)
