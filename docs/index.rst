@@ -16,6 +16,7 @@ The purpose of this documentation is to list and protocol all the information ab
    :caption: Contents:
 
    intro
+   contributing
    game-mechanics
    file-structures
 
