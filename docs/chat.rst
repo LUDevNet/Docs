@@ -1,4 +1,4 @@
-Chat packets
+Chat Packets
 ============
 
 .. note ::
