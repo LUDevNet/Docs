@@ -27,7 +27,7 @@ align to byte boundary (don’t ask me why, this (and the “padding” below) i
 
 TacArc
 ^^^^^^
-| hit_something=**[bit]**
+| hit_something= **[bit]**
 | if hit_something:
 | 	if “check_env” parameter:
 |   	**[bit]** - ???, always 0?
@@ -87,7 +87,7 @@ Switch
 ^^^^^^
 | state = True
 | if “imagination” parameter > 0 or not “isEnemyFaction” parameter:
-| 	state=**[bit]** - switch state
+| 	state= **[bit]** - switch state
 | if state:
 | 	-> action_true
 | else:
