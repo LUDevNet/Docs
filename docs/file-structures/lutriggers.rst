@@ -11,6 +11,7 @@ plain text, xml structure
 | 			**target**
 | 				``self`` for the trigger,
 |				``target`` for the object that triggered it,
+|				``zone`` probably the ZoneControlObject,
 |				``objGroup`` which instantiates another attribute called targetName
 | 			**args** - command-specific arguments todo:
 
