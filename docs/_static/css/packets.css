@@ -16,7 +16,7 @@ table.docutils tr, table.docutils td {
 
 .rst-content .line-block .line-block, .rst-content .field-body .line-block {
 	padding: 4px;
-	margin-bottom: 8px;
+	margin-bottom: 2px;
 }
 
 .file > em:before {
