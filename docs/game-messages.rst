@@ -30,15 +30,15 @@ TacArc
 | hit_something= **[bit]**
 | if hit_something:
 | 	if “check_env” parameter:
-|   	**[bit]** - ???, always 0?
+| 		**[bit]** - ???, always 0?
 | 	**[u32]** - number of targets
 | 		**[s64]** - target object id
 | 	for each target:
 | 		-> action
 | else:
 | 	if “blocked_action” parameter exists:
-|   	**[bit]** - is blocked
-|       if blocked -> blocked action, else -> miss action
+| 		**[bit]** - is blocked
+| 		if blocked -> blocked action, else -> miss action
 | 	else:
 | 		-> miss action
 
@@ -524,26 +524,26 @@ ID-specific game message structure
 
 .. hint :: Mission Task Types:
 
-    .. hlist ::
-    	:columns: 3
+	.. hlist ::
+		:columns: 3
 
-    	- KillEnemy = 0
-    	- Script = 1
-    	- QuickBuild = 2
-    	- Collect = 3
-    	- GoToNPC = 4
-    	- UseEmote = 5
-    	- UseConsumable = 9
-    	- UseSkill = 10
-    	- ObtainItem = 11
-    	- Discover = 12
-    	- MinigameAchievement = 14
-    	- Interact = 15
-    	- MissionComplete = 16
-    	- TamePet = 22
-    	- Racing? = 23
-    	- Flag = 24
-    	- NexusTowerBrickDonation = 32
+		- KillEnemy = 0
+		- Script = 1
+		- QuickBuild = 2
+		- Collect = 3
+		- GoToNPC = 4
+		- UseEmote = 5
+		- UseConsumable = 9
+		- UseSkill = 10
+		- ObtainItem = 11
+		- Discover = 12
+		- MinigameAchievement = 14
+		- Interact = 15
+		- MissionComplete = 16
+		- TamePet = 22
+		- Racing? = 23
+		- Flag = 24
+		- NexusTowerBrickDonation = 32
 
 00ff: NotifyMissionTask
 """""""""""""""""""""""
