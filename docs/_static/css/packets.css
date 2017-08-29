@@ -14,6 +14,16 @@ table.docutils tr, table.docutils td {
 	margin-bottom: 24px;
 }
 
+.rst-content .line-block
+{
+	margin-left: 0px;
+}
+
+.rst-content .line>.line-block, .rst-content .line-block>.line-block
+{
+	margin-left: 24px;
+}
+
 .rst-content .line-block .line-block, .rst-content .field-body .line-block {
 	padding: 4px;
 	margin-bottom: 2px;

@@ -29,16 +29,16 @@ TacArc
 ^^^^^^
 | hit_something= **[bit]**
 | if hit_something:
-| 	if “check_env” parameter:
+| 	if ``check_env`` parameter:
 | 		**[bit]** - ???, always 0?
 | 	**[u32]** - number of targets
 | 		**[s64]** - target object id
 | 	for each target:
-| 		-> action
+| 		-> `action`
 | else:
-| 	if “blocked_action” parameter exists:
+| 	if ``blocked_action`` parameter exists:
 | 		**[bit]** - is blocked
-| 		if blocked -> blocked action, else -> miss action
+| 		if blocked -> `blocked action`, else -> `miss action`
 | 	else:
 | 		-> miss action
 
