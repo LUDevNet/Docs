@@ -4,6 +4,13 @@ Database (.fdb)
 .. note ::
 	There is a converter from fdb to sqlite available, see the :ref:`tools` section. This file type has no relation to firebird database files of the same extension.
 
+.. note ::
+	It seems like:
+		* Tables are sorted by their name in ascii representation. Uppercase letters then underscore then lowercase letters.
+		* Tables themselves are hash maps. Use `id % row_count` to get the appropriate `row_info`, then follow the `linked_row_info` until all entries with that ID are found.
+		* When the primary key is a string, a dedicated hash function is used to determin the index of the `row_info` slot.
+		* Strings are stored spearately for each row, even if they have the same content. This makes for a great amount of redundancy in the file, but keeps editing simple.
+
 | table_count= **[u32]** - number of tables
 | **[u32]** - address pointer to table header in file
 
@@ -11,7 +18,8 @@ Database (.fdb)
 """""""""""""""
 
 | **[table_count]**
-| **[u32]** - address pointer to column header in file
+| 	**[u32]** - address pointer to column header in file
+| 	**[u32]** - address pointer to row top header in file
 
 -> column header
 """"""""""""""""
@@ -24,7 +32,6 @@ Database (.fdb)
 | **[column_count]**
 | 	**[u32]** - data type of column
 | 	**[L\:4]** - name of column, DATA_TYPE::TEXT
-| **[u32]** - address pointer to row top header in file
 
 -> row top header
 """""""""""""""""
@@ -34,7 +41,7 @@ Database (.fdb)
 -> row header
 """""""""""""
 | **[row_count]**
-| **[s32]** - address pointer to row info in file
+| 	**[s32]** - address pointer to row info in file
 
 -> row info
 """""""""""

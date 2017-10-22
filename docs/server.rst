@@ -13,7 +13,7 @@ General
 | 	*this has to match with the client version (otherwise client disconnects), latest one is 171022*
 | **[u32]** - ???, is always 0x93?
 | **[u32]** - remote connection type
-| 	*(this is for some reason a u32, although the packet header only has space for a u16, so 2 bytes are wasted), tells the client what number he has to put in the header for his next packets (after the init sequence), for auth this is 1, otherwise its 4*
+| 	*(this is for some reason a u32, although the packet header only has space for a u16, so 2 bytes are wasted), tells the client what number it has to put in the header for his next packets (after the init sequence), for auth this is 1, otherwise its 4*
 | **[u32]** - process id (I assume from the server?)
 | **[u16]** - local port???, is always 0xff?
 | 	*This would be the local port for the client, but since the client already knows this, it could be filler*
