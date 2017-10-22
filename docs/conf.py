@@ -48,8 +48,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'LU Documentation'
-copyright = '2017, humanoid, lcdr, pwjones'
-author = 'humanoid, lcdr, pwjones'
+copyright = '2017, humanoid & lcdr with contributions from Alanzote, Avery, jon002, Simon Nitzsche, Kendal, Knightoffaith, pwjones, Xiphoseer and others'
+author = 'humanoid & lcdr'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -156,7 +156,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'LUDocumentation.tex', 'LU Documentation Documentation',
-     'humanoid, lcdr, pwjones', 'manual'),
+     'humanoid & lcdr', 'manual'),
 ]
 
 
