@@ -18,7 +18,6 @@ The purpose of this documentation is to list and protocol all the information ab
    intro
    contributing
    client-list
-   game-mechanics
    file-structures
 
 .. toctree::
@@ -31,6 +30,13 @@ The purpose of this documentation is to list and protocol all the information ab
    server
    replica
    game-messages
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Mechanics:
+
+   game-mechanics
+   database
 
 
 If any of these documents helped you in some way or another for one of your projects then please credit us and/or include a direct link to this document.
