@@ -1,0 +1,51 @@
+ItemComponent
+-------------
+
+==================================================  ==========
+Column                                              Type      
+==================================================  ==========
+id                                                  INTEGER   
+equipLocation                                       TEXT      
+baseValue                                           INTEGER   
+isKitPiece                                          BOOLEAN   
+rarity                                              INTEGER   
+itemType                                            INTEGER   
+itemInfo                                            BIGINT    
+inLootTable                                         BOOLEAN   
+inVendor                                            BOOLEAN   
+isUnique                                            BOOLEAN   
+isBOP                                               BOOLEAN   
+isBOE                                               BOOLEAN   
+reqFlagID                                           INTEGER   
+reqSpecialtyID                                      INTEGER   
+reqSpecRank                                         INTEGER   
+reqAchievementID                                    INTEGER   
+stackSize                                           INTEGER   
+color1                                              INTEGER   
+decal                                               INTEGER   
+offsetGroupID                                       INTEGER   
+buildTypes                                          INTEGER   
+reqPrecondition                                     TEXT      
+animationFlag                                       INTEGER   
+equipEffects                                        INTEGER   
+readyForQA                                          BOOLEAN   
+itemRating                                          INTEGER   
+isTwoHanded                                         BOOLEAN   
+minNumRequired                                      INTEGER   
+delResIndex                                         INTEGER   
+currencyLOT                                         INTEGER   
+altCurrencyCost                                     INTEGER   
+subItems                                            TEXT      
+audioEventUse                                       TEXT      
+noEquipAnimation                                    BOOLEAN   
+commendationLOT                                     INTEGER   
+commendationCost                                    INTEGER   
+audioEquipMetaEventSet                              TEXT      
+currencyCosts                                       TEXT      
+ingredientInfo                                      TEXT      
+locStatus                                           INTEGER   
+forgeType                                           INTEGER   
+SellMultiplier                                      FLOAT     
+==================================================  ==========
+
+8192 Slots
