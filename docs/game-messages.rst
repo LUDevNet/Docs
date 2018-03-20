@@ -4,141 +4,6 @@ Game Messages
 .. note ::
 	This is a read-the-docs port of the original google docs `lu_game_messages <https://docs.google.com/document/d/117F74OhLcdsykwRJ1wnpx4TahsFa2zGtOvMF6I3_afg>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
-
-Skill / Behavior system bitstream structures
---------------------------------------------
-
-For the IDs for the behavior names, see cdclient BehaviorTemplateName, for the parameters for the specific behaviors of an item, see cdclient BehaviorParameter (necessary for implementing skills).
-For a basic explanation of how the Skill system works see the according section in the Game Mechanics document.
-
-
-Basic Attack
-^^^^^^^^^^^^
-align to byte boundary (don’t ask me why, this (and the “padding” below) is completely pointless)
-
-| **[u16]** - “padding”
-| **[bit]** - ???, always False?
-| **[bit]** - ???, always False?
-| **[bit]** - ???, always True?
-| **[u32]** - ???
-| **[u32]** - damage
-| **[bit]** - ???, maybe whether the attack is part of an Area of Effect attack?
-
-
-TacArc
-^^^^^^
-| hit_something= **[bit]**
-| if hit_something:
-| 	if ``check_env`` parameter:
-| 		**[bit]** - ???, always 0?
-| 	**[u32]** - number of targets
-| 		**[s64]** - target object id
-| 	for each target:
-| 		-> `action`
-| else:
-| 	if ``blocked_action`` parameter exists:
-| 		**[bit]** - is blocked
-| 		if blocked -> `blocked action`, else -> `miss action`
-| 	else:
-| 		-> miss action
-
-
-Projectile Attack
-^^^^^^^^^^^^^^^^^
-| **[s64]** - target id
-| projectile count = “spread_count” parameter, minimum 1
-| **[projectile count]**
-| 	**[s64]** - local projectile id
-| 		used for projectile impact message (behavior of impact message determined by projectile LOT skill)
-
-
-Movement Switch
-^^^^^^^^^^^^^^^
-| **[u32]** - movement type, 1 -> ground, 2 -> single-jump, 3 -> falling, 4 -> double-jump, 6 -> jetpack
-
-
-Area of Effect
-^^^^^^^^^^^^^^
-| **[u32]** - number of targets
-| 	**[s64]** - target object id
-| -> action for targets
-
-
-Stun
-^^^^
-| if target != self:
-| 	note that for some reason this does not work for projectiles, todo: investigate
-| 	**[bit]** - ???, always False?
-
-
-Knockback
-^^^^^^^^^
-**[bit]** - ???, always False?
-
-
-Attack Delay, Switch
-^^^^^^^^^^^^^^^^^^^^
-seem to work the same; this behavior causes SyncSkill messages, which use the behavior handle as ID and “action” as the behavior to execute on SyncSkill
-
-| **[u32]** - behavior handle
-
-
-Switch
-^^^^^^
-| state = True
-| if “imagination” parameter > 0 or not “isEnemyFaction” parameter:
-| 	state= **[bit]** - switch state
-| if state:
-| 	-> action_true
-| else:
-| 	-> action_false
-
-
-Chain
-^^^^^
-| **[u32]** - chain index, basically attack combo in attacks, 1-based
-| -> relevant action
-
-
-ForceMovement
-^^^^^^^^^^^^^
-| if any of “hit_action”, “hit_action_enemy”, “hit_action_faction” is not 0:
-| 	**[u32]** - behavior handle
-| 	-> SyncSkill, see AirMovement for details
-
-
-Interrupt
-^^^^^^^^^
-| if target != self:
-| 	**[bit]** - ???, always False?
-| if “interrupt_block” parameter == 0:
-| 	**[bit]** - ???, always False?
-| **[bit]** - ???, always False?
-
-
-SwitchMultiple
-^^^^^^^^^^^^^^
-mostly used for charge up action
-
-| **[float]** - value
-| if value <= “value_1” parameter:
-| 	-> behavior_1
-| else:
-| 	-> behavior_2
-
-AirMovement
-^^^^^^^^^^^
-like Attack Delay, this causes SyncSkill messages, which use the behavior handle as ID but have the behavior to execute specified in the SyncSkill bitstream
-
-| **[u32]** - behavior handle
-| *SyncSkill structure:*
-| **[u32]** - behavior id
-| **[u64]** - target object id
-
-
-Game Messages
--------------
-
 .. note ::
 
 	- the structure of a game message is the same for both client and server, however not all IDs can/should be sent by both (todo - mark which IDs are client/server/unified)
@@ -285,6 +150,8 @@ ID-specific game message structure
 | **[std::string]** - sBitStream
 | **[TSkillID]** - skillID
 | **[u32]** - uiSkillHandle, default: 0
+
+.. _gm-start-skill:
 
 0077: StartSkill
 """"""""""""""""
@@ -1505,6 +1372,8 @@ For collectibles the updates are of the form collectible_id+(world_id<<8)
 | **[std::string]** - sBitStream
 | **[u32]** - uiBehaviorHandle
 | **[u32]** - uiSkillHandle
+
+.. _gm-sync-skill:
 
 0479: SyncSkill
 """""""""""""""
