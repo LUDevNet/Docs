@@ -1,0 +1,4 @@
+FX Component (44)
+-----------------
+
+This component is likely related to some sort of effects.
