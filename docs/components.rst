@@ -109,24 +109,19 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/093-text-effect
    components/094-trade
    components/095-user-control
-   components/096-unused
+
+.. toctree::
+   :caption: Components (Unofficial Names)
+   :maxdepth: 1
+
    components/097-lup-launchpad
-   components/098-unused
-   components/099-unused
    components/100-brick-donation
-   components/101-unused
    components/102-commendation-vendor
-   components/103-unused
    components/104-rail-activator
    components/105-roller
    components/106-unknown
    components/107-unknown
    components/108-driveable
-   components/109-unused
-   components/110-unused
-   components/111-unused
-   components/112-unused
    components/113-property-plaque
    components/114-build-border
-   components/115-unused
    components/116-culling-plane
