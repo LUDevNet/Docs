@@ -37,6 +37,7 @@ The purpose of this documentation is to list and protocol all the information ab
 
    game-mechanics
    database
+   components
 
 
 If any of these documents helped you in some way or another for one of your projects then please credit us and/or include a direct link to this document.

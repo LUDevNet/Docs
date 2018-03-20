@@ -1,0 +1,9 @@
+Pet Component (26)
+------------------
+
+This object is a pet.
+
+Relevant Database Tables
+........................
+
+This component uses the :doc:`../database/PetComponent` table.
