@@ -88,3 +88,45 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/072-faction-trigger
    components/073-mission-offer
    components/074-racing-stats
+   components/075-lup-exhibit
+   components/076-bbb
+   components/077-sound-trigger
+   components/078-proximity-monitor
+   components/079-racing-sound-trigger
+   components/080-chat
+   components/081-friends-list
+   components/082-guild
+   components/083-local-system
+   components/084-mission
+   components/085-mutable-model-behaviors
+   components/086-pathfinding-control
+   components/087-pet-taming-control
+   components/088-property-editor
+   components/089-skinned-render
+   components/090-slash-command
+   components/091-status-effect
+   components/092-teams
+   components/093-text-effect
+   components/094-trade
+   components/095-user-control
+   components/096-unused
+   components/097-lup-launchpad
+   components/098-unused
+   components/099-unused
+   components/100-brick-donation
+   components/101-unused
+   components/102-commendation-vendor
+   components/103-unused
+   components/104-rail-activator
+   components/105-roller
+   components/106-unknown
+   components/107-unknown
+   components/108-driveable
+   components/109-unused
+   components/110-unused
+   components/111-unused
+   components/112-unused
+   components/113-property-plaque
+   components/114-build-border
+   components/115-unused
+   components/116-culling-plane

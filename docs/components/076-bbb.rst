@@ -1,0 +1,5 @@
+BBB Component (76)
+------------------
+
+Something with BrickByBrick. No objects from tha database have it attached,
+as it is likely only attached to user generated models.
