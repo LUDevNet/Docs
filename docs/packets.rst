@@ -114,7 +114,7 @@ prefix = :samp:`MSG_SERVER_`
 
 Chat
 ^^^^
-prefix = :samp:`MSP_CHAT_`
+prefix = :samp:`MSG_CHAT_`
 
 ===========  =======================================  ===================================
 53-02-00-00  LOGIN_SESSION_NOTIFY
