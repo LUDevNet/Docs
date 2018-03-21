@@ -1,4 +1,4 @@
-Driveable Component (108)
+Possessable Component (108)
 -------------------------
 
 This component seems to be attached to all the cars, skateboards,
