@@ -121,7 +121,7 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/105-roller
    components/106-unknown
    components/107-unknown
-   components/108-driveable
+   components/108-possessable
    components/113-property-plaque
    components/114-build-border
    components/116-culling-plane
