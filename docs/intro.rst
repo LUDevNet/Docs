@@ -10,7 +10,7 @@ Quick notes to get started
 Client
 ^^^^^^
 
-* This documentation is targeted towards the latest publicly released client (1.10.64) which you can download in its original form `here <https://mega.nz/#!zpQyzAyA!az8Omzz-mH-03nOT1-H5jpjm75x2ZyDAv9BikCUHxG8>`_ (recommended) or in its unpacked form `here <https://mega.nz/#!zhRzBa4C!B5eY94-6vYmjJYqXkDXDM5hiqkPhZ7yb9ShCHG3Lgo8>`_.
+* This documentation is targeted towards the latest publicly released client (1.10.64) which you can download in its original form `here <https://mega.nz/#!zpQyzAyA!az8Omzz-mH-03nOT1-H5jpjm75x2ZyDAv9BikCUHxG8>`__ (recommended) or in its unpacked form `here <https://mega.nz/#!zhRzBa4C!B5eY94-6vYmjJYqXkDXDM5hiqkPhZ7yb9ShCHG3Lgo8>`__.
 * To redirect the client to a different server simply change the :samp:`AUTHSERVERIP` host info in the :file:`boot.cfg` file to a new host.
 * The client stores an additional config and a log file from the last session in the :file:`{SystemDrive}:\\Users\\{User}\\AppData\\Local\\LEGO Software\\LEGO Universe\\` folder.
 
@@ -18,7 +18,7 @@ Server
 ^^^^^^
 
 * The client uses the RakNet network library (v3.25) to communicate with the server, therefore it is recommended to use it in the server if you want to work on one and are new to this project.
-* You can download it `here <http://www.raknet.com/raknet/downloads/RakNet-3.25.zip>`_ (documentation and sample projects are included), note that later versions of the library won’t work due to changes in the network protocol. Alternatively lcdr wrote a python version with the minimum features needed to run a server for the game implemented, available `here <https://bitbucket.org/lcdr/pyraknet>`_ (no documentation yet so not recommended for inexperienced users)
+* You can download it `here <http://www.raknet.com/raknet/downloads/RakNet-3.25.zip>`__ (documentation and sample projects are included), note that later versions of the library won’t work due to changes in the network protocol. Alternatively lcdr wrote a python version with the minimum features needed to run a server for the game implemented, available `here <https://bitbucket.org/lcdr/pyraknet>`__ (no documentation yet so not recommended for inexperienced users)
 * The listening port for the Authentication Server is hardcoded to 1001 (UDP), the ports for the following instances (char, world) depend on what the Authentication Server sends to the client but the port range used for the original servers was 2001-2200 (UDP)
 * In order for the server to establish a working connection with the client it is required to set up a pre-set password in RakNet by calling :samp:`SetIncomingPassword("3.25 ND1", 8);` for the `RakPeerInterface` instance before listening for packets
 * It seems that the server used the :samp:`SYSTEM_PRIORITY` and :samp:`RELIABLE_ORDERED` options for all outgoing packets to the client (though that's probably not a requirement)
