@@ -15,10 +15,10 @@ Note that usually most of the client files are packed into :file:`.pk` files whi
 Tools
 -----
 
-* Extract PK files: `LUPKExtractor <http://www.mediafire.com/download.php?vh6c80y5jzgjaog>`_ (source code included, linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`_, `original post (most likely) <http://forum.xentax.com/viewtopic.php?f=10&t=4500>`_)
+* Extract PK files: `LUPKExtractor <http://www.mediafire.com/download.php?vh6c80y5jzgjaog>`_ (source code included, linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`__, `original post (most likely) <http://forum.xentax.com/viewtopic.php?f=10&t=4500>`_)
 * Decompress sd0 compressed files: https://bitbucket.org/lcdr/utils/src decompress_sd0.py 
-* Find keys for fsb files: http://hcs64.com/files/guessfsb03.zip (linked to from `here <http://forum.xentax.com/viewtopic.php?f=17&t=5700>`_)
-* View .nif files http://sourceforge.net/projects/niftools/ (linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`_)
+* Find keys for fsb files: http://hcs64.com/files/guessfsb03.zip (linked to from `here <http://forum.xentax.com/viewtopic.php?f=17&t=5700>`__)
+* View .nif files http://sourceforge.net/projects/niftools/ (linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`__)
 * Convert FDB to SQLite: https://bitbucket.org/lcdr/utils/src fdb_to_sqlite.py
 
 Compression formats

@@ -18,7 +18,7 @@ Handling a behavior
 
 When a skill is triggered on the client, it will send a :any:`gm-start-skill` message. This message
 contains a bitstream that represents all the decisions the client has made whenever a behavior has
-multiple paths to continue. An example for this would be the _`Area of Effect``which will serialize
+multiple paths to continue. An example for this would be the :doc:`behaviors/aoe` which will serialize
 the amount of objects within the area, and then the object id and remaining bitstream for all of
 these objects.
 
@@ -49,75 +49,57 @@ The following is a list of (networked) behavior templates.
    behaviors/immunity
    behaviors/damage-buff
    behaviors/damage-absorption
-
-
-Stun
-^^^^
-| if target != self:
-| 	note that for some reason this does not work for projectiles, todo: investigate
-| 	**[bit]** - ???, always False?
-
-
-Knockback
-^^^^^^^^^
-**[bit]** - ???, always False?
-
-
-Attack Delay, Switch
-^^^^^^^^^^^^^^^^^^^^
-seem to work the same; this behavior causes SyncSkill messages, which use the behavior handle as ID and “action” as the behavior to execute on SyncSkill
-
-| **[u32]** - behavior handle
-
-
-Switch
-^^^^^^
-| state = True
-| if “imagination” parameter > 0 or not “isEnemyFaction” parameter:
-| 	state= **[bit]** - switch state
-| if state:
-| 	-> action_true
-| else:
-| 	-> action_false
-
-
-Chain
-^^^^^
-| **[u32]** - chain index, basically attack combo in attacks, 1-based
-| -> relevant action
-
-
-ForceMovement
-^^^^^^^^^^^^^
-| if any of “hit_action”, “hit_action_enemy”, “hit_action_faction” is not 0:
-| 	**[u32]** - behavior handle
-| 	-> SyncSkill, see AirMovement for details
-
-
-Interrupt
-^^^^^^^^^
-| if target != self:
-| 	**[bit]** - ???, always False?
-| if “interrupt_block” parameter == 0:
-| 	**[bit]** - ???, always False?
-| **[bit]** - ???, always False?
-
-
-SwitchMultiple
-^^^^^^^^^^^^^^
-mostly used for charge up action
-
-| **[float]** - value
-| if value <= “value_1” parameter:
-| 	-> behavior_1
-| else:
-| 	-> behavior_2
-
-AirMovement
-^^^^^^^^^^^
-like Attack Delay, this causes SyncSkill messages, which use the behavior handle as ID but have the behavior to execute specified in the SyncSkill bitstream
-
-| **[u32]** - behavior handle
-| *SyncSkill structure:*
-| **[u32]** - behavior id
-| **[u64]** - target object id
+   behaviors/over-time
+   behaviors/imagination
+   behaviors/target-caster
+   behaviors/stun
+   behaviors/duration
+   behaviors/knockback
+   behaviors/attack-delay
+   behaviors/car-boost
+   behaviors/fall-speed
+   behaviors/shield
+   behaviors/repair-armor
+   behaviors/speed
+   behaviors/dark-inspiration
+   behaviors/loot-buff
+   behaviors/venture-vision
+   behaviors/spawn-object
+   behaviors/lay-brick
+   behaviors/switch
+   behaviors/buff
+   behaviors/jetpack
+   behaviors/skill-event
+   behaviors/consume-item
+   behaviors/skill-cast-failed
+   behaviors/imitation-skunk-stink
+   behaviors/change-idle-flags
+   behaviors/apply-buff
+   behaviors/chain
+   behaviors/change-orientation
+   behaviors/force-movement
+   behaviors/interrupt
+   behaviors/alter-cooldown
+   behaviors/charge-up
+   behaviors/switch-multiple
+   behaviors/start
+   behaviors/end
+   behaviors/alter-chain-delay
+   behaviors/camera
+   behaviors/remove-buff
+   behaviors/grab
+   behaviors/modular-build
+   behaviors/npc-combat-skill
+   behaviors/block
+   behaviors/verify
+   behaviors/taunt
+   behaviors/air-movement
+   behaviors/spawn-quickbuild
+   behaviors/pull-to-point
+   behaviors/property-rotate
+   behaviors/damage-reduction
+   behaviors/property-teleport
+   behaviors/clear-target
+   behaviors/take-picture
+   behaviors/mount
+   behaviors/skill-set
