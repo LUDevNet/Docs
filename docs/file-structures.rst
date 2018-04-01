@@ -13,7 +13,7 @@ Note that usually most of the client files are packed into :file:`.pk` files whi
 .. _tools:
 
 Tools
------
+^^^^^
 
 * Extract PK files: `LUPKExtractor <http://www.mediafire.com/download.php?vh6c80y5jzgjaog>`_ (source code included, linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`__, `original post (most likely) <http://forum.xentax.com/viewtopic.php?f=10&t=4500>`_)
 * Decompress sd0 compressed files: https://bitbucket.org/lcdr/utils/src decompress_sd0.py 
@@ -21,48 +21,51 @@ Tools
 * View .nif files http://sourceforge.net/projects/niftools/ (linked to from `here <https://factionlu.wordpress.com/2012/01/23/my-personal-giveaway/>`__)
 * Convert FDB to SQLite: https://bitbucket.org/lcdr/utils/src fdb_to_sqlite.py
 
+Resources
+^^^^^^^^^
+*  There are scripts, which require stuff from an “TestAndExample” folder, which is missing, you can get it from
+   `here <http://dl.coolgametube.net/LU%20missing%20folder,%20TestAndExample.zip>`__.
+* `Official LXFML Documentation <https://news.lugnet.com/cad/ldd/?n=140>`_ from the LEGO Group back from 2007
+
 Compression formats
 -------------------
 
-Segmented (sd0)
-^^^^^^^^^^^^^^^
+.. toctree::
+   :maxdepth: 1
 
-There is a decompressor available, see the tools section.
-
-| **[L:5]** - header, ‘s’-‘d’-‘0’-01-ff
-| repeated:
-| 	**[L:4]** - length of compressed chunk
-| 		*a chunk usually consists of 1024*256 uncompressed bytes*
-| 	**[L:V]** - compressed (deflate) chunk
-
+   file-structures/segmented
+   file-structures/manifest
+   file-structures/catalog
+   file-structures/pack
 
 File format structures
 ----------------------
 
-.. include :: file-structures/manifest.rst
+.. toctree::
+   :maxdepth: 1
 
-.. include :: file-structures/catalog.rst
+   file-structures/database
+   file-structures/lutriggers
+   file-structures/zone
+   file-structures/level
+   file-structures/raw
 
-.. include :: file-structures/pack.rst
+Other formats
+-------------
 
-.. include :: file-structures/database.rst
+Environment (.evc)
+^^^^^^^^^^^^^^^^^^
 
-.zal, .ast
-^^^^^^^^^^
-| plain text, lists paths to additional files (to load?), one line for each file
-| zal = zone asset list?
-
-.evc
-^^^^
 plain text, xml structure, environment-config?
 
-.. include :: file-structures/lutriggers.rst
+Assets (.zal/.ast)
+^^^^^^^^^^^^^^^^^^
 
-.. include :: file-structures/zone.rst
+Plain text, lists paths to additional files (to load?), one line for each file
 
-.. include :: file-structures/level.rst
+* zal = zone asset list?
+* ast = asset list?
 
-.. include :: file-structures/raw.rst
 
 Animations (.gfx)
 ^^^^^^^^^^^^^^^^^

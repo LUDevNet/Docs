@@ -68,38 +68,57 @@ Zone (.luz)
 | 				**[u8]** - ???
 | 			elif path version >= 13:
 | 				**[u8]** - count
-| 					**[wchar]** - ???
+| 					**[wchar]** - moving platform travel sound?
 | 		elif path type == 2:
 |			**[s32]** - ???
-| 			**[s32]** - ???
-| 			**[s32]** - ???
-| 			**[u64]** - ???
+| 			**[s32]** - price
+| 			**[s32]** - rental time
+| 			**[u64]** - associated zone
 | 			**[u8]** - count
-| 				**[wchar]** - ???
+| 				**[wchar]** - display name
 | 			**[u32]** - count
-| 				**[wchar]** - ???
+| 				**[wchar]** - display description
 | 			**[s32]** - ???
-| 			**[s32]** - ???
-| 			**[float]** - ???
-| 			**[s32]** - ???
-| 			**[s32]** - ???
-| 			**[float]** - ???
-| 			**[float]** - ???
-| 			**[float]** - ???
-| 			**[float]** - ???
+| 			**[s32]** - clone limit
+| 			**[float]** - reputation multiplier
+| 			**[s32]** - rental time unit,
+| 				0 = forever,
+| 				1 = seconds,
+| 				2 = minutes,
+| 				3 = hours,
+| 				4 = days,
+| 				5 = weeks,
+| 				6 = months,
+| 				7 = years
+| 			**[s32]** - achievement required
+| 				0 = none,
+| 				1 = builder,
+| 				2 = craftsman,
+| 				3 = senior builder,
+| 				4 = journeyman,
+| 				5 = master builder,
+| 				6 = architect,
+| 				7 = senior architect,
+| 				8 = master architect,
+| 				9 = visionary,
+| 				10 = exemplar
+| 			**[float]** - player zone coordinate x
+| 			**[float]** - player zone coordinate y
+| 			**[float]** - player zone coordinate z
+| 			**[float]** - max building height
 | 		elif path type == 3:
 | 			**[u8]** - count
-| 				**[wchar]** - ???
+| 				**[wchar]** - next path
 | 			if path version >= 14:
-| 				**[u8]** - ???
+| 				**[u8]** - ???, boolean? Always either 0 or 1 so far?
 | 		elif path type == 4:
 | 			**[u32]** - spawned lot
-| 			**[u32]** - ???
-| 			**[s32]** - ???
-| 			**[u32]** - ???
+| 			**[u32]** - respawn time
+| 			**[s32]** - max to spawn (-1 for infinity)
+| 			**[u32]** - number to maintain
 | 			**[s64]** - spawner object id, note that this does not get added bits in the captures
-| 			**[u8]** - ???
-| 		**[u32]** - count
+| 			**[u8]** - activate spawner network on load
+| 		**[u32]** - waypoint count
 | 			**[float]** - position x
 | 			**[float]** - position y
 | 			**[float]** - position z
@@ -108,34 +127,34 @@ Zone (.luz)
 | 				**[float]** - rotation x
 | 				**[float]** - rotation y
 | 				**[float]** - rotation z
-| 				**[u8]** - ???
-| 				**[float]** - moveTime????
-| 				**[float]** - idle Time????
+| 				**[u8]** - lock player until next waypoint
+| 				**[float]** - speed
+| 				**[float]** - wait
 | 				if path version >= 13:
 | 					**[u8]** - count
-| 						**[wchar]** - audioUUID???
+| 						**[wchar]** - depart sound
 | 					**[u8]** - count
-| 						**[wchar]** - audioUUID???
+| 						**[wchar]** - arrive sound
 | 				elif path type == 3:
 | 					**[float]** - ???
 | 					**[float]** - ???
 | 					**[float]** - ???
 | 					**[float]** - ???
+| 					**[float]** - time (seconds)
 | 					**[float]** - ???
-| 					**[float]** - ???
-| 					**[float]** - ???
-| 					**[float]** - ???
-| 					**[float]** - ???
+| 					**[float]** - tension
+| 					**[float]** - continuity
+| 					**[float]** - bias
 |				elif path type == 4:
 | 					**[float]** - rotation w
 | 					**[float]** - rotation x
 | 					**[float]** - rotation y
 | 					**[float]** - rotation z
 | 				elif path type == 6:
-| 					**[float]** - ???
-| 					**[float]** - ???
-| 					**[float]** - ???
-| 					**[float]** - ???
+| 					**[float]** - rotation w
+| 					**[float]** - rotation x
+| 					**[float]** - rotation y
+| 					**[float]** - rotation z
 | 					**[u8]** - ???
 | 					**[u8]** - ???
 | 					**[float]** - ???

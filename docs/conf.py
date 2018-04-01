@@ -21,7 +21,6 @@ import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -32,7 +31,7 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo',
-    'sphinx.ext.githubpages']
+    'sphinx.ext.githubpages', 'sphinxcontrib.plantuml' ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -78,15 +77,16 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+# -- Options for RTD ------------------------------------------------------
+
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-
-# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only import and set the theme if we're building docs locally   
     import sphinx_rtd_theme                                                      

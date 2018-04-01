@@ -32,7 +32,7 @@ The purpose of this documentation is to list and protocol all the information ab
    game-messages
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Mechanics:
 
    game-mechanics

@@ -1,5 +1,6 @@
-.lutriggers
-^^^^^^^^^^^
+Triggers (.lutriggers)
+======================
+
 plain text, xml structure
 
 | **trigger** - A trigger
@@ -16,7 +17,7 @@ plain text, xml structure
 | 			**args** - command-specific arguments todo:
 
 Possible Values (EventIDs)
-""""""""""""""""""""""""""
+--------------------------
 
 .. hlist ::
 	:columns: 3
@@ -40,7 +41,7 @@ Possible Values (EventIDs)
 	* OnInteract
 
 Possible Values (Commands)
-""""""""""""""""""""""""""
+--------------------------
 
 ============================  =======================================================================================================
 Command                       Parameters
