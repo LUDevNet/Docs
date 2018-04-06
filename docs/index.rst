@@ -45,7 +45,7 @@ If any of these documents helped you in some way or another for one of your proj
 .. warning ::
 
 	LEGO is in no way affiliated with the content of this and the aforementioned documents.
-	Furthermore the creators of the just mentioned documents are not associated or involved with LEGO or any existing “official” private server websites for the game.
+	Furthermore the creators of the just mentioned documents are not associated or involved with LEGO.
 
 
 Contact Info

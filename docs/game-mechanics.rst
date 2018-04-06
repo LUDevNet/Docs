@@ -10,3 +10,9 @@ Game Mechanics
 
    game-mechanics/skill-system
    game-mechanics/flag-system
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Protocols
+
+   protocols/loading
