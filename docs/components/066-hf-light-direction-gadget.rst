@@ -1,4 +1,4 @@
-HFLightDirectionGadget Component (65)
+HFLightDirectionGadget Component (66)
 -------------------------------------
 
 HappyFlower (HF) was the world editor within the game. It seems

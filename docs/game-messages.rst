@@ -389,29 +389,6 @@ ID-specific game message structure
 | 	CompletedReadyToComplete = 12
 | **[bit]** - sendingRewards, default: false
 
-.. hint :: Mission Task Types:
-
-	.. hlist ::
-		:columns: 3
-
-		- KillEnemy = 0
-		- Script = 1
-		- QuickBuild = 2
-		- Collect = 3
-		- GoToNPC = 4
-		- UseEmote = 5
-		- UseConsumable = 9
-		- UseSkill = 10
-		- ObtainItem = 11
-		- Discover = 12
-		- MinigameAchievement = 14
-		- Interact = 15
-		- MissionComplete = 16
-		- TamePet = 22
-		- Racing? = 23
-		- Flag = 24
-		- NexusTowerBrickDonation = 32
-
 00ff: NotifyMissionTask
 """""""""""""""""""""""
 | **[int]** - missionID
@@ -986,7 +963,9 @@ For collectibles the updates are of the form collectible_id+(world_id<<8)
 """""""""""""""""""""""""""""""
 | **[NiPoint3]** - pos
 | 
-| 0302: FireEventServerSide
+
+0302: FireEventServerSide
+"""""""""""""""""""""""""
 | **[std::wstring]** - args
 | **[int]** - param1, default: -1
 | **[int]** - param2, default: -1

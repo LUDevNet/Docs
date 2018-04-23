@@ -109,13 +109,17 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/093-text-effect
    components/094-trade
    components/095-user-control
+   components/096-ignore-list
+   components/097-multi-zone-entrance
+   components/098-buff
+   components/099-interaction-manager
+   components/100-donation-vendor
+   components/101-combat-mediator
 
 .. toctree::
    :caption: Components (Unofficial Names)
    :maxdepth: 1
 
-   components/097-lup-launchpad
-   components/100-brick-donation
    components/102-commendation-vendor
    components/104-rail-activator
    components/105-roller
