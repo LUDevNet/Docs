@@ -10,6 +10,8 @@ Game Mechanics
 
    game-mechanics/skill-system
    game-mechanics/flag-system
+   game-mechanics/mission-system
+   game-mechanics/scripting-system
 
 .. toctree::
    :maxdepth: 2
