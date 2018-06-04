@@ -255,16 +255,16 @@ Part 4 ($+8A3A40)
 | 		**[wchar_t]** - LDF info of rocket modules, sample: “1:9746;1:9747;1:9748;”
 | *End of Creation only*
 | **[bit]** - flag
-| 	**[bit]** - flag for data?
-| 	**[bit]** - ???
-| 	**[u8]** - ???
+| 	**[bit]** - PVP Flag
+| 	**[bit]** - is GM
+| 	**[u8]** - gmLevel
 | 	**[bit]** - ???
 | 	**[u8]** - ???
 | **[bit]** - flag
 | 	**[u32]** - if this is 1 the character's head glows
 | **[bit]** - flag (this and below was in a separate function in the code)
-| 	**[s64]** - ???
-| 	**[u8]** - ??? (count for next struct?)
+| 	**[s64]** - Guild ID
+| 	**[u8-wstring]** - Guild Name
 | 	**[bit]** - ???
 | 	**[s32]** - ???
 
