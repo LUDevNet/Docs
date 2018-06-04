@@ -72,12 +72,12 @@ Note: this also can contain a script, like for example on pets, to whitelist spe
 | *End of Creation only*
 |
 | **[bit]** - flag
-| **[bit]** - flag
-| **[s64]** - parent? object id
-| **[bit]** - ???
-| **[bit]** - flag
-| **[u16]** - count
-| **[s64]** - child? objects ids
+| 	**[bit]** - flag
+| 		**[s64]** - parent? object id
+| 		**[bit]** - ???
+| 	**[bit]** - flag
+| 		**[u16]** - count
+| 			**[s64]** - child? objects ids
 | **[component serialization data]**
 
 Component serialization
