@@ -606,6 +606,24 @@ Destructible ($+939820)
 | 		if trigger:
 | 			**[s64]** - ???
 | 		**[u32]** - ???
+| **[bit]** - flag
+| 	**[u32]** - count for following structs
+| 		**[u32]** - ???
+| 		**[bit]** - flag
+| 			**[u32]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		**[bit]** - ???
+| 		trigger=**[bit]** - ???, seems to toggle **[s64]** below?
+| 		**[bit]** - ???
+| 		if trigger:
+| 			**[s64]** - ???
+| 		**[u32]** - ???
 | *End of Creation only*
 
 
