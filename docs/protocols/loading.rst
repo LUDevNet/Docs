@@ -30,6 +30,6 @@ and a Client (NetID 5).
    WorldServer -> Client: [<b>53-00-00-00</b>] Handshake
    Client -> WorldServer: [<b>53-04-00-01</b>] Client Validation
    WorldServer -> Client: [<b>53-05-00-02</b>] Load World
-   Client -> WorldServer: [<b>53-04-00-19</b>] Load Complete
+   Client -> WorldServer: [<b>53-04-00-13</b>] Load Complete
    WorldServer -> Client: [<b>53-05-00-04</b>] Chardata
    WorldServer -> Client: ReplicaManager Packets
