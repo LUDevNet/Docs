@@ -11,9 +11,9 @@ Catalog (.pki)
 | **[u32]** - count
 | 	**[u32]** - length
 | 		**[char]** - pk filename, char
-| 	**[u32]** - count
-| 		**[s32]** - crc of filename
-| 		**[s32]** - index of left child (or -1)
-| 		**[s32]** - index of right child (or -1)
-| 		**[u32]** - 0-based index of file in the file list above
-| 		**[u32]** - mostly 268515584, sometimes 1, sometimes something else (~ 20 possible values)
+| **[u32]** - count
+| 	**[s32]** - crc of filename
+| 	**[s32]** - index of left child (or -1)
+| 	**[s32]** - index of right child (or -1)
+| 	**[u32]** - 0-based index of file in the file list above
+| 	**[u32]** - mostly 268515584, sometimes 1, sometimes something else (~ 20 possible values)
