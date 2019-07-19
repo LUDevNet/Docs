@@ -19,10 +19,10 @@ available, including one general `script` type
 Mission Task Types
 ------------------
 
-KillEnemy (0)
-^^^^^^^^^^^^^
+Smash (0)
+^^^^^^^^^
 
-The player is required to kill a count of :samp:`targetValue` objects of the templates specified
+The player is required to smash a count of :samp:`targetValue` objects of the templates specified
 in :samp:`target` or :samp:`targetGroup`.
 
 Script (1)
@@ -92,6 +92,11 @@ MissionComplete (16)
 The player needs to complete a count of :samp:`targetValue` of the missions specified by
 :samp:`target` and :samp:`targetGroup`.
 
+EarnReputation (17)
+^^^^^^^^^^^^^^^^^^^
+
+The player needs to earn :samp:`targetValue` reputation.
+
 TamePet (22)
 ^^^^^^^^^^^^
 
@@ -120,6 +125,12 @@ Flag (24)
 
 The player needs to activate a count of :samp:`targetValue` of the flags specified by
 :samp:`target` and :samp:`targetGroup`.
+
+VisitProperty (30)
+^^^^^^^^^^^^^^^^^^
+
+The player needs to visit a count of :samp:`targetValue` of properties of template
+:samp:`target` or :samp:`targetGroup`.
 
 NexusTowerBrickDonation (32)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

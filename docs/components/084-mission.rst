@@ -1,4 +1,59 @@
 Mission Component (84)
 ----------------------
 
-This component is not attached to any object in the game database.
+This component is responsible for missions and achievements.
+
+.. note ::
+  This component is not attached to any object in the game database.
+
+Relevant Game Messages
+......................
+
+* :ref:`gm-offer-mission`
+* :ref:`gm-respond-to-mission`
+* :ref:`gm-notify-mission`
+* :ref:`gm-notify-mission-task`
+* :ref:`gm-cancel-mission`
+* :ref:`gm-reset-mission`
+* :ref:`gm-set-mission-type-state`
+* :ref:`gm-notify-reward-mailed`
+* :ref:`gm-request-linked-mission`
+* :ref:`gm-mission-dialogue-ok`
+
+XML Serialization :samp:`<mis>`
+...............................
+
+Currently Active :samp:`<cur>`
+''''''''''''''''''''''''''''''
+
+Mission (Active) :samp:`<m>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:id: ID of the mission/achievement.
+:o: (?)
+
+Progress for a task :samp:`<sv>`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+For achievements like collecting flags, there is one of this that has the displayed progress N, and N other :samp:`<sv>` elements that seem to have a bitflag in the id?
+
+:v: Value of the progress.
+
+
+Completed :samp:`<done>`
+''''''''''''''''''''''''
+Mission (Complete) :samp:`<m>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:cct: Amount of times completed (this can be more than 1 for repeatable missions)
+:cts: Timestamp of last completion in seconds.
+:id: ID of the mission/achievement.
+
+Type State :samp:`<ts>`
+'''''''''''''''''''''''
+
+Type :samp:`<type>`
+~~~~~~~~~~~~~~~~~~~
+:v: (?)
+
+Subtype :samp:`<st>`
+^^^^^^^^^^^^^^^^^^^^
+:sub: (?)
+:val: (?)

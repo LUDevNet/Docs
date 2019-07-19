@@ -18,3 +18,24 @@ Relevant Database Tables
 ........................
 
 This component uses the :doc:`../database/DestructibleComponent` table.
+
+Relevant Game Messages
+......................
+
+* :ref:`gm-set-status-immunity`
+
+XML Serialization :samp:`<dest>`
+................................
+
+This component is serialized to XML to store its data. The attributes are:
+
+:am: Maximum Armor
+:ac: Current Armor
+:d: Dead
+:hc: Current Health
+:hm: Maximum Health
+:ic: Current Imagination
+:im: Maximum imagination.
+:imm: Immune
+:rsh: Respawn Health
+:rsi: Respawn Imagination
