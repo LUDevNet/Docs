@@ -19,3 +19,20 @@ This component uses the following tables:
 
 * :doc:`../database/ObjectSkills`
 * :doc:`../database/SkillBehavior`
+
+Relevant Game Messages
+......................
+
+* :ref:`gm-echo-start-skill`
+* :ref:`gm-start-skill`
+* :ref:`gm-select-skill`
+* :ref:`gm-add-skill`
+* :ref:`gm-remove-skill`
+
+XML Serialization :samp:`<skil>`
+................................
+
+.. note ::
+  What kind of skills, active ones? Why would they be saved? Action bar skills and skill uses are handled using different packets, so what would this be?
+
+This was empty in the packet, if you find a sample that isn't empty please add content.

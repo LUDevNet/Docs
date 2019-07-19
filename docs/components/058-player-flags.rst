@@ -9,3 +9,25 @@ Relevant Database Tables
 This component uses the following tables:
 
 * :doc:`../database/PlayerFlags`
+
+Relevant Game Messages:
+.......................
+
+* :ref:`gm-set-tooltip-flag`
+* :ref:`gm-set-flag`
+* :ref:`gm-notify-client-flag-change`
+
+XML Serialization :samp:`<flag>`
+................................
+
+This component is serialized to XML to store its data.
+
+Flags :samp:`<f>`
+'''''''''''''''''
+
+Flags are serialized as blocks of 64 bit. The ID of such a block is
+the common prefix you get when shifting all flags indices to the right
+by 6 bits.
+
+:id: The ID of the flag group
+:v: The value of 64 flags

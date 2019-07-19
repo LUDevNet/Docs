@@ -1,9 +1,25 @@
 Pet Component (26)
 ------------------
 
-This object is a pet.
+This object is a `pet <https://legouniverse.fandom.com/wiki/Pets>`_. It is
+attached to the actual pet model when it is spawned into the game, as opposed to
+the :doc:`034-pet-control` which is attached to the player owning the pet.
 
 Relevant Database Tables
 ........................
 
 This component uses the :doc:`../database/PetComponent` table.
+
+Relevant Game Messages
+......................
+
+* :ref:`gm-despawn-pet`
+* :ref:`gm-command-pet`
+* :ref:`gm-register-pet-id`
+* :ref:`gm-register-pet-dbid`
+* :ref:`gm-client-notify-pet`
+* :ref:`gm-notify-pet`
+* :ref:`gm-request-set-pet-name`
+* :ref:`gm-set-pet-name`
+* :ref:`gm-pet-name-changed`
+* :ref:`gm-set-pet-name-moderated`

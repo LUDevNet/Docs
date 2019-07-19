@@ -129,3 +129,10 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/113-property-plaque
    components/114-build-border
    components/116-culling-plane
+
+.. toctree::
+  :caption: Components (Unknown ID)
+  :maxdepth: 1
+
+  components/xxx-level-progression
+  components/xxx-mount-control
