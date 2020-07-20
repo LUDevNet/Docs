@@ -44,7 +44,7 @@ Reference
 		signed long long (8 bytes)
 
 	bool
-		boolean, can either be 1 or 0 (1 byte)
+		boolean, can either be 1 or 0 (1 byte or 1 bit)
 	
 	bit
 		“true” boolean, can either be 0 or 1, if there is a “flag” specifier then this defines whether a part of a packet (all structures that are indented one additional level) is included or not (1 bit)
