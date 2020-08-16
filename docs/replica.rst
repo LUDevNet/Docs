@@ -565,7 +565,7 @@ Stats ($+92BBD0)
 | 	**[float]** - ??? (same number as max imagination but changing it had no effect)
 | 	**[u32]** - Damage absorption points
 | 	**[bit]** - Immunity?
-| 	**[bit]** - GM Immunne?
+| 	**[bit]** - GM Immune?
 | 	**[bit]** - Shielded
 | 	**[float]** - max health
 | 	**[float]** - max armor
