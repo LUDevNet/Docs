@@ -265,8 +265,8 @@ Part 4 ($+8A3A40)
 | **[bit]** - flag (this and below was in a separate function in the code)
 | 	**[s64]** - Guild ID
 | 	**[u8-wstring]** - Guild Name
-| 	**[bit]** - ???
-| 	**[s32]** - ???
+| 	**[bit]** - Is guild Owner?
+| 	**[s32]** - Guild creation date
 
 
 Component 108 ($+7DC1F0)
@@ -295,14 +295,14 @@ SimplePhysics ($+7E4B00)
 | **[float]** - ???
 | *End of Creation only*
 | **[bit]** - flag
-| 	**[float]** - ???
-| 	**[float]** - ???
-| 	**[float]** - ???
-| 	**[float]** - ???
-| 	**[float]** - ???
-| 	**[float]** - ???
+| 	**[float]** - Linear Velocity x
+| 	**[float]** - Linear Velocity y
+| 	**[float]** - Linear Velocity z
+| 	**[float]** - Angular Velocity x
+| 	**[float]** - Angular Velocity y
+| 	**[float]** - Angular Velocity z
 | **[bit]** - flag
-| 	**[u32]** - ???
+| 	**[u32]** - Air Speed
 | **[bit]** - flag
 | 	**[float]** - position x
 | 	**[float]** - position y
@@ -376,8 +376,8 @@ PhantomPhysics ($+834DB0)
 | 		**[u32]** - physics effect type
 | 		**[float]** - physics effect amount
 | 		**[bit]** - flag
-| 			**[u32]** - ???
-| 			**[u32]** - ???
+| 			**[u32]** - Physics Effect Max distance
+| 			**[u32]** - Physics Effect min distance
 | 		**[bit]** - flag
 | 			**[float]** - physics effect direction x * effect amount
 | 			**[float]** - physics effect direction y * effect amount
@@ -403,8 +403,8 @@ ControllablePhysics ($+845770)
 | *Creation only*
 | **[bit]** - flag, related to jetpack?
 | 	**[u32]** - jetpack effect id
-| 	**[bit]** - ???
-| 	**[bit]** - ???
+| 	**[bit]** - Jetpack flying ?
+| 	**[bit]** - Jetpack bypass checks ?
 | **[bit]** - flag
 | 	**[u32]** - ???
 | 	**[u32]** - ???
@@ -434,7 +434,7 @@ ControllablePhysics ($+845770)
 | 	**[float]** - player rotation z (or x)
 | 	**[float]** - player rotation w
 | 	**[bit]** - is player on ground
-| 	**[bit]** - ???
+| 	**[bit]** - is player on rail
 | 	**[bit]** - flag
 | 		**[float]** - velocity x
 | 		**[float]** - velocity y
@@ -476,7 +476,7 @@ Pet ($+8D1270)
 | 	**[u32]** - ???
 | 	**[u32]** - ???
 | 	**[bit]** - flag
-| 		**[s64]** - ???
+| 		**[s64]** - Pet object ID
 | 	**[bit]** - flag
 | 		**[s64]** - Owner Object ID
 | 	**[bit]** - flag
@@ -538,7 +538,7 @@ ModuleAssembly ($+913F30)
 | 		**[s64]** - ???
 | 	**[bit]** - ???
 | 	**[u16]** - wstring length
-| 		**[wchar_t]** - ???
+| 		**[wchar_t]** - assembly data
 | *End of Creation only*
 
 
@@ -563,10 +563,10 @@ Stats ($+92BBD0)
 | 	**[float]** - ??? (same number as max armor but changing it had no effect)
 | 	**[u32]** - current imagination
 | 	**[float]** - ??? (same number as max imagination but changing it had no effect)
-| 	**[u32]** - ???
-| 	**[bit]** - ???
-| 	**[bit]** - ???
-| 	**[bit]** - ???
+| 	**[u32]** - Damage absorption points
+| 	**[bit]** - Immunity?
+| 	**[bit]** - GM Immune?
+| 	**[bit]** - Shielded
 | 	**[float]** - max health
 | 	**[float]** - max armor
 | 	**[float]** - max imagination
@@ -676,7 +676,7 @@ Racing Control ($+949620)
 | *start of something*
 | ScriptedActivity content here
 | **[bit]** - flag
-| 	**[u16]** - ???
+| 	**[u16]** - Mininum number of players
 | **[bit]** - flag
 | 	while True:
 | 		not_break=**[bit]** - flag
