@@ -8,11 +8,11 @@ attached to the individual pets.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-pet-response`
-* :ref:`gm-register-pet-id`
-* :ref:`gm-register-pet-dbid`
-* :ref:`gm-add-pet-to-player`
-* :ref:`gm-show-pet-action-button`
+* :gm:`PetResponse`
+* :gm:`RegisterPetId`
+* :gm:`RegisterPetDbid`
+* :gm:`AddPetToPlayer`
+* :gm:`ShowPetActionButton`
 
 XML Serialization :samp:`<pet>`
 ...............................

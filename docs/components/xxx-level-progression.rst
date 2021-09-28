@@ -14,8 +14,8 @@ Relevant Data Tables
 Relevant Game Messages
 ......................
 
-* :ref:`gm-modify-lego-score`
-* :ref:`gm-notify-level-rewards`
+* :gm:client:`ModifyLegoScore`
+* :gm:client:`NotifyLevelRewards`
 
 XML Serialization :samp:`<lvl>`
 ...............................

@@ -13,13 +13,13 @@ This component uses the :doc:`../database/PetComponent` table.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-despawn-pet`
-* :ref:`gm-command-pet`
-* :ref:`gm-register-pet-id`
-* :ref:`gm-register-pet-dbid`
-* :ref:`gm-client-notify-pet`
-* :ref:`gm-notify-pet`
-* :ref:`gm-request-set-pet-name`
-* :ref:`gm-set-pet-name`
-* :ref:`gm-pet-name-changed`
-* :ref:`gm-set-pet-name-moderated`
+* :gm:`DespawnPet`
+* :gm:`CommandPet`
+* :gm:`RegisterPetId`
+* :gm:`RegisterPetDbid`
+* :gm:`ClientNotifyPet`
+* :gm:`NotifyPet`
+* :gm:`RequestSetPetName`
+* :gm:`SetPetName`
+* :gm:`PetNameChanged`
+* :gm:`SetPetNameModerated`

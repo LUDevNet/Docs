@@ -14,18 +14,18 @@ This component uses the :doc:`../database/InventoryComponent` table.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-pop-equipped-items-state`
-* :ref:`gm-move-item-in-inventory`
-* :ref:`gm-add-item-to-inventory-client-sync`
-* :ref:`gm-remove-item-from-inventory`
-* :ref:`gm-equip-inventory`
-* :ref:`gm-unequip-inventory`
-* :ref:`gm-set-inventory-size`
-* :ref:`gm-use-non-equipment-item`
-* :ref:`gm-move-inventory-batch`
-* :ref:`gm-move-item-between-inventory-types`
-* :ref:`gm-notify-not-enough-inv-space`
-* :ref:`gm-mark-inventory-item-as-active`
+* :gm:`PopEquippedItemsState`
+* :gm:`MoveItemInInventory`
+* :gm:`AddItemToInventoryClientSync`
+* :gm:`RemoveItemFromInventory`
+* :gm:`EquipInventory`
+* :gm:`UnequipInventory`
+* :gm:`SetInventorySize`
+* :gm:`UseNon-EquipmentItem`
+* :gm:`MoveInventoryBatch`
+* :gm:`MoveItemBetweenInventoryTypes`
+* :gm:`NotifyNotEnoughInvSpace`
+* :gm:`MarkInventoryItemAsActive`
 
 XML Serialization :samp:`<inv>`
 ...............................

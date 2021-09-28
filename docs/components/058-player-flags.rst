@@ -13,9 +13,9 @@ This component uses the following tables:
 Relevant Game Messages:
 .......................
 
-* :ref:`gm-set-tooltip-flag`
-* :ref:`gm-set-flag`
-* :ref:`gm-notify-client-flag-change`
+* :gm:`SetTooltipFlag`
+* :gm:`SetFlag`
+* :gm:`NotifyClientFlagChange`
 
 XML Serialization :samp:`<flag>`
 ................................

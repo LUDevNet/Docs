@@ -8,6 +8,8 @@ that the player interacted with, the last VE-mission and more.
 The flags are stored into a 12008 bit number as taskmask. Because there is no numberic datatype,
 which can hold up to 12008 bits, the taskmask is split up into tiny parts, each 64 bits.
 
+Each flag is configured using the :doc:`../database/PlayerFlags` table.
+
 Derived Flag Numbers
 ^^^^^^^^^^^^^^^^^^^^
 

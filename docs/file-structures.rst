@@ -1,11 +1,9 @@
-File Structures
-===============
+Introduction
+------------
 
 .. note ::
 	This is a read-the-docs port of the original google docs `lu_file_structs <https://docs.google.com/document/d/1ZlgGv5gVI7Rx6kGNUwoXDHhOKJNjHkfQcuzpCL_fgjw>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
-Introduction
-------------
 
 The purpose of this document is to list and protocol all the information about the client files of the game LEGO Universe (at least the ones that might be helpful for the process of creating a private server).
 Note that usually most of the client files are packed into :file:`.pk` files which are stored in the :file:`client/res/pack` folder and need to be extracted first to be able to work on them (see Tools section for a link to a simple extractor).
@@ -26,50 +24,3 @@ Resources
 *  There are scripts, which require stuff from an “TestAndExample” folder, which is missing, you can get it from
    `here <http://dl.coolgametube.net/LU%20missing%20folder,%20TestAndExample.zip>`__.
 * `Official LXFML Documentation <https://news.lugnet.com/cad/ldd/?n=140>`_ from the LEGO Group back from 2007
-
-Compression formats
--------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   file-structures/segmented
-   file-structures/manifest
-   file-structures/catalog
-   file-structures/pack
-
-File format structures
-----------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   file-structures/database
-   file-structures/lutriggers
-   file-structures/zone
-   file-structures/level
-   file-structures/raw
-
-Other formats
--------------
-
-Environment (.evc)
-^^^^^^^^^^^^^^^^^^
-
-plain text, xml structure, environment-config?
-
-Assets (.zal/.ast)
-^^^^^^^^^^^^^^^^^^
-
-Plain text, lists paths to additional files (to load?), one line for each file
-
-* zal = zone asset list?
-* ast = asset list?
-
-
-Animations (.gfx)
-^^^^^^^^^^^^^^^^^
-
-.. note ::
-	Used for small animations, such as minifig faces. Essentially a .swf flash file, with a different file header. To convert to a .swf file, change the “GFX” in the beginning of the file header to “FWS”.
-	See also: http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/swf/pdf/swf-file-format-spec.pdf

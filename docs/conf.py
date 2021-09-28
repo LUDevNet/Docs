@@ -22,6 +22,7 @@ import os, re
 # sys.path.insert(0, os.path.abspath('.'))
 from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
+from sphinx.domains import Domain
 
 # -- General configuration ------------------------------------------------
 
@@ -100,6 +101,7 @@ else:
 
 explorer_base_url = 'https://lu.lcdruniverse.org/explorer/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
+lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
 
 
 def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -108,6 +110,22 @@ def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     title = utils.unescape(text)
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
+
+def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
+    ref = lu_packet_base_url + '%s.html' % text
+    set_classes(options)
+    title = utils.unescape(text)
+    node = nodes.reference(rawtext, title, refuri=ref, **options)
+    return [node], []
+
+def lu_gm_role(key):
+    def role(role, rawtext, text, lineno, inliner, options={}, content=[]):
+        ref = lu_packet_base_url + f'world/gm{key}/struct.{text}.html'
+        set_classes(options)
+        title = utils.unescape(text)
+        node = nodes.reference(rawtext, title, refuri=ref, **options)
+        return [node], []
+    return role
 
 def script_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     ref = explorer_base_url + 'scripts/' + text
@@ -149,12 +167,24 @@ object_role = explorer_role('Object ', 'objects/%d')
 mission_role = explorer_role('Mission ', 'missions/%d')
 zone_role = explorer_role('Zone ', 'zones/%d')
 
+class GMDomain(Domain):
+    label = 'Game Message'
+    name = 'gm'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
 def setup(app):
     app.add_role('mis', mission_role)
     app.add_role('lot', object_role)
     app.add_role('zone', zone_role)
     app.add_role('script', script_role)
     app.add_role('wiki', wiki_role)
+    app.add_domain(GMDomain)
+    app.add_role('gm', lu_gm_role(''))
+    app.add_role_to_domain('gm', 'server', lu_gm_role('/server'))
+    app.add_role_to_domain('gm', 'client', lu_gm_role('/client'))
+    app.add_role('packet', lu_packet_role)
     app.add_stylesheet("css/packets.css")
 
 # Theme options are theme-specific and customize the look and feel of a theme

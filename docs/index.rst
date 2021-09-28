@@ -18,18 +18,26 @@ The purpose of this documentation is to list and protocol all the information ab
    intro
    contributing
    client-list
-   file-structures
 
 .. toctree::
    :maxdepth: 2
-   :caption: Packets:
+   :caption: File Structures
 
-   packets
-   chat
-   client
-   server
-   replica
-   game-messages
+   file-structures
+   file-structures/compression
+   file-structures/game-data
+
+..
+   .. toctree::
+      :maxdepth: 2
+      :caption: Packets:
+
+      packets
+      chat
+      client
+      server
+      replica
+      game-messages
 
 .. toctree::
    :maxdepth: 1
@@ -50,12 +58,8 @@ If any of these documents helped you in some way or another for one of your proj
 
 Contact Info
 ------------
-Feel free to visit us on our IRC channel on freenode for a discussion about the game and its inner workings.
 
-.. glossary::
+Most developer activity happens on the `LEGO Universe Community Hub (LUCH) <https://discord.gg/pNhUZUM>`_ discord nowadays.
+If you join there and ask a question, it’s quite likely someone will be able to help you out.
 
-	Channel
-		`##luserver <https://webchat.freenode.net/?channels=%23%23luserver>`_ on irc.freenode.net
-
-	Time frame
-		if not otherwise occupied we are online between 6:30 PM and 9:30 PM UTC
+Devs from all major server projects are active in LUCH.

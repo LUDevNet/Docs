@@ -22,7 +22,7 @@ This component uses the :doc:`../database/DestructibleComponent` table.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-set-status-immunity`
+* :gm:client:`SetStatusImmunity`
 
 XML Serialization :samp:`<dest>`
 ................................

@@ -9,16 +9,16 @@ This component is responsible for missions and achievements.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-offer-mission`
-* :ref:`gm-respond-to-mission`
-* :ref:`gm-notify-mission`
-* :ref:`gm-notify-mission-task`
-* :ref:`gm-cancel-mission`
-* :ref:`gm-reset-mission`
-* :ref:`gm-set-mission-type-state`
-* :ref:`gm-notify-reward-mailed`
-* :ref:`gm-request-linked-mission`
-* :ref:`gm-mission-dialogue-ok`
+* :gm:`OfferMission`
+* :gm:`RespondToMission`
+* :gm:`NotifyMission`
+* :gm:`NotifyMissionTask`
+* :gm:`CancelMission`
+* :gm:`ResetMission`
+* :gm:`SetMissionType-State`
+* :gm:`NotifyRewardMailed`
+* :gm:`RequestLinkedMission`
+* :gm:`MissionDialogueOk`
 
 XML Serialization :samp:`<mis>`
 ...............................

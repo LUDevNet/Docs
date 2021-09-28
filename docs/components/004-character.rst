@@ -8,9 +8,9 @@ such as the lego score (U-Score), account information and the passport statistic
 Relevant Game Messages
 ......................
 
-* :ref:`gm-update-player-statistics`
-* :ref:`gm-modify-lego-score`
-* :ref:`gm-set-emotes-enabled`
+* `gm-update-player-statistics`
+* :gm:client:`ModifyLegoScore`
+* :gm:server:`SetEmotesEnabled`
 
 XML Serialization :samp:`<char>`
 ................................

@@ -1,7 +1,7 @@
 Attack Delay (18)
 =================
 
-The attak is continued later with an :any:`gm-sync-skill` message.
+The attak is continued later with an :gm:server:`SyncSkill` message.
 
 Parameters
 ----------

@@ -23,11 +23,11 @@ This component uses the following tables:
 Relevant Game Messages
 ......................
 
-* :ref:`gm-echo-start-skill`
-* :ref:`gm-start-skill`
-* :ref:`gm-select-skill`
-* :ref:`gm-add-skill`
-* :ref:`gm-remove-skill`
+* `gm-echo-start-skill`
+* :gm:server:`StartSkill`
+* :gm:server:`SelectSkill`
+* :gm:client:`AddSkill`
+* :gm:`RemoveSkill`
 
 XML Serialization :samp:`<skil>`
 ................................

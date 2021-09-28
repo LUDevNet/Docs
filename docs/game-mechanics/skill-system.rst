@@ -16,14 +16,14 @@ is then synchronized to the clients for display.
 Handling a behavior
 -------------------
 
-When a skill is triggered on the client, it will send a :any:`gm-start-skill` message. This message
+When a skill is triggered on the client, it will send a :gm:server:`StartSkill` message. This message
 contains a bitstream that represents all the decisions the client has made whenever a behavior has
 multiple paths to continue. An example for this would be the :doc:`behaviors/aoe` which will serialize
 the amount of objects within the area, and then the object id and remaining bitstream for all of
 these objects.
 
 When a behavior is not completed immediately, it will serialize a :samp:`handleID`, which will then
-later be used to identify a :any:`gm-sync-skill` message that serializes the continued execution. It
+later be used to identify a :gm:server:`SyncSkill` message that serializes the continued execution. It
 is possible that this happens multiple times for a single skill execution.
 
 .. uml ::

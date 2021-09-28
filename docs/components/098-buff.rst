@@ -11,8 +11,8 @@ on the local player.
 Relevant Game Messages
 ......................
 
-* :ref:`gm-add-buff`
-* :ref:`gm-remove-buff`
+* :gm:`AddBuff`
+* :gm:`RemoveBuff`
 
 XML Serialization :samp:`<buff>`
 ................................
