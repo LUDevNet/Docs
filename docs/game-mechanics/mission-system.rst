@@ -62,7 +62,9 @@ The player needs to consume the specified item.
 UseSkill (10)
 ^^^^^^^^^^^^^
 
-The player needs to trigger the skill with id :samp:`taskParam1`.
+The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimited set in :samp:`taskParam1`.
+
+Example: https://lu-explorer.web.app/missions/755
 
 ObtainItem (11)
 ^^^^^^^^^^^^^^^

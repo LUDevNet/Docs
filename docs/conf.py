@@ -17,9 +17,11 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
+import os, re
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+from docutils import nodes, utils
+from docutils.parsers.rst.roles import set_classes
 
 # -- General configuration ------------------------------------------------
 
@@ -31,7 +33,7 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo',
-    'sphinx.ext.githubpages', 'sphinxcontrib.plantuml' ]
+              'sphinx.ext.githubpages', 'sphinxcontrib.plantuml']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -47,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'LU Documentation'
-copyright = '2017, humanoid & lcdr with contributions from Alanzote, Avery, jon002, Simon Nitzsche, Raine, Knightoffaith, pwjones, Xiphoseer and others'
+copyright = '2015-2021 humanoid & lcdr with contributions from Alanzote, Avery, jon002, Simon Nitzsche, Raine, Knightoffaith, pwjones, Xiphoseer and others – CC-NC-SA 4.0'
 author = 'humanoid & lcdr'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -95,14 +97,72 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 else:
     html_theme = 'default'
 
+
+explorer_base_url = 'https://lu.lcdruniverse.org/explorer/'
+wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
+
+
+def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
+    ref = wiki_base_url + text
+    set_classes(options)
+    title = utils.unescape(text)
+    node = nodes.reference(rawtext, title, refuri=ref, **options)
+    return [node], []
+
+def script_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
+    ref = explorer_base_url + 'scripts/' + text
+    set_classes(options)
+    title = utils.unescape(text)
+    lit = nodes.literal(rawtext, title)
+    node = nodes.reference('', 'Script ', lit, refuri=ref, **options)
+    return [node], []
+
+obj_match = re.compile(r"(.*) <([0-9]+)>")
+
+def explorer_role(prefix, part_url):
+    def role(role, rawtext, text, lineno, inliner,
+                 options={}, content=[]):
+        m = obj_match.match(text)
+        if m:
+            num = int(m.group(2))
+            title = utils.unescape(m.group(1))
+        else:
+            try:
+                num = int(text)
+                title = prefix + utils.unescape(text)
+                if num <= 0:
+                    raise ValueError
+            except ValueError:
+                msg = inliner.reporter.error(
+                    prefix + 'number must be a number greater than or equal to 1; '
+                    '"%s" is invalid.' % text, line=lineno)
+                prb = inliner.problematic(rawtext, rawtext, msg)
+                return [prb], [msg]
+
+        ref = explorer_base_url + part_url % num
+        set_classes(options)
+        node = nodes.reference(rawtext, title, refuri=ref, **options)
+        return [node], []
+    return role
+
+object_role = explorer_role('Object ', 'objects/%d')
+mission_role = explorer_role('Mission ', 'missions/%d')
+zone_role = explorer_role('Zone ', 'zones/%d')
+
 def setup(app):
-    app.add_stylesheet( "css/packets.css" )
+    app.add_role('mis', mission_role)
+    app.add_role('lot', object_role)
+    app.add_role('zone', zone_role)
+    app.add_role('script', script_role)
+    app.add_role('wiki', wiki_role)
+    app.add_stylesheet("css/packets.css")
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -114,7 +174,7 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-#html_sidebars = {
+# html_sidebars = {
 #    '**': [
 #        'about.html',
 #        'navigation.html',
@@ -122,7 +182,7 @@ html_static_path = ['_static']
 #        'searchbox.html',
 #        'donate.html',
 #    ]
-#}
+# }
 
 
 # -- Options for HTMLHelp output ------------------------------------------
