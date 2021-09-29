@@ -19,7 +19,7 @@ Database (.fdb)
 
 | **[table_count]**
 | 	**[u32]** - address pointer to column header in file
-| 	**[u32]** - address pointer to row top header in file
+| 	**[u32]** - address pointer to bucket header in file
 
 -> column header
 """"""""""""""""
@@ -33,20 +33,20 @@ Database (.fdb)
 | 	**[u32]** - data type of column
 | 	**[L\:4]** - name of column, DATA_TYPE::TEXT
 
--> row top header
+-> bucket header
 """""""""""""""""
-| row_count= **[u32]** - row count, an allocated number
+| bucket_count= **[u32]** - row count, an allocated number
 | **[s32]** - address pointer to row header in file (-1 means invalid there are a lot of those)
 
 -> row header
 """""""""""""
-| **[row_count]**
-| 	**[s32]** - address pointer to row info in file
+| **[bucket_count]**
+| 	**[s32]** - address pointer to first row info in bucket
 
 -> row info
 """""""""""
 | **[s32]** - address pointer to row data header in file
-| **[s32]** - address pointer to a linked row info in file
+| **[s32]** - address pointer to the next row info in bucket
 | 	doesn’t count as a row in row_count and it seems that all rows with a key id greater than row_count get linked to the row with a key id modulo row_count, rows with the same key id also get linked together, otherwise this is an invalid pointer
 
 -> row data header
