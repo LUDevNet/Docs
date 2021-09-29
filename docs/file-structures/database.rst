@@ -1,6 +1,8 @@
 Database (.fdb)
 ^^^^^^^^^^^^^^^
 
+You can use the tools collection from `assembly <https://crates.io/crates/assembly-data>`_ to work with FDB files.
+
 .. note ::
 	There is a converter from fdb to sqlite available, see the :ref:`tools` section. This file type has no relation to firebird database files of the same extension.
 
