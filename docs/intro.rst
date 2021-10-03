@@ -10,7 +10,7 @@ Quick notes to get started
 Client
 ^^^^^^
 
-* This documentation is targeted towards the latest publicly released client (1.10.64) which you can download in its original form `here <https://mega.nz/#!zpQyzAyA!az8Omzz-mH-03nOT1-H5jpjm75x2ZyDAv9BikCUHxG8>`__ (recommended) or in its unpacked form `here <https://mega.nz/#!zhRzBa4C!B5eY94-6vYmjJYqXkDXDM5hiqkPhZ7yb9ShCHG3Lgo8>`__.
+* This documentation is targeted towards the latest publicly released client (1.10.64)
 * To redirect the client to a different server simply change the :samp:`AUTHSERVERIP` host info in the :file:`boot.cfg` file to a new host.
 * The client stores an additional config and a log file from the last session in the :file:`{SystemDrive}:\\Users\\{User}\\AppData\\Local\\LEGO Software\\LEGO Universe\\` folder.
 
@@ -39,12 +39,12 @@ The naming format used is:
 where :samp:`[optional]` is used to display game message ids or network ids and LOTs in round brackets for the according packet types.
 
 Extracting the entire .zip capture(s) is not recommended, since this many files (several ten thousand) will have a huge overhead on the file system (because of things like last modified info, which isn’t applicable here anyways), resulting in a much larger file space consumption and slower access times when trying to list the files in the explorer.
-If you want to search multiple captures for specific files, use this script: https://bitbucket.org/lcdr/utils/src find_packets.py
+If you want to search multiple captures for specific files, use this script: https://github.com/lcdr/utils/ find_packets.py
 
 (The script also yields the binary content of the packets, which can be useful for further filtering or logging)
 If you want to look at the raw data of a packet yourself (not recommended for inexperienced users) you can of course extract single files from the .zip archive using an archive extractor of your choice (I recommend 7-Zip).
 Then you can open the extracted `*.bin` file(s) using a hex editor of your choice (for some packet types it might be useful to have an editor that can shift the bits in the data, no recommendation here).
-Alternatively a graphical viewer for capture files is available at https://bitbucket.org/lcdr/utils/src/ captureviewer.py (takes the entire .zip archive of a traffic as input, no need to extract anything)
+Alternatively a graphical viewer for capture files is available at https://github.com/lcdr/utils/tree/master/utils/captureviewer.py (takes the entire .zip archive of a traffic as input, no need to extract anything)
 
 
 Appendix A: LEGO data format and data type IDs

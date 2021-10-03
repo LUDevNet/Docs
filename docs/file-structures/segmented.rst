@@ -16,7 +16,7 @@ Segmented Data (.sd0)
 | repeated:
 | 	**[L:4]** - length of compressed chunk
 | 		*a chunk usually consists of 1024*256 uncompressed bytes*
-| 	**[L:V]** - compressed (deflate) chunk
+| 	**[L:V]** - compressed (zlib) chunk
 
 .. _ff-si0:
 

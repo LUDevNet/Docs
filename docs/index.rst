@@ -17,7 +17,6 @@ The purpose of this documentation is to list and protocol all the information ab
 
    intro
    contributing
-   client-list
 
 .. toctree::
    :maxdepth: 2
@@ -26,6 +25,7 @@ The purpose of this documentation is to list and protocol all the information ab
    file-structures
    file-structures/compression
    file-structures/game-data
+   file-structures/other
 
 ..
    .. toctree::
