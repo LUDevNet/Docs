@@ -13,6 +13,7 @@ Game Mechanics
    game-mechanics/flag-system
    game-mechanics/mission-system
    game-mechanics/scripting-system
+   game-mechanics/minimaps
 
 .. toctree::
    :maxdepth: 2
