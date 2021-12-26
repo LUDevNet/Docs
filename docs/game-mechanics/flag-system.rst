@@ -34,6 +34,7 @@ Known Flags
     :widths: 5, 80, 15
 
     Flag, Description, Source
+    0, btarr testing, 1.4.49 client
     1, player has entered pet ranch, 1.1.18 client
     2, minimap unlocked, 1.1.18 client
     3, activity rebuilding fail time, 1.1.18 client
@@ -142,7 +143,12 @@ Known Flags
     113, Player has finished AG property tutorials, 1.1.18 client
     114, Player can now see the news screen, 1.1.18 client
     115, Player is in a Foot Race, 1.1.18 client
+    116, Player has completed the Winter Foot Race, 1.4.49 client
     117, The player has powered the (RtVE?) launcher with the console, :doc:`../database/Preconditions`
+    118, Defeat maelstrom from medium AG property, 1.4.49 client
+    119, Placed first model on AG medium property, 1.4.49 client
+    120, No login fade on load, 1.4.49 client
+    121, CP Sheild Generator flag, 1.4.49 client
     801, :lot:`Elephant Pet - 3050 <3050>`, 1.1.18 client
     802, Not used, 1.1.18 client
     803, :lot:`Triceratops Pet - 3195 <3195>`, 1.1.18 client
@@ -171,11 +177,23 @@ Known Flags
     826, Crocodile Pet, 1.1.18 client
     827, Goat Pet, 1.1.18 client
     828, Coalessa's lion Cant Tame, 1.1.18 client
+    829, Raindeer Pet,1.4.49 client
+    834, Bone Dragon Pet,1.4.49 client
     1001, AG Space Ship Binoc at launch, 1.1.18 client
     1002, AG Space Ship Binoc at launch platform, 1.1.18 client
     1003, AG Space Ship Binoc on platform to left of start, 1.1.18 client
     1004, AG Space Ship Binoc on platform to right of start, 1.1.18 client
     1005, AG Space Ship Binoc at Bob, 1.1.18 client
+    1010, SpaceShipDaily0, 1.4.49 client
+    1011, SpaceShipDaily1, 1.4.49 client
+    1012, SpaceShipDaily2, 1.4.49 client
+    1013, SpaceShipDaily3, 1.4.49 client
+    1014, SpaceShipDaily4, 1.4.49 client
+    1015, SpaceShipDaily5, 1.4.49 client
+    1016, SpaceShipDaily6, 1.4.49 client
+    1017, SpaceShipDaily7, 1.4.49 client
+    1018, SpaceShipDaily8, 1.4.49 client
+    1019, SpaceShipDaily9, 1.4.49 client
     1101, AG Battle Binoc for triceretops, 1.1.18 client
     1102, AG Battle Binoc at Paradox, 1.1.18 client
     1103, AG Battle Binoc at mission giver, 1.1.18 client
@@ -216,6 +234,13 @@ Known Flags
     1264, PR Pet Dig back side by partner bounce, 1.1.18 client
     1265, PR Pet Dig by launch pad, 1.1.18 client
     1266, PR Pet Dig by first pet bouncer, 1.1.18 client
+    1280, Frostburgh Binoc 1, 1.4.49 client
+    1281, Frostburgh Binoc 2, 1.4.49 client
+    1282, Frostburgh Binoc 3, 1.4.49 client
+    1283, Frostburgh Plaque 1, 1.4.49 client
+    1284, Frostburgh Plaque 2, 1.4.49 client
+    1285, Frostburgh Plaque 3, 1.4.49 client
+    1286, Frostburgh Plaque 4, 1.4.49 client
     1301, GF Binoc on Landing pad, 1.1.18 client
     1302, GF Binoc at Ravine Start, 1.1.18 client
     1303, GF Binoc on top of Ravine Head, 1.1.18 client
@@ -238,7 +263,81 @@ Known Flags
     1410, FV Binoc at the dragon crevice, 1.1.18 client
     1601, LUP Station Binoc 1, 1.1.18 client
     1602, LUP Station Binoc 2, 1.1.18 client
-    1900, :zone:`Nexus Tower <1900>` needs no more bricks to be finished, :doc:`../database/Preconditions`
+    1801, AM Binocular 1, 1.4.49 client
+    1802, AM Binocular 2, 1.4.49 client
+    1803, AM Binocular 3, 1.4.49 client
+    1804, AM Binocular 4, 1.4.49 client
+    1805, AM Binocular 5, 1.4.49 client
+    1806, AM Binocular 6, 1.4.49 client
+    1807, AM Binocular 7, 1.4.49 client
+    1808, AM Binocular 8, 1.4.49 client
+    1809, AM Binocular 9, 1.4.49 client
+    1810, AM Binocular 10, 1.4.49 client
+    1900, NT Build Finish, 1.4.49 client
+    1901, NT Binoc Vent Overlook, 1.4.49 client
+    1902, NT Binoc Vent Telescope, 1.4.49 client
+    1903, NT Binoc Beam Room, 1.4.49 client
+    1904, NT Binoc Para Entrance, 1.4.49 client
+    1905, NT Binoc WarRoom Overlook, 1.4.49 client
+    1906, NT Binoc Landing Pad, 1.4.49 client
+    1907, NT Binoc Battlefield Launchpad, 1.4.49 client
+    1908, NT Binoc Armory Overlook, 1.4.49 client
+    1911, NT Paradox Trial, 1.4.49 client
+    1912, Assembly Pipe Rebuild 1, 1.4.49 client
+    1913, Assembly Pipe Rebuild 2, 1.4.49 client
+    1914, Assembly Pipe Rebuild 3, 1.4.49 client
+    1915, NT Sent Shortcut 6, 1.4.49 client
+    1916, NT Sent Shortcut 7, 1.4.49 client
+    1917, NT Sent Shortcut 6, 1.4.49 client
+    1918, Nexus Tower Welcome, 1.4.49 client
+    1930, NT Vent Shortcut 1, 1.4.49 client
+    1931, NT Vent Shortcut 2, 1.4.49 client
+    1932, NT Vent Shortcut 3, 1.4.49 client
+    1933, NT Vent Shortcut 4, 1.4.49 client
+    1934, NT Vent Shortcut 5, 1.4.49 client
+    1935, NT Assem Shortcut 1, 1.4.49 client
+    1936, NT Assem Shortcut 2, 1.4.49 client
+    1937, NT Para Shortcut 1, 1.4.49 client
+    1938, NT Para Shortcut 2, 1.4.49 client
+    1939, NT Para Shortcut 3, 1.4.49 client
+    1940, NT Para Shortcut 4, 1.4.49 client
+    1941, NT Sent Shortcut 1, 1.4.49 client
+    1942, NT Sent Shortcut 2, 1.4.49 client
+    1943, NT Sent Shortcut 3, 1.4.49 client
+    1944, NT Sent Shortcut 4, 1.4.49 client
+    1945, NT Sent Shortcut 5, 1.4.49 client
+    1946, Pipe Rebuild 1, 1.4.49 client
+    1947, Pipe Rebuild 2, 1.4.49 client
+    1948, Pipe Rebuild 3, 1.4.49 client
+    1949, Pipe Rebuild 4, 1.4.49 client
+    1950, Pipe Rebuild 5, 1.4.49 client
+    1951, Pipe Rebuild 6, 1.4.49 client
+    1952, Banking Flag, 1.4.49 client
+    1953, Bank Slot Flag, 1.4.49 client
+    1954, Sentinel Trial, 1.4.49 client
+    1955, NT Dirt Cloud 1, 1.4.49 client
+    1956, NT Dirt Cloud 2, 1.4.49 client
+    1957, NT Dirt Cloud 3, 1.4.49 client
+    1958, NT Dirt Cloud 4, 1.4.49 client
+    1959, NT Dirt Cloud 5, 1.4.49 client
+    1960, NT Dirt Cloud 6, 1.4.49 client
+    1961, NT Dirt Cloud 7, 1.4.49 client
+    1962, NT Dirt Cloud 8, 1.4.49 client
+    1963, NT Dirt Cloud 9, 1.4.49 client
+    1964, NT Dirt Cloud 10, 1.4.49 client
+    1965, NT Dirt Cloud 11, 1.4.49 client
+    1966, NT Dirt Cloud 12, 1.4.49 client
+    1967, Paradox Panel 1, 1.4.49 client
+    1968, Paradox Panel 2, 1.4.49 client
+    1969, Paradox Panel 3, 1.4.49 client
+    1970, Paradox Panel 4, 1.4.49 client
+    1971, Paradox Panel 5, 1.4.49 client
+    1972, Paradox Panel 6, 1.4.49 client
+    1973, Paradox Panel 7, 1.4.49 client
+    1974, Paradox Sentinel Spy, 1.4.49 client
+    1975, Paradox Pet, 1.4.49 client
+    1976, Paradox Assembly Spy, 1.4.49 client
+    1977, Paradox Venture Spy, 1.4.49 client
     11001, SS Plaque 1, 1.1.18 client
     11002, SS Plaque 2, 1.1.18 client
     11003, SS Plaque 3, 1.1.18 client
@@ -266,3 +365,9 @@ Known Flags
     11407, FV Plaque 7, 1.1.18 client
     11501, PC Plaque 1, 1.1.18 client
     11502, PC Plaque 2, 1.1.18 client
+    11801, CP Plaque 1, 1.4.49 client
+    11802, CP Plaque 2, 1.4.49 client
+    11803, CP Plaque 3, 1.4.49 client
+    11804, CP Plaque 4, 1.4.49 client
+    11805, CP Plaque 5, 1.4.49 client
+    11806, CP Plaque 6, 1.4.49 client
