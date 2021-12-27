@@ -84,3 +84,17 @@ You can use the tools collection from `assembly <https://crates.io/crates/assemb
 	    UNKNOWN2,     // never used?
 	    VARCHAR       // called TEXT in MSSQL?
 	};
+
+lcdr's tools rely on https://www.sqlite.org/datatype3.html#determination_of_column_affinity to assign the type
+of columns in SQLite while preserving the original type:
+
+.. code-block :: py
+
+	SQLITE_TYPE = {}
+	SQLITE_TYPE[0] = "none"
+	SQLITE_TYPE[1] = "int32"
+	SQLITE_TYPE[3] = "real"
+	SQLITE_TYPE[4] = "text_4"
+	SQLITE_TYPE[5] = "int_bool"
+	SQLITE_TYPE[6] = "int64"
+	SQLITE_TYPE[8] = "text_8"
