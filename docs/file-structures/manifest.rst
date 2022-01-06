@@ -2,6 +2,12 @@ Manifest (.txt)
 ^^^^^^^^^^^^^^^
 (in :file:`/versions` folder)
 
+| **[version]** section:
+|   There is a single line in this section. The elements are:
+|
+|   1) version number
+|   2) md5 hash of version number as text
+
 | **[files]** section:
 | 	Every line represents a file entry which consists of six values (in ASCII format), separated by a :samp:`,`
 | 	
