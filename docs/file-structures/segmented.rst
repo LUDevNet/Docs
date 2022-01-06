@@ -29,8 +29,8 @@ The first line is a header of the following form:
 
 with the following data:
 
-| 1) the file extension 'si0'
-| 2) the magic bytes 0x01 0xff
+| 1) the file extension :samp:`si0`
+| 2) the magic bytes 0x01 0xff as :samp:`\x01\xff`
 | 3) the total size of the input
 | 4) the MD5 hash of the input
 | 5) the chunk size
