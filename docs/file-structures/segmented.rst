@@ -23,4 +23,29 @@ Segmented Data (.sd0)
 Segmented Index (.si0)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Not documented yet
+The first line is a header of the following form:
+
+:samp:`%s%s:%08x:%s:%08x\r`
+
+with the following data:
+
+| 1) the file extension 'si0'
+| 2) the magic bytes 0x01 0xff
+| 3) the total size of the input
+| 4) the MD5 hash of the input
+| 5) the chunk size
+
+
+The rest of the file is one line for every compressed block, in the following form:
+
+:samp:`%08x:%08x:%s:%s:%08x:%08x:%s\r`
+
+with the following data:
+
+| 1) start of the block in the raw file
+| 2) size of the block
+| 3) Adler32 of the raw bytes modulo 0xFFFFFFFF, as hex, with the first two and last letters removed
+| 4) MD5 hash of the raw bytes
+| 5) number of bytes already written to compressed file (without magic bytes)
+| 6) number of compressed bytes
+| 7) MD5 hash of compressed bytes
