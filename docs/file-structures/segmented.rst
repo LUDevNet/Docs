@@ -25,7 +25,7 @@ Segmented Index (.si0)
 
 The first line is a header of the following form:
 
-:samp:`%s%s:%08x:%s:%08x\r`
+:samp:`%s%s:%08x:%s:%08x\\r`
 
 with the following data:
 
@@ -38,7 +38,7 @@ with the following data:
 
 The rest of the file is one line for every compressed block, in the following form:
 
-:samp:`%08x:%08x:%s:%s:%08x:%08x:%s\r`
+:samp:`%08x:%08x:%s:%s:%08x:%08x:%s\\r`
 
 with the following data:
 
