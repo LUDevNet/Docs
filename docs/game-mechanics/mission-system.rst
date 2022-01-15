@@ -72,7 +72,10 @@ ObtainItem (11)
 The player needs to somehow obtain a count of :samp:`targetValue` items of the template specified in :samp:`target`.
 This is usually used to implement quests, asking the player to buy something from a vendor.
 
-Something is up with :samp:`taskParam1`.
+Depending on :samp:`taskParam1`:
+- 1: The :samp:`targetLOT` item is not taken from the players inventory on mission turnin.
+- 2: The :samp:`targetLOT` item is taken from the players inventory on mission turnin.
+- 5: The :samp:`targetLOT` item does not need to be in the players inventory on mission turnin? (still needs confirmation)
 
 Discover (12)
 ^^^^^^^^^^^^^
