@@ -73,12 +73,10 @@ The player needs to somehow obtain a count of :samp:`targetValue` items of the t
 This is usually used to implement quests, asking the player to buy something from a vendor.
 
 Depending on :samp:`taskParam1`:
-- 0 or no value: No extra parameters apply.
-- 1: The :samp:`targetLOT` item is not taken from the players inventory on mission turn in.
-- 2: The :samp:`targetLOT` item is taken from the players inventory on mission turn in.
-- 4: (UNUSED IN DATABSAE) If the :samp:`targetLOT` is removed from the players' inventory before mission completion,
-the player will not lose progress on this mission.
-- 5: The properties of 1 and 4 are combined.  Items are not taken from the inventory nor will losing these items before mission
+- 0b000 or no value: No extra parameters apply.
+- 0b001: The :samp:`targetLOT` item is not taken from the players inventory on mission turn in.
+- 0b010: The :samp:`targetLOT` item is taken from the players inventory on mission turn in.
+- 0b101: The properties of 1 and 4 are combined.  Items are not taken from the inventory nor will losing these items before mission
 completion lower progress.
 
 Discover (12)
