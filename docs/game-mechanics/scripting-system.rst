@@ -65,8 +65,11 @@ Game Messages
 LEVEL
 -----
 
+- LEVEL:CLUTEffect(clut: string, fadeDuration: int, startIntensity: float, endIntensity: float, uiOverlay: bool)
 - LEVEL:GetCinematicInfo(cinematicName: string)
 - LEVEL:GetCurrentZoneID()
+- LEVEL:SetLights(modifyAmbientColor: bool, ambientColor: int, modifyDirectionalColor: bool, directionalColor: int, modifySpecularColor: bool, specularColor: int, modifyUpperHemiColor: bool, upperHemiColor: int, modifyDirectionalDirection: bool, directionalDirection: {x: float, y: float, z: float}, modifyFogColor: bool, fogColor: int, modifyDrawDistance: bool, fogNearMin: float, fogNearMax: float, fogFarMin: float, fogFarMax: float, postFogSolidMin: float, postFogSolidMax: float, postFogFadeMin: float, postFogFadeMax: float, staticObjectCutoffMin: float, staticObjectCutoffMax: float, dynamicObjectCutoffMin: float, dynamicObjectCutoffMax: float, modifySkyDome: bool, skyDome: string, blendTime: float)
+- LEVEL:SetSkyDome(skyDome: string)
 
 GAMEOBJ
 -------
