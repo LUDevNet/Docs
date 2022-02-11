@@ -44,10 +44,11 @@ BitStream Serialization
 
 align to byte boundary (don’t ask me why, this (and the "padding" below) is completely pointless)
 
-| **[u16]** - This is just :samp:`padding`.
-| **[bit]** - True if the attack was :samp:`blocked`.  False otherwise.
-| **[bit]** - True if the the target is :samp:`immune`.  False otherwise.
-| **[bit]** - True if the attack was successful.  False otherwise.  
-| **[u32]** - This is just :samp:`padding`.
+| **[u16]** - This is just padding.
+| **[bit]** - True if the attack was blocked.  False otherwise.  As of February 11, 2022, this value is always serialized as false.
+| **[bit]** - True if the the target is immune.  False otherwise.  As of February 11, 2022, this value is always serialized as false.
+| **[bit]** - True if the attack was successful.  False otherwise.  As of February 11, 2022, this value is always serialized as true.
+| **[u32]** - This is just padding.
 | **[u32]** - Amount of damage that was dealt.
+| **[bit]** - True if the target died from the attack.  False otherwise.
 | **[u8]**  - The success state of the attack.
