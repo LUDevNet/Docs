@@ -33,7 +33,7 @@ Parameters
    * - on_success
      - The behavior to use on success of the attack.
    * - radius
-     - The radius of the attack.  This is likely deprecated as only `one behavior <https://explorer.lu-dev.net/skills/69>`_ currently uses this.  Currently unused in Darkflame Universe.
+     - The radius of the attack.  This is likely deprecated as only `one behavior <https://explorer.lu/skills/69>`_ currently uses this.  Currently unused in Darkflame Universe.
    * - use_caster_velocity
      - Whether or not to use the casters velocity.  Currently unused in Darkflame Universe.
    * - velocity_multiplier
