@@ -50,5 +50,4 @@ align to byte boundary (don’t ask me why, this (and the "padding" below) is co
 | **[bit]** - True if the attack was successful.  False otherwise.  
 | **[u32]** - This is just :samp:`padding`.
 | **[u32]** - Amount of damage that was dealt.
-| **[bit]** - Whether the target has died?  This value is read in but is never used in Darkflame Universe.
 | **[u8]**  - The success state of the attack.
