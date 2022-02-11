@@ -28,7 +28,8 @@ in :samp:`target` or :samp:`targetGroup`.
 Script (1)
 ^^^^^^^^^^
 
-This task will be set as completed by some script and is as such not handled by the mission system.
+Complete a condition specified in :samp:`target` or :samp:`targetGroup` scripts :samp:`targetValue` times.
+The condition will vary drastically between scripts.
 
 QuickBuild (2)
 ^^^^^^^^^^^^^^
@@ -51,28 +52,34 @@ The player need to go to the NPC of the template specified in :samp:`target`.
 UseEmote (5)
 ^^^^^^^^^^^^
 
-The player needs to play the emote with id :samp:`taskParam1` near an object of the template specified in
+The player needs to play any emote id within :samp:`taskParam1` near an object of the template specified in
 :samp:`target`.
 
 UseConsumable (9)
 ^^^^^^^^^^^^^^^^^
 
-The player needs to consume the specified item.
+The player needs to consume the template specified in :samp:`target` :samp:`targetValue` times.
 
 UseSkill (10)
 ^^^^^^^^^^^^^
 
 The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimited set in :samp:`taskParam1`.
 
-Example: https://lu-explorer.web.app/missions/755
+Example: https://explorer.lu-dev.net/missions/755
 
 ObtainItem (11)
 ^^^^^^^^^^^^^^^
 
 The player needs to somehow obtain a count of :samp:`targetValue` items of the template specified in :samp:`target`.
-This is usually used to implement quests, asking the player to buy something from a vendor.
+This is usually used to implement quests, asking the player to buy something from a vendor or to pick up an item in the world.
 
-Something is up with :samp:`taskParam1`.
+:samp:`taskParam1` does not affect the mission progression but rather what happens to
+the items at mission turn in.  Depending on :samp:`taskParam1`:
+- 0 or no value: No extra parameters apply.
+- 1: The :samp:`target` item is not taken from the players inventory on mission turn in.
+- 2: The :samp:`target` item is taken from the players inventory on mission turn in.
+- 5: The properties of 1 and 4 are combined.  Items are not taken from the inventory nor will losing these items before mission
+
 
 Discover (12)
 ^^^^^^^^^^^^^
@@ -83,10 +90,16 @@ MinigameAchievement (14)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Achieve at least :samp:`targetValue` at the :samp:`targetGroup` statistic in a minigame, such as :samp:`survival_time_solo`.
-:samp:`target` likely specifies the relevant minigame.
+:samp:`target` specifies the relevant Activity ID.
+
+Example: https://explorer.lu-dev.net/activities/5
+
+Some minigame missions like https://explorer.lu-dev.net/missions/229 set their :samp:`targetValue` to `1` or `true`
+instead of setting them to their :samp:`targetValue` since you are intended to get this score in one attempt.
 
 Interact (15)
 ^^^^^^^^^^^^^
+Interact with the :samp:`target` template :samp:`targetValue` times.
 
 MissionComplete (16)
 ^^^^^^^^^^^^^^^^^^^^
@@ -111,16 +124,20 @@ Racing (23)
 
 Depending on :samp:`taskParam1`:
 
-- 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`
-- 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`
-- 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`
+- 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`.
+- 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`.
+- 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`.
+- 4: Complete :samp:`targetValue` achievements from the :samp:`targetGroup`.
 - 5: Achieve :samp:`targetValue` achievements of the ones in :samp:`targetGroup`.
+- 6: Complete a task during while in modular building :samp:`targetValue` times.
 - 10: Complete a race at the race world specified by :samp:`target` without (less than :samp:`targetValue` ???) wrecking.
-- 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`
-- 13: Enter the race world specified by :samp:`target`
-- 14: Win :samp:`targetValue` races at the world specified by :samp:`target`
-- 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`
-- 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`
+- 11: Smash any smashable in any world contained in :samp:`targetGroup` :samp:`targetValue` times.
+- 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`.
+- 13: Enter the race world specified by :samp:`target`.
+- 14: Win :samp:`targetValue` races at the world specified by :samp:`target`.
+- 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`.
+- 16: Finish in last place :samp:`targetValue` times in :samp:`targetGroup` race worlds.
+- 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`.
 
 Flag (24)
 ^^^^^^^^^
@@ -131,7 +148,7 @@ The player needs to activate a count of :samp:`targetValue` of the flags specifi
 VisitProperty (30)
 ^^^^^^^^^^^^^^^^^^
 
-The player needs to visit a count of :samp:`targetValue` of properties of template
+The player needs to visit a count of :samp:`targetValue` properties of template
 :samp:`target` or :samp:`targetGroup`.
 
 NexusTowerBrickDonation (32)
