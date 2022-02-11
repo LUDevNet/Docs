@@ -28,7 +28,8 @@ in :samp:`target` or :samp:`targetGroup`.
 Script (1)
 ^^^^^^^^^^
 
-This task will be set as completed by some script and is as such not handled by the mission system.
+Complete a condition specified in :samp:`target` or :samp:`targetGroup` scripts :samp:`targetValue` times.
+The condition will vary drastically between scripts.
 
 QuickBuild (2)
 ^^^^^^^^^^^^^^
@@ -51,13 +52,13 @@ The player need to go to the NPC of the template specified in :samp:`target`.
 UseEmote (5)
 ^^^^^^^^^^^^
 
-The player needs to play the emote with id :samp:`taskParam1` near an object of the template specified in
+The player needs to play any emote id within :samp:`taskParam1` near an object of the template specified in
 :samp:`target`.
 
 UseConsumable (9)
 ^^^^^^^^^^^^^^^^^
 
-The player needs to consume the specified item.
+The player needs to consume the template specified in :samp:`target` :samp:`targetValue` times.
 
 UseSkill (10)
 ^^^^^^^^^^^^^
@@ -92,7 +93,7 @@ instead of setting them to their :samp:`targetValue` since you are intended to g
 
 Interact (15)
 ^^^^^^^^^^^^^
-Interact with the :samp:`target` LOT :samp:`targetValue` times.
+Interact with the :samp:`target` template :samp:`targetValue` times.
 
 MissionComplete (16)
 ^^^^^^^^^^^^^^^^^^^^
@@ -141,7 +142,7 @@ The player needs to activate a count of :samp:`targetValue` of the flags specifi
 VisitProperty (30)
 ^^^^^^^^^^^^^^^^^^
 
-The player needs to visit a count of :samp:`targetValue` of properties of template
+The player needs to visit a count of :samp:`targetValue` properties of template
 :samp:`target` or :samp:`targetGroup`.
 
 NexusTowerBrickDonation (32)
