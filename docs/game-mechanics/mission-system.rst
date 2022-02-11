@@ -64,7 +64,7 @@ UseSkill (10)
 
 The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimited set in :samp:`taskParam1`.
 
-Example: https://lu-explorer.web.app/missions/755
+Example: https://explorer.lu-dev.net/missions/755
 
 ObtainItem (11)
 ^^^^^^^^^^^^^^^
@@ -83,10 +83,16 @@ MinigameAchievement (14)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Achieve at least :samp:`targetValue` at the :samp:`targetGroup` statistic in a minigame, such as :samp:`survival_time_solo`.
-:samp:`target` likely specifies the relevant minigame.
+:samp:`target` specifies the relevant Activity ID.
+
+Example: https://explorer.lu-dev.net/activities/5
+
+Some minigame missions like https://explorer.lu-dev.net/missions/229 set their :samp:`targetValue` to `1` or `true`
+instead of setting them to their :samp:`targetValue` since you are intended to get this score in one attempt.
 
 Interact (15)
 ^^^^^^^^^^^^^
+Interact with the :samp:`target` LOT :samp:`targetValue` times.
 
 MissionComplete (16)
 ^^^^^^^^^^^^^^^^^^^^
@@ -111,16 +117,20 @@ Racing (23)
 
 Depending on :samp:`taskParam1`:
 
-- 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`
-- 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`
-- 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`
+- 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`.
+- 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`.
+- 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`.
+- 4: Complete :samp:`targetValue` achievements from the :samp:`targetGroup`.
 - 5: Achieve :samp:`targetValue` achievements of the ones in :samp:`targetGroup`.
+- 6: Complete a task during while in modular building :samp:`targetValue` times.
 - 10: Complete a race at the race world specified by :samp:`target` without (less than :samp:`targetValue` ???) wrecking.
-- 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`
-- 13: Enter the race world specified by :samp:`target`
-- 14: Win :samp:`targetValue` races at the world specified by :samp:`target`
-- 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`
-- 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`
+- 11: Smash any smashable in any world contained in :samp:`targetGroup` :samp:`targetValue` times.
+- 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`.
+- 13: Enter the race world specified by :samp:`target`.
+- 14: Win :samp:`targetValue` races at the world specified by :samp:`target`.
+- 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`.
+- 16: Finish in last place :samp:`targetValue` times in :samp:`targetGroup` race worlds.
+- 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`.
 
 Flag (24)
 ^^^^^^^^^
