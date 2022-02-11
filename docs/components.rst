@@ -6,7 +6,7 @@ to how the object gets serialized from the server to the client, but also attach
 functionality and behaviors to the object. Components may react to game messages but also express
 other aspects of the game.
 
-As per `this test object's description <https://xiphoseer.github.io/lu-explorer/objects/6228>`_,
+As per `this test object's description <https://explorer.lu-dev.net/objects/6228>`_,
 the internal name of a component class would have been :file:`LWO{Name}Component` as in
 :samp:`LWOModelBuilderComponent`.
 
