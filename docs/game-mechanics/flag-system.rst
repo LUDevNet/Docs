@@ -16,6 +16,8 @@ Derived Flag Numbers
 The flag ids used for binoculars and story plaques is generally
 derived from the current zone ID and an additional index:
 
+800+ID
+    | The player has tamed the pet with Pet Component #ID
 ZZNN
     | The player has looked through binocular NN on zones ZZ…
     | Source: :script:`02_client/map/general/l_binoculars_client.lua`
