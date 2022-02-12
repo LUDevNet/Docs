@@ -17,7 +17,7 @@ This behavior is used to deal damage to a target.
    * - dir_angle_y
      - The direction to modify the attackers angle by.
    * - dir_force
-     - The amount of force to apply towards angle specified in :samp:`dir_angle_xz` or :samp:`dir_angle_y`.
+     - The amount of force to apply towards angle specified in dir_angle_xz or dir_angle_y.
    * - dont_apply_immune
      - Whether or not to apply immunity to the caster of the behavior.
    * - max damage
