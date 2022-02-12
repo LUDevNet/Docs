@@ -39,7 +39,7 @@ Parameters
    * - velocity_multiplier
      - Value to multiply velocity by when attacking.
 
-DarkFlame Universe Parameter Notes
+Darkflame Universe Parameter Notes
 ----------------------------------
 
 As of February 11, 2022, only the following parameters are used:
@@ -48,21 +48,18 @@ As of February 11, 2022, only the following parameters are used:
 - min damage
 - on_success
 
-The following parameters are are in the cdclient but are not attached to usable items:
-
-- dir_angle_xz
-- dir_angle_y
-- dir_force
-- radius
-- use_caster_velocity
-- velocity_multiplier
-
 It is unknown whether the following need to be used:
 
 - on_fail_armor
 - on_fail_blocked
 - on_fail_immune
 - dont_apply_immune
+- dir_angle_xz
+- dir_angle_y
+- dir_force
+- radius
+- use_caster_velocity
+- velocity_multiplier
 
 BitStream Serialization
 -----------------------
