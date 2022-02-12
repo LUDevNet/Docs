@@ -25,9 +25,9 @@ Parameters
    * - include_faction
      - A faction to include in targetting
    * - max targets
-     - The maximum number of Entities allowed to be targeted.
+     - The maximum number of allowed targets.
    * - radius
-     - The radius to check for Entities in.
+     - The radius to check for targets in.
    * - target_enemy
      - Whether or not to target an enemy.
    * - target_friend
