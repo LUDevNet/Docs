@@ -42,8 +42,7 @@ Parameters
 BitStream Serialization
 -----------------------
 
-align to byte boundary
-
+Align to byte boundary
 | **[u16]** - Required BitStream Padding.
 | **[bit]** - True if the attack was blocked, false otherwise.
 | **[bit]** - True if the the target is immune, false otherwise.
