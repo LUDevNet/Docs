@@ -1,7 +1,7 @@
 Area of Effect / AoE (7)
 ========================
 
-This behavior calls the specified behaviors on all / a maximum number of entities in the casters' radius.
+This behavior calls the specified action on all / a maximum number of entities in the casters' radius.
 
 Parameters
 ----------
