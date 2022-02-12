@@ -1,7 +1,7 @@
 `Basic Attack (1) <https://github.com/DarkflameUniverse/DarkflameServer/blob/main/dGame/dBehaviors/BasicAttackBehavior.cpp>`_
 =============================================================================================================================
 
-This behavior is used to deal damage to the current target.
+This behavior is used to deal damage to a target.
 
 `Parameters <https://github.com/DarkflameUniverse/DarkflameServer/blob/main/dGame/dBehaviors/BasicAttackBehavior.cpp#L142>`_
 ----------------------------------------------------------------------------------------------------------------------------
@@ -39,8 +39,8 @@ This behavior is used to deal damage to the current target.
    * - velocity_multiplier
      - Value to multiply velocity by when attacking.
 
-DarkFlame Universe Server Parameter Notes
------------------------------------------
+DarkFlame Universe Parameter Notes
+----------------------------------
 
 As of February 11, 2022, only the following parameters are used:
 
