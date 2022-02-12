@@ -55,5 +55,5 @@ Darkflame Universe BitStream Serialization Notes
 When reading the BitStream in, the number of target object ids should be 
 less than or equal to the number of targets.
 
-When writing the BitStream out, the number of targets should be exactly equal to the 
+When writing the BitStream out, the number of targets is exactly equal to the 
 number of targets.
