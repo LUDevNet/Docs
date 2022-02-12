@@ -186,7 +186,7 @@ def setup(app):
     app.add_role_to_domain('gm', 'server', lu_gm_role('/server'))
     app.add_role_to_domain('gm', 'client', lu_gm_role('/client'))
     app.add_role('packet', lu_packet_role)
-    app.add_stylesheet("css/packets.css")
+    app.add_css_file("css/packets.css")
     app.add_role('act', activity_role)
 
 # Theme options are theme-specific and customize the look and feel of a theme
