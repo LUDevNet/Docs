@@ -65,7 +65,7 @@ UseSkill (10)
 
 The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimited set in :samp:`taskParam1`.
 
-Example :mis:`mission<755>`.
+Example :mis:`mission <755>`.
 
 ObtainItem (11)
 ^^^^^^^^^^^^^^^
