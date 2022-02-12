@@ -46,8 +46,8 @@ BitStream Serialization
 
 | **[u32]** - The number of targets.
 | **[s64]** - The target object id.
-| **[for each target]**
-| -> do action
+| **[for target in targets]**
+| -> action(target)
 
 Darkflame Universe BitStream Serialization Notes
 ------------------------------------------------
