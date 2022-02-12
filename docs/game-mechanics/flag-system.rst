@@ -151,9 +151,9 @@ Known Flags
     119, Placed first model on AG medium property, 1.4.49 client
     120, No login fade on load, 1.4.49 client
     121, CP Sheild Generator flag, 1.4.49 client
-    801, :lot:`Elephant Pet - 3050 <3050>`, 1.1.18 client
+    801, :lot:`Elephant Pet <3050>`, 1.1.18 client
     802, Not used, 1.1.18 client
-    803, :lot:`Triceratops Pet - 3195 <3195>`, 1.1.18 client
+    803, :lot:`Triceratops Pet <3195>`, 1.1.18 client
     804, Reindeer - not in live 1, 1.1.18 client
     805, not used, 1.1.18 client
     806, Skunk Pet -, 1.1.18 client
