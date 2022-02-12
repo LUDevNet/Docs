@@ -99,7 +99,7 @@ else:
     html_theme = 'default'
 
 
-explorer_base_url = 'https://lu.lcdruniverse.org/explorer/'
+explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
 
