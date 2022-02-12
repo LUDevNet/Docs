@@ -163,7 +163,7 @@ def explorer_role(prefix, part_url):
         return [node], []
     return role
 
-activity_role = explorer_role('Activity ', 'activity/%d')
+activity_role = explorer_role('Activities ', 'activities/%d')
 object_role = explorer_role('Object ', 'objects/%d')
 mission_role = explorer_role('Mission ', 'missions/%d')
 zone_role = explorer_role('Zone ', 'zones/%d')
