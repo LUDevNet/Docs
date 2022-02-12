@@ -1,10 +1,10 @@
-`Basic Attack (1) <https://github.com/DarkflameUniverse/DarkflameServer/blob/main/dGame/dBehaviors/BasicAttackBehavior.cpp>`_
-=============================================================================================================================
+Basic Attack (1)
+================
 
 This behavior is used to deal damage to a target.
 
-`Parameters <https://github.com/DarkflameUniverse/DarkflameServer/blob/main/dGame/dBehaviors/BasicAttackBehavior.cpp#L142>`_
-----------------------------------------------------------------------------------------------------------------------------
+Parameters 
+----------
 
 .. list-table ::
    :widths: 15 30
@@ -48,7 +48,7 @@ As of February 11, 2022, only the following parameters are used:
 - min damage
 - on_success
 
-The following parameters are not attached to any behavior trees or skills from live:
+The following parameters are are in the cdclient but are not attached to usable items:
 
 - dir_angle_xz
 - dir_angle_y
@@ -78,10 +78,10 @@ Align to byte boundary.
 | **[bit]** - True if the target died from the attack.  False otherwise.
 | **[u8]**  - The success state of the attack.
 
-`DarkFlame Universe Server Side Calculation Notes <https://github.com/DarkflameUniverse/DarkflameServer/blob/42f6f2f10b5971dd13faa18e2018892ce21ce3c3/dGame/dBehaviors/BasicAttackBehavior.cpp#L79>`_
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DarkFlame Universe Server Side Calculation Notes
+------------------------------------------------
 
-- The aligning to byte boundary is pointless but must be done.
-- The padding in the BitStream is also pointless however it must be done.
+- The aligning to byte boundary must be done.  The meaning of this alignment is currently unknown.
+- The padding in the BitStream is required.  The meaning of the padding is also unknown.
 - The attack is never blocked, the target is never immune and the attack is always successful.
 - The success state is always serialized as 1 as of February 11, 2022.
