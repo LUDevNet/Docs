@@ -163,6 +163,7 @@ def explorer_role(prefix, part_url):
         return [node], []
     return role
 
+activity_role = explorer_role('Activity ', 'activity/%d')
 object_role = explorer_role('Object ', 'objects/%d')
 mission_role = explorer_role('Mission ', 'missions/%d')
 zone_role = explorer_role('Zone ', 'zones/%d')
@@ -186,6 +187,7 @@ def setup(app):
     app.add_role_to_domain('gm', 'client', lu_gm_role('/client'))
     app.add_role('packet', lu_packet_role)
     app.add_stylesheet("css/packets.css")
+    app.add_role('act', activity_role)
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
