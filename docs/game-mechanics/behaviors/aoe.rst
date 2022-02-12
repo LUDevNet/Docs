@@ -48,11 +48,3 @@ BitStream Serialization
 |   **[s64]** - The target object id.
 | **[for target in targets]**
 |   -> action(target)
-
-Darkflame Universe BitStream Serialization Notes
-------------------------------------------------
-
-When reading the BitStream in, the number of target object ids should be equal to the number of targets.
-
-When writing the BitStream out, the number of targets is exactly equal to the 
-number of targets.
