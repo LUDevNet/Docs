@@ -65,7 +65,7 @@ UseSkill (10)
 
 The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimited set in :samp:`taskParam1`.
 
-Example: https://explorer.lu/missions/755
+Example :mis:`mission<755>`.
 
 ObtainItem (11)
 ^^^^^^^^^^^^^^^
@@ -94,7 +94,7 @@ Achieve at least :samp:`targetValue` at the :samp:`targetGroup` statistic in a m
 
 Example: https://explorer.lu/activities/5
 
-Some minigame missions like https://explorer.lu/missions/229 set their :samp:`targetValue` to `1` or `true`
+Some minigame missions like :mis:`mission 229 <229>`set their :samp:`targetValue` to `1` or `true`
 instead of setting them to their :samp:`targetValue` since you are intended to get this score in one attempt.
 
 Interact (15)
