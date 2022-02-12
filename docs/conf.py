@@ -99,7 +99,7 @@ else:
     html_theme = 'default'
 
 
-explorer_base_url = 'https://lu.lcdruniverse.org/explorer/'
+explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
 
@@ -163,6 +163,7 @@ def explorer_role(prefix, part_url):
         return [node], []
     return role
 
+activity_role = explorer_role('Activities ', 'activities/%d')
 object_role = explorer_role('Object ', 'objects/%d')
 mission_role = explorer_role('Mission ', 'missions/%d')
 zone_role = explorer_role('Zone ', 'zones/%d')
@@ -185,7 +186,8 @@ def setup(app):
     app.add_role_to_domain('gm', 'server', lu_gm_role('/server'))
     app.add_role_to_domain('gm', 'client', lu_gm_role('/client'))
     app.add_role('packet', lu_packet_role)
-    app.add_stylesheet("css/packets.css")
+    app.add_css_file("css/packets.css")
+    app.add_role('act', activity_role)
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
