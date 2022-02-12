@@ -39,16 +39,24 @@ Parameters
    * - velocity_multiplier
      - Value to multiply velocity by when attacking.  Currently unused in Darkflame Universe.
 
-BitStream Serialization for Darkflame Universe
+BitStream Serialization
 -----------------------
 
-align to byte boundary (don’t ask me why, this (and the "padding" below) is completely pointless)
+align to byte boundary
 
-| **[u16]** - This is just padding.
+| **[u16]** - Required BitStream Padding.
 | **[bit]** - True if the attack was blocked, false otherwise.
 | **[bit]** - True if the the target is immune, false otherwise.
 | **[bit]** - True if the attack was successful, false otherwise.
-| **[u32]** - This is just padding.
+| **[u32]** - Required BitStream Padding.
 | **[u32]** - Amount of damage that was dealt.
 | **[bit]** - True if the target died from the attack.  False otherwise.
 | **[u8]**  - The success state of the attack.
+
+DarkFlame Universe Server Side Calculation Notes
+------------------------------------------------
+
+- The aligning to byte boundary is pointless but must be done.
+- The padding in the BitStream is also pointless however it must be done.
+- When doing server side calculations for the BitStream, the attack is never blocked, the target is never immune and the attack is always successful.
+- The success state is always serialized as 1 as of February 11, 2022.
