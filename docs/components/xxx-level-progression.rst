@@ -3,7 +3,7 @@ Level Progression Component (?)
 
 This component handles the progression in levels for the local player. It is
 unknown which ID this component has, as it was introduced in a version we don't
-have the list for. See also `Player Leveling <https://legouniverse.fandom.com/wiki/Player_Leveling>`_
+have the list for. See also :wiki:`Player Leveling <Player_Leveling>`
 in the wiki.
 
 Relevant Data Tables

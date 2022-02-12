@@ -2,7 +2,7 @@ Property Management Component (45)
 ----------------------------------
 
 This component is the logic for the
-`property management console <http://legouniverse.wikia.com/wiki/Property_Console>`_.
+:wiki:`property management console <Property_Console>`.
 It is attached only to the
-`Property Plaque Object <https://explorer.lu/objects/3315>`_.
+:lot:`Property Plaque Object <3315>`.
 It allows the player to edit the settings for the current property.
