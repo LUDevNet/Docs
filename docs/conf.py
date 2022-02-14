@@ -163,6 +163,7 @@ def explorer_role(prefix, part_url):
         return [node], []
     return role
 
+behaviors_role = explorer_role('Behaviors ', 'skills/behaviors/%d')
 skills_role = explorer_role('Skills ', 'skills/%d')
 activity_role = explorer_role('Activities ', 'activities/%d')
 object_role = explorer_role('Object ', 'objects/%d')
@@ -177,6 +178,7 @@ class GMDomain(Domain):
         super().__init__(*args, **kwargs)
 
 def setup(app):
+    app.add_role('behavior', behaviors_role)
     app.add_role('skill', skills_role)
     app.add_role('mis', mission_role)
     app.add_role('lot', object_role)
