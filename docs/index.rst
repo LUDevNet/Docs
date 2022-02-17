@@ -52,8 +52,8 @@ If any of these documents helped you in some way or another for one of your proj
 
 .. warning ::
 
-	Neither the original documentation nor this read-the-docs port is associated or involved with The Lego Group.
-	Likewise, the creators of the aforementioned documents are not associated or involved with The Lego Group.
+	Neither the original documentation nor this read-the-docs port is associated or involved with The LEGO Group.
+	Likewise, the creators of the aforementioned documents are not associated or involved with The LEGO Group.
 
 
 Contact Info
