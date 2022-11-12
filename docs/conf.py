@@ -18,11 +18,12 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os, re
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
 from sphinx.domains import Domain
+from io import BytesIO
+from urllib.request import urlopen
+from zipfile import ZipFile
 
 # -- General configuration ------------------------------------------------
 
@@ -102,7 +103,25 @@ else:
 explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
+lu_formats_rev = 'e4f68a284b233c7265f84ba21b50195f9acda5c6'
 
+docs_dir = os.path.dirname(os.path.realpath(__file__))
+res_dir = os.path.join(docs_dir, 'res')
+
+def download_github_repo(user, repo, rev):
+  zipurl = f'https://github.com/{user}/{repo}/archive/{rev}.zip'
+  zipdir = os.path.join(res_dir, f"{repo}-{rev}")
+  repdir = os.path.join(res_dir, repo)
+  print(f"Downloading {zipurl} to {zipdir}")
+  with urlopen(zipurl) as zipresp:
+      with ZipFile(BytesIO(zipresp.read())) as zfile:
+          print(f"Extracting files to {res_dir}")
+          zfile.extractall(res_dir)
+          print(f"Renaming {zipdir} to {repdir}")
+          os.rename(zipdir, repdir)
+  print(f"Download complete")
+          
+download_github_repo("lcdr", "lu_formats", lu_formats_rev)
 
 def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     ref = wiki_base_url + text
