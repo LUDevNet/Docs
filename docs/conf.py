@@ -18,12 +18,12 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os, re
+import yaml
+import json
 from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
+from docutils.parsers.rst import Directive, directives
 from sphinx.domains import Domain
-from io import BytesIO
-from urllib.request import urlopen
-from zipfile import ZipFile
 
 # -- General configuration ------------------------------------------------
 
@@ -73,7 +73,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'res']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -103,25 +103,112 @@ else:
 explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
-lu_formats_rev = 'e4f68a284b233c7265f84ba21b50195f9acda5c6'
 
-docs_dir = os.path.dirname(os.path.realpath(__file__))
-res_dir = os.path.join(docs_dir, 'res')
+class Kaitai(Directive):
+    required_arguments = 1
+    final_argument_whitespace = True
+    has_content = False
 
-def download_github_repo(user, repo, rev):
-  zipurl = f'https://github.com/{user}/{repo}/archive/{rev}.zip'
-  zipdir = os.path.join(res_dir, f"{repo}-{rev}")
-  repdir = os.path.join(res_dir, repo)
-  print(f"Downloading {zipurl} to {zipdir}")
-  with urlopen(zipurl) as zipresp:
-      with ZipFile(BytesIO(zipresp.read())) as zfile:
-          print(f"Extracting files to {res_dir}")
-          zfile.extractall(res_dir)
-          print(f"Renaming {zipdir} to {repdir}")
-          os.rename(zipdir, repdir)
-  print(f"Download complete")
-          
-download_github_repo("lcdr", "lu_formats", lu_formats_rev)
+    def data(self, data):
+        if isinstance(data, list):
+            node = nodes.enumerated_list()
+            for v in data:
+                list_item = nodes.list_item()
+                list_item += self.data(v)
+                node += list_item
+            return node
+        if isinstance(data, dict):
+            node = nodes.field_list(classes=["kaitai"])
+            for id, val in data.items():
+                field = nodes.field()
+                field += nodes.field_name(text=str(id))
+                var_body = nodes.field_body()
+                var_body += self.data(val)
+                field += var_body
+                node += field
+            return node
+        if isinstance(data, str) or isinstance(data, int) or isinstance(data, float):
+            return nodes.literal(text=str(data))
+        else:
+            return nodes.literal(text=f"{type(data)} {data}")
+    
+    def seq(self, data, id):
+        section = nodes.section(ids=f"{id}-seq")
+        section += nodes.title(text="Sequence")
+        section += self.data(data)
+        return [section]
+
+    def enums(self, data, id):
+        enums_section = nodes.section(ids=[f"{id}-enums"])
+        enums_section += nodes.title(text = "Enums")
+        for key, value in data.items():
+            enum_section = nodes.section(ids=[f"kaitai-enums-{key}"])
+            enum_title = nodes.title()
+            enum_title += nodes.generated(text="Enum ")
+            enum_title += nodes.literal(text=key)
+            enum_section += enum_title
+            list = nodes.field_list()
+            for id, val in value.items():
+                field = nodes.field()
+                field += nodes.field_name(text=str(id))
+                var_body = nodes.field_body()
+                var_body += nodes.literal(text=str(val))
+                field += var_body
+                list += field
+            enum_section += list
+            enums_section += enum_section
+        return enums_section
+    
+    def types(self, data, id):
+        id = f"{id}-types"
+        section = nodes.section(ids=[id])
+        section += nodes.title(text = "Types")
+        for key, value in data.items():
+            type_id = f"{id}-{key}"
+            type_section = nodes.section(ids=[type_id])
+            type_title = nodes.title()
+            type_title += nodes.generated(text="Type ")
+            type_title += nodes.literal(text=key)
+            type_section += type_title
+            for id, val in value.items():
+                if id == 'seq':
+                    type_section.extend(self.seq(val, type_id))
+                else:
+                    sec = nodes.section(ids = [f"{type_id}-{id}"])
+                    sec += nodes.title(text = id)
+                    sec += self.data(val)
+                    type_section += sec
+            section += type_section
+        return section
+
+    def run(self):
+        try:
+            file = directives.path(self.arguments[0])
+            doc = self.state_machine.document
+            src = doc.current_source
+            dir = os.path.dirname(src)
+            path = os.path.normpath(os.path.join(dir, file))
+            
+            with open(path, 'r') as ksy_file:
+                data = yaml.safe_load(ksy_file)
+                id = data['meta']['id']
+                section = nodes.section(ids=[id])
+                section += nodes.title(text=f"Binary Format")
+                for key, value in data.items():
+                    if key == 'enums':
+                        section += self.enums(value, id)
+                    elif key == 'types':
+                        section += self.types(value, id)
+                    elif key == 'seq':
+                        section += self.seq(value, id)
+                    else:
+                        sec = nodes.section(ids = [f"{id}-{key}"])
+                        sec += nodes.title(text = key)
+                        sec += self.data(value)
+                        section += sec
+                return [section]
+        except Exception as e:
+            return [nodes.paragraph(text=str(e))]
 
 def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     ref = wiki_base_url + text
@@ -197,6 +284,7 @@ class GMDomain(Domain):
         super().__init__(*args, **kwargs)
 
 def setup(app):
+    app.add_directive('kaitai', Kaitai)
     app.add_role('behavior', behavior_role)
     app.add_role('skill', skill_role)
     app.add_role('mis', mission_role)

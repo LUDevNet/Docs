@@ -1,0 +1,3 @@
+[submodule "docs/res/lu_formats"]
+	path = docs/res/lu_formats
+	url = https://github.com/lcdr/lu_formats
