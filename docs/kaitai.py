@@ -220,7 +220,7 @@ class Kaitai(Directive):
         return section
             
 
-    def types(self, data: dict[str, Any], id: str):
+    def types(self, data: dict, id: str):
         return [self.type(f"{id}-types", key, value) for key, value in data.items()]
 
     def run(self):
