@@ -165,6 +165,26 @@ class Kaitai(Directive):
         instances_id = '-'.join([id, "instances"])
         return [self.instance(instances_id, key, value) for key, value in data.items()]
 
+    def enum_variant(self, id, val):
+        field = nodes.field()
+        field += nodes.field_name(text=str(id))
+        var_body = nodes.field_body()
+        if isinstance(val, dict):
+            lines = nodes.line_block()
+            if "id" in val:
+                id_line = nodes.line()
+                id_line += nodes.literal(text = str(val["id"]))
+                lines += id_line
+            if "doc" in val:
+                doc_line = nodes.line()
+                doc_line += nodes.paragraph(text = val["doc"])
+                lines += doc_line
+            var_body += lines
+        else:
+            var_body += nodes.literal(text=str(val))
+        field += var_body
+        return field
+
     def enum(self, parent_id, key, value):
         section = nodes.section(ids=[f"{parent_id}-{key}"])
         title = nodes.title()
@@ -173,12 +193,7 @@ class Kaitai(Directive):
         section += title
         list = nodes.field_list()
         for id, val in value.items():
-            field = nodes.field()
-            field += nodes.field_name(text=str(id))
-            var_body = nodes.field_body()
-            var_body += nodes.literal(text=str(val))
-            field += var_body
-            list += field
+            list += self.enum_variant(id, val)
         section += list
         return section
     

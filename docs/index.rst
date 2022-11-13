@@ -20,6 +20,14 @@ The purpose of this documentation is to list and protocol all the information ab
 
 .. toctree::
    :maxdepth: 2
+   :caption: Packets
+
+   packets
+   packets/common
+   packets/general
+
+.. toctree::
+   :maxdepth: 2
    :caption: File Structures
 
    file-structures
