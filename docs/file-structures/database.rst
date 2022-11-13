@@ -13,6 +13,11 @@ You can use the tools collection from `assembly <https://crates.io/crates/assemb
 		* When the primary key is a string, a dedicated hash function is used to determin the index of the `row_info` slot.
 		* Strings are stored spearately for each row, even if they have the same content. This makes for a great amount of redundancy in the file, but keeps editing simple.
 
+.. kaitai:: ../res/lu_formats/files/fdb.ksy
+
+Old Format
+~~~~~~~~~~
+
 | table_count= **[u32]** - number of tables
 | **[u32]** - address pointer to table header in file
 
