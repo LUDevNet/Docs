@@ -22,6 +22,7 @@ from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
 from sphinx.domains import Domain
 from kaitai import Kaitai
+from sphinx.application import Sphinx 
 
 # -- General configuration ------------------------------------------------
 
@@ -175,7 +176,7 @@ class GMDomain(Domain):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-def setup(app):
+def setup(app: Sphinx):
     app.add_directive('kaitai', Kaitai)
     app.add_role('behavior', behavior_role)
     app.add_role('skill', skill_role)
@@ -189,7 +190,7 @@ def setup(app):
     app.add_role_to_domain('gm', 'server', lu_gm_role('/server'))
     app.add_role_to_domain('gm', 'client', lu_gm_role('/client'))
     app.add_role('packet', lu_packet_role)
-    app.add_css_file("css/packets.css")
+    app.add_stylesheet("css/packets.css")
     app.add_role('act', activity_role)
 
 # Theme options are theme-specific and customize the look and feel of a theme
