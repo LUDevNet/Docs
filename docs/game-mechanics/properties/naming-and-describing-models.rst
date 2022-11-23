@@ -25,7 +25,7 @@ Networked message definitions:
 
 Component serialization:
 
-* Item Component `Serialization <https://lcdruniverse.org/lu_packets/lu_packets/raknet/client/replica/item/struct.ItemConstruction.html>`_
+* Item Component :packet:`raknet/client/replica/item/struct.ItemConstruction`
 
 Until the SetName message **and** Item Component serialization are sent, the client will be
 unable to name or describe models until a time out occurs, upon which the client side name and description will revert
