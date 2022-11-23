@@ -19,7 +19,7 @@ The following diagram shows the expected reply from a server in order to succeed
 
 Networked message definitions:
 
-* Game Message `UpdatePropertyOrModelForFilterCheck <https://lcdruniverse.org/lu_packets/lu_packets/world/gm/server/struct.UpdatePropertyOrModelForFilterCheck.html>`_
+* Game Message :gm:server:`UpdatePropertyOrModelForFilterCheck`
 
 * Game Message `SetName <https://lcdruniverse.org/lu_packets/lu_packets/world/gm/client/struct.SetName.html>`_
 
