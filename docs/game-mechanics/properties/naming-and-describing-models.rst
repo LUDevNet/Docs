@@ -21,7 +21,7 @@ Networked message definitions:
 
 * Game Message :gm:server:`UpdatePropertyOrModelForFilterCheck`
 
-* Game Message `SetName <https://lcdruniverse.org/lu_packets/lu_packets/world/gm/client/struct.SetName.html>`_
+* Game Message :gm:client:`SetName`
 
 Component serialization:
 
