@@ -60,7 +60,7 @@ Component XML Format
 |   :samp:`attr lrrz` - Last respawn point rotation z
 |   :samp:`attr ls` - Lego score/Universe score.
 |   :samp:`attr lzcs` - Last Zone Check Sum, stored as an int32_t
-|   :samp:`attr lzid` - The last zone clone ID, instance ID and zone ID concatenated into 1 64 bit number.
+|   :samp:`attr lzid` - The last zone clone ID, instance ID and zone ID concatenated into 1 64 bit number. See :ref:`this footnote <lzid_foot_note>` for more info.
 |   :samp:`attr lzrw` - Last world rotation w
 |   :samp:`attr lzrx` - Last world rotation x
 |   :samp:`attr lzry` - Last world rotation y
@@ -89,3 +89,14 @@ Component XML Format
 |       :samp:`attr es` - Enemies smashed
 |       :samp:`attr map` - ID of the world the statistics are for
 |       :samp:`attr qbc` - Quick build count
+
+.. _lzid_foot_note:
+
+.. note ::
+  | :samp:`lzid` a binary concatenation of world ID, world instance and world clone, e.g:
+  | lzid = :samp:`2341502167811299`
+  | hex representation of lzid = :samp:`00 08 51 95 74 f4 04 e3`
+  | hex representation of lzid, byte reversed (= packet byte order, Little Endian) = :samp:`e3 04 f4 74 95 51 08 00`
+  | World ID = :samp:`e3 04`
+  | World Instance = :samp:`f4 74`
+  | World Clone = :samp:`95 51 08 00`
