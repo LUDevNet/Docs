@@ -116,6 +116,7 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/100-donation-vendor
    components/101-combat-mediator
    components/106-player-forced-movement
+   components/107-bbb
    components/109-level-progression
    components/110-possession-control
 
