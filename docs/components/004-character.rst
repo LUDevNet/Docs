@@ -5,84 +5,87 @@ This component does not have any client database table associated with it, as it
 represents and manages the state of the character of some player. It holds information
 such as the lego score (U-Score), account information and the passport statistics.
 
-Relevant Game Messages
+There is a very strange struct in the serialization, notably the `TransitionState` in the Character Component.
+It is a 2 bit enum defined as the following:
+
+| **[uint2_t]** - TransitionState
+| if TransitionState == 1
+|   **[uint16_t]** - lastCustomBuildParts (presumably the rocket they are arriving on)
+|     **[wchar]** - wCharacterOfTheAboveString
+
+Component Dependencies
 ......................
 
-* `gm-update-player-statistics`
-* :gm:client:`ModifyLegoScore`
-* :gm:server:`SetEmotesEnabled`
+| :doc:`110-possession-control`
+| :doc:`109-level-progression`
+| :doc:`106-player-forced-movement`
 
-XML Serialization :samp:`<char>`
-................................
+Component Construction
+......................
 
-This component is serialized to XML to store its data.
+| :ref:`Possession Control <110-construction>`
+| :ref:`Level Progression <109-construction>`
+| :ref:`Player Forced Movement <106-construction>`
+| :packet:`raknet/client/replica/character/struct.CharacterConstruction`
 
-:acct: Account ID
-:cc: Currency Current
-:cm: Currency Max (?)
-:co: (?)
-:edit: Is Editor (?)
-:ft: FreeToPlay status (?)
-:gid: Group ID (?)
-:gm: GM level
-:gn: (?)
-:lcbp: modular info of last used rocket (?)
-:llog: Timestamp of last login as this character (?)
-:lrx: Last respawn point position x (?)
-:lry: Last respawn point position y (?)
-:lrz: Last respawn point position z (?)
-:lrrw: Last respawn point rotation w (?)
-:lrrx: Last respawn point rotation x (?)
-:lrry: Last respawn point rotation y (?)
-:lrrz: Last respawn point rotation z (?)
-:ls: Lego score/Universe score.
-:lzcs: (?)
-:lzid: Information about the last world?
-:lzrw: Last world rotation w
-:lzrx: Last world rotation x
-:lzry: Last world rotation y
-:lzrz: Last world rotation z
-:lzx: Last world position x
-:lzy: Last world position y
-:lzz: Last world position z
-:mldt: (?)
-:stt: Player stats
-:time: Total time played, in seconds
-:ttip: (?)
-:v: (?)
-:vd: (?)
+Component Serialization
+.......................
 
-.. note ::
-  | This seems to be a binary concatenation of world ID, world instance and world clone, e.g:
-  | lzid = :samp:`2341502167811299`
-  | hex representation of lzid = :samp:`00 08 51 95 74 f4 04 e3`
-  | hex representation of lzid, byte reversed (= packet byte order) = :samp:`e3 04 f4 74 95 51 08 00`
-  | World ID = :samp:`e3 04`
-  | World Instance = :samp:`f4 74`
-  | World Clone = :samp:`95 51 08 00`
+| :ref:`Possession Control <110-serialization>`
+| :ref:`Level Progression <109-serialization>`
+| :ref:`Player Forced Movement <106-serialization>`
+| :packet:`raknet/client/replica/character/struct.CharacterSerialization`
 
-Unlocked Emotes :samp:`<ue>`
-''''''''''''''''''''''''''''
-An unlocked emote :samp:`<e>`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:id: Emote ID.
+Component XML Format
+............................
 
-Visited levels :samp:`<vl>`
-'''''''''''''''''''''''''''
-
-Level :samp:`<l>`
-~~~~~~~~~~~~~~~~~
-:cid: Clone ID (used for properties, 0 if not a property)
-:id: World ID.
-
-Zone Statistics :samp:`<zs>`
-''''''''''''''''''''''''''''
-
-Statistics :samp:`<s>`
-~~~~~~~~~~~~~~~~~~~~~~
-:ac: Achievements collected.
-:bc: Bricks collected.
-:cc: Coins collected.
-:es: Enemies smashed.
-:map: ID of the world the statistics are for.
-:qbc: Quick build count.
+|   :samp:`char` - Character Component data
+|   :samp:`attr acct` - account ID
+|   :samp:`attr cc` - Currency
+|   :samp:`atrr cm` - Maximum Currency
+|   :samp:`attr co` - Unknown
+|   :samp:`attr edit` - Unknown, Maybe related to HF editor?
+|   :samp:`attr ft` - FreeToPlay status?
+|   :samp:`attr gid` - Guild ID
+|   :samp:`attr gm` - GM level
+|   :samp:`attr gn` - Guild name
+|   :samp:`attr lcbp` - modular info of last used rocket
+|   :samp:`attr llog` - Timestamp of last login as this character
+|   :samp:`attr lrx` - Last respawn point position x
+|   :samp:`attr lry` - Last respawn point position y
+|   :samp:`attr lrz` - Last respawn point position z
+|   :samp:`attr lrrw` - Last respawn point rotation w
+|   :samp:`attr lrrx` - Last respawn point rotation x
+|   :samp:`attr lrry` - Last respawn point rotation y
+|   :samp:`attr lrrz` - Last respawn point rotation z
+|   :samp:`attr ls` - Lego score/Universe score.
+|   :samp:`attr lzcs` - Last Zone Check Sum, stored as an int32_t
+|   :samp:`attr lzid` - The last zone clone ID, instance ID and zone ID concatenated into 1 64 bit number.
+|   :samp:`attr lzrw` - Last world rotation w
+|   :samp:`attr lzrx` - Last world rotation x
+|   :samp:`attr lzry` - Last world rotation y
+|   :samp:`attr lzrz` - Last world rotation z
+|   :samp:`attr lzx` - Last world position x
+|   :samp:`attr lzy` - Last world position y
+|   :samp:`attr lzz` - Last world position z
+|   :samp:`attr mldt` - "Prop mod last display time"
+|   :samp:`attr stt` - Player stats. Stored as a string with each variable separated with “;”
+|   :samp:`attr time` - Total time played, in seconds.
+|   :samp:`attr ttip` - "tool tip flags"
+|   :samp:`attr v` - Unknown, maybe version?  Always 3 in caps
+|   :samp:`attr vd` - Unknown, packet cap values are 15368, 15318, 15367
+|     :samp:`ue` - Unlocked emotes
+|       :samp:`e` - An unlocked emote
+|       :samp:`attr id` - Emote ID
+|     :samp:`vl` - Visited worlds
+|       :samp:`l` - A visited world
+|       :samp:`attr cid` - Clone ID (used for properties, 0 if not a property)
+|       :samp:`attr id` - World ID.
+|     :samp:`zs` - World Statistics
+|       :samp:`s` - Statistics for a world
+|       :samp:`attr ac` - Achievements collected
+|       :samp:`attr bc` - Bricks collected
+|       :samp:`attr cc` - Coins collected
+|       :samp:`attr es` - Enemies smashed
+|       :samp:`attr map` - ID of the world the statistics are for
+|       :samp:`attr qbc` - Quick build count
