@@ -5,7 +5,7 @@ This component does not have any client database table associated with it, as it
 represents and manages the state of the character of some player. It holds information
 such as the lego score (U-Score), account information and the passport statistics.
 
-There is a very strange struct in the serialization, notably the `TransitionState` in the Character Component.
+There is a very strange struct in the serialization, notably the :samp:`TransitionState` in the Character Component.
 It is a 2 bit enum defined as the following:
 
 | **[uint2_t]** - TransitionState
@@ -36,6 +36,15 @@ Component Serialization
 | :ref:`Player Forced Movement <106-serialization>`
 | :packet:`raknet/client/replica/character/struct.CharacterSerialization`
 
+Relevant Game Messages
+......................
+
+Server received
+_______________
+| :gm:server:`ModifyPlayerZoneStatistic`
+| :gm:server:`UpdatePlayerStatistic`
+| :gm:server:`SetEmotesEnabled`
+
 Component XML Format
 ............................
 
@@ -43,7 +52,7 @@ Component XML Format
 |   :samp:`attr acct` - account ID
 |   :samp:`attr cc` - Currency
 |   :samp:`atrr cm` - Maximum Currency
-|   :samp:`attr co` - Unknown
+|   :samp:`attr co` - Unknown, related to claim codes?
 |   :samp:`attr edit` - Unknown, Maybe related to HF editor?
 |   :samp:`attr ft` - FreeToPlay status?
 |   :samp:`attr gid` - Guild ID
@@ -69,11 +78,11 @@ Component XML Format
 |   :samp:`attr lzy` - Last world position y
 |   :samp:`attr lzz` - Last world position z
 |   :samp:`attr mldt` - "Prop mod last display time"
-|   :samp:`attr stt` - Player stats. Stored as a string with each variable separated with “;”
+|   :samp:`attr stt` - Player stats. See :ref:`this footnote <character_stats_footnote>` for more information about the format.
 |   :samp:`attr time` - Total time played, in seconds.
 |   :samp:`attr ttip` - "tool tip flags"
 |   :samp:`attr v` - Unknown, maybe version?  Always 3 in caps
-|   :samp:`attr vd` - Unknown, packet cap values are 15368, 15318, 15367
+|   :samp:`attr vd` - Unknown, some packet cap values are 15368, 15318, 15367
 |     :samp:`ue` - Unlocked emotes
 |       :samp:`e` - An unlocked emote
 |       :samp:`attr id` - Emote ID
@@ -100,3 +109,41 @@ Component XML Format
   | World ID = :samp:`e3 04`
   | World Instance = :samp:`f4 74`
   | World Clone = :samp:`95 51 08 00`
+
+.. _character_stats_footnote:
+
+Character Statistics Format
+...........................
+
+| The character statistics are formatted as follows with a semicolon delimiting each statistic, including the last one. Fill in empty statistics with a zero.
+| Example:
+| :samp:`10809;543;106;43;257;3;41;0;532;236;123;32403;1;58;7;55;101;111;0;0;0;0;0;0;0;0;0;`
+| All stats are :samp:`uint64_t` except where noted otherwise:
+
+| CurrencyCollected
+| BricksCollected (:samp:`int64_t`)
+| SmashablesSmashed
+| QuickBuildsCompleted
+| EnemiesSmashed
+| RocketsUsed
+| MissionsCompleted
+| PetsTamed
+| ImaginationPowerUpsCollected
+| LifePowerUpsCollected
+| ArmorPowerUpsCollected
+| MetersTraveled
+| TimesSmashed
+| TotalDamageTaken
+| TotalDamageHealed
+| TotalArmorRepaired
+| TotalImaginationRestored
+| TotalImaginationUsed
+| DistanceDriven
+| TimeAirborneInCar
+| RacingImaginationPowerUpsCollected
+| RacingImaginationCratesSmashed
+| RacingCarBoostsActivated
+| RacingTimesWrecked
+| RacingSmashablesSmashed
+| RacesFinished
+| FirstPlaceRaceFinishes
