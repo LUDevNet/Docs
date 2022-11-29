@@ -11,3 +11,14 @@ Relevant Database Tables
 ........................
 
 This component uses the :doc:`../database/PhysicsComponent` table.
+
+Component Construction
+......................
+
+| :packet:`raknet/client/replica/controllable_physics/struct.ControllablePhysicsConstruction`
+
+Component Serialization
+.......................
+
+| :packet:`raknet/client/replica/controllable_physics/struct.ControllablePhysicsSerialization`
+
