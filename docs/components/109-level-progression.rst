@@ -19,12 +19,12 @@ Relevant Game Messages
 Component Construction
 ......................
 
-:packet:`raknet/client/replica/level_progression/struct.LevelProgressionConstruction`
+| :packet:`Level Progression <raknet/client/replica/level_progression/struct.LevelProgressionConstruction>`
 
 .. _109-serialization:
 
 Component Serialization
 .......................
 
-:packet:`raknet/client/replica/level_progression/type.LevelProgressionConstruction`
+| :packet:`Level Progression <raknet/client/replica/level_progression/type.LevelProgressionSerialization>`
 

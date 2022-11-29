@@ -17,11 +17,11 @@ Relevant Game Messages
 Component Construction
 ......................
 
-:packet:`raknet/client/replica/possession_control/struct.PossessionControlConstruction`
+| :packet:`Possession Control <raknet/client/replica/possession_control/struct.PossessionControlConstruction>`
 
 .. _110-serialization:
 
 Component Serialization
 .......................
 
-:packet:`raknet/client/replica/possession_control/type.PossessionControlSerialization`
+| :packet:`Possession Control <raknet/client/replica/possession_control/type.PossessionControlSerialization>`

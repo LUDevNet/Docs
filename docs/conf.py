@@ -110,10 +110,28 @@ def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 
+packet_matcher = re.compile(r"(.*) <(.*)>")
+# Takes a string like raknet/client/replica/character/struct.CharacterSerialization and returns CharacterSerialization with .findall
+default_name_finder = re.compile(r"((?:[A-Z][^A-Z]*(?!\\))+$)")
+# Takes a string like CharacterSerialization and returns ['Character', 'Serialization'] with .findall
+default_name_splitter = re.compile(r"([A-Z][^A-Z]*)")
+
 def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
-    ref = lu_packet_base_url + '%s.html' % text
+    m = packet_matcher.match(text)
+    new_url = text
+    new_title = text
+    if m:
+        new_url = m.group(2)
+        new_title = m.group(1)
+    else:
+        name_split = re.findall(default_name_splitter, re.findall(default_name_finder, text)[0])
+        new_title = ""
+        for word in name_split:
+            new_title += word + " "
+        new_title = new_title[:-1]
+    ref = lu_packet_base_url + '%s.html' % new_url
     set_classes(options)
-    title = utils.unescape(text)
+    title = utils.unescape(new_title)
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 

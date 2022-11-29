@@ -26,7 +26,7 @@ Component Construction
 | :ref:`Possession Control <110-construction>`
 | :ref:`Level Progression <109-construction>`
 | :ref:`Player Forced Movement <106-construction>`
-| :packet:`raknet/client/replica/character/struct.CharacterConstruction`
+| :packet:`Character <raknet/client/replica/character/struct.CharacterConstruction>`
 
 Component Serialization
 .......................
@@ -34,7 +34,7 @@ Component Serialization
 | :ref:`Possession Control <110-serialization>`
 | :ref:`Level Progression <109-serialization>`
 | :ref:`Player Forced Movement <106-serialization>`
-| :packet:`raknet/client/replica/character/struct.CharacterSerialization`
+| :packet:`Character <raknet/client/replica/character/struct.CharacterSerialization>`
 
 Component XML Format
 ............................
