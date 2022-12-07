@@ -3,7 +3,7 @@ Rocket Launch Component (67)
 
 This component identifies an object as a place to launch a rocket to another
 world. There is a different object for every
-:wiki:`Launchpad` in the game.
+:wiki:`Launchpad <Launchpad>` in the game.
 
 Relevant Database Tables
 ........................

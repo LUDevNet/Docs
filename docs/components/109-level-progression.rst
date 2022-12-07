@@ -2,7 +2,7 @@ Level Progression Component (109)
 ---------------------------------
 
 This component handles the progression in levels for the local player.
-See also :wiki:`Player Leveling` in the wiki.
+See also :wiki:`Player leveling <Player_Leveling>` in the wiki.
 
 Relevant Data Tables
 ....................

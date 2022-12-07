@@ -1,7 +1,7 @@
 Pet Component (26)
 ------------------
 
-This object is a :wiki:`Pets`. It is
+This object is a :wiki:`Pet <Pets>`. It is
 attached to the actual pet model when it is spawned into the game, as opposed to
 the :doc:`034-pet-control` which is attached to the player owning the pet.
 
