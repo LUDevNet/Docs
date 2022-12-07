@@ -10,6 +10,14 @@ table.docutils tr, table.docutils td {
 	font-size: 100% !important;
 }
 
+table.kaitai th, table.kaitai td {
+	padding: 0 8px 2px 0 !important;
+}
+
+li div.kaitai-field {
+	margin-bottom: 0 !important;
+}
+
 .line-block {
 	margin-bottom: 24px;
 }

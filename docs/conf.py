@@ -18,11 +18,11 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os, re
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
 from sphinx.domains import Domain
+from kaitai import Kaitai
+from sphinx.application import Sphinx 
 
 # -- General configuration ------------------------------------------------
 
@@ -67,12 +67,12 @@ release = '1.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'res']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -102,7 +102,6 @@ else:
 explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
-
 
 def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     ref = wiki_base_url + text
@@ -163,7 +162,9 @@ def explorer_role(prefix, part_url):
         return [node], []
     return role
 
-activity_role = explorer_role('Activities ', 'activities/%d')
+behavior_role = explorer_role('Behavior ', 'skills/behaviors/%d')
+skill_role = explorer_role('Skill ', 'skills/%d')
+activity_role = explorer_role('Activity ', 'activities/%d')
 object_role = explorer_role('Object ', 'objects/%d')
 mission_role = explorer_role('Mission ', 'missions/%d')
 zone_role = explorer_role('Zone ', 'zones/%d')
@@ -175,7 +176,10 @@ class GMDomain(Domain):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-def setup(app):
+def setup(app: Sphinx):
+    app.add_directive('kaitai', Kaitai)
+    app.add_role('behavior', behavior_role)
+    app.add_role('skill', skill_role)
     app.add_role('mis', mission_role)
     app.add_role('lot', object_role)
     app.add_role('zone', zone_role)

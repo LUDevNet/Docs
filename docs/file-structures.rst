@@ -24,3 +24,8 @@ Resources
 *  There are scripts, which require stuff from an “TestAndExample” folder, which is missing, you can get it from
    `here <http://dl.coolgametube.net/LU%20missing%20folder,%20TestAndExample.zip>`__.
 * `Official LXFML Documentation <https://news.lugnet.com/cad/ldd/?n=140>`_ from the LEGO Group back from 2007
+
+Common Types
+^^^^^^^^^^^^
+
+.. kaitai:: res/lu_formats/common/common.ksy

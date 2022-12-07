@@ -115,6 +115,10 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/099-interaction-manager
    components/100-donation-vendor
    components/101-combat-mediator
+   components/106-player-forced-movement
+   components/107-bbb
+   components/109-level-progression
+   components/110-possession-control
 
 .. toctree::
    :caption: Components (Unofficial Names)
@@ -123,8 +127,6 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/102-commendation-vendor
    components/104-rail-activator
    components/105-roller
-   components/106-unknown
-   components/107-possessor
    components/108-possessable
    components/113-property-plaque
    components/114-build-border
@@ -134,5 +136,4 @@ the internal name of a component class would have been :file:`LWO{Name}Component
   :caption: Components (Unknown ID)
   :maxdepth: 1
 
-  components/xxx-level-progression
   components/xxx-mount-control
