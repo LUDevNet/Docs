@@ -125,10 +125,7 @@ def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[])
         new_title = m.group(1)
     else:
         name_split = re.findall(default_name_splitter, re.findall(default_name_finder, text)[0])
-        new_title = ""
-        for word in name_split:
-            new_title += word + " "
-        new_title = new_title[:-1]
+        new_title = " ".join(name_split)
     ref = lu_packet_base_url + '%s.html' % new_url
     set_classes(options)
     title = utils.unescape(new_title)
