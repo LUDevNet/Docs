@@ -124,20 +124,24 @@ Racing (23)
 
 Depending on :samp:`taskParam1`:
 
-- 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`.
-- 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`.
-- 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`.
-- 4: Complete :samp:`targetValue` achievements from the :samp:`targetGroup`.
-- 5: Achieve :samp:`targetValue` achievements of the ones in :samp:`targetGroup`.
-- 6: Complete a task during while in modular building :samp:`targetValue` times.
-- 10: Complete a race at the race world specified by :samp:`target` without (less than :samp:`targetValue` ???) wrecking.
-- 11: Smash any smashable in any world contained in :samp:`targetGroup` :samp:`targetValue` times.
-- 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`.
-- 13: Enter the race world specified by :samp:`target`.
-- 14: Win :samp:`targetValue` races at the world specified by :samp:`target`.
-- 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`.
-- 16: Finish in last place :samp:`targetValue` times in :samp:`targetGroup` race worlds.
-- 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`.
+| - 1: Be at or above the :samp:`targetValue` place in the race world specified by :samp:`target`.
+| - 2: Achieve a :samp:`targetValue` ms lap time or better in the race world specified by :samp:`target`.
+| - 3: Achieve a :samp:`targetValue` ms time or better in the race world specified by :samp:`target`.
+| - 4: Complete :samp:`targetValue` achievements from the :samp:`targetGroup`.
+| - 5: Achieve :samp:`targetValue` achievements of the ones in :samp:`targetGroup`.
+| - 6: Complete a task during while in modular building :samp:`targetValue` times.
+| - 10: Complete a race at the race world specified by :samp:`target` without (less than :samp:`targetValue` ???) wrecking.
+| - 11: Smash any smashable in any world contained in :samp:`targetGroup` :samp:`targetValue` times.
+| - 12: Collect :samp:`targetValue` imagination orbs in the racing worlds specified by :samp:`targetGroup`.
+| - 13: Enter the race world specified by :samp:`target`.
+| - 14: Win :samp:`targetValue` races at the world specified by :samp:`target`.
+| - 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`.
+
+.. note ::
+  | Task type 15 is a bitflag!  The number of bits that are on dictates the progress of the mission.
+
+| - 16: Finish in last place :samp:`targetValue` times in :samp:`targetGroup` race worlds.
+| - 17: Smash :samp:`targetValue` of the objects specified by :samp:`targetGroup`.
 
 Flag (24)
 ^^^^^^^^^
