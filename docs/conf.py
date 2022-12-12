@@ -120,10 +120,25 @@ def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 
+# There is supposed to be a way to do this in Sphinx, but I cannot figure it out.
+# This covers our base cases but should be replaced when the real method is able to be done.
+packet_matcher = re.compile(r'(.*) <(.*)>')
+
 def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
-    ref = lu_packet_base_url + '%s.html' % text
+    m = packet_matcher.match(text)
+    new_url = text
+    new_title = text
+    if m:
+        new_url = m.group(2)
+        new_title = m.group(1)
+    else:
+        name_split = text.split(".")
+        if len(name_split) < 2:
+            raise ValueError('Packet link (%s) is not valid' % text)
+        new_title = name_split[1]
+    ref = lu_packet_base_url + '%s.html' % new_url
     set_classes(options)
-    title = utils.unescape(text)
+    title = utils.unescape(new_title)
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 

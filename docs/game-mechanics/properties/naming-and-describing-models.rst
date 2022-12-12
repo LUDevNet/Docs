@@ -17,15 +17,15 @@ The following diagram shows the expected reply from a server in order to succeed
     WorldServer -> Client: [<b>Item Component Serialization</b>] Description updated with moderated description
     @enduml
 
-Networked message definitions:
+Networked message definitions
 
 * Game Message :gm:server:`UpdatePropertyOrModelForFilterCheck`
 
 * Game Message :gm:client:`SetName`
 
-Component serialization:
+Component serialization
 
-* Item Component :packet:`raknet/client/replica/item/struct.ItemConstruction`
+* :ref:`011-serialization`
 
 Until the SetName message **and** Item Component serialization are sent, the client will be
 unable to name or describe models until a time out occurs, upon which the client side name and description will revert
@@ -37,8 +37,8 @@ The following will happen if the client does not receive **both** of these repli
 * The description will not be updated unless the Item Component Serialized with the moderated description. 
 
 
-What should happen after receiving the Client message:
-------------------------------------------------------
+What should happen after receiving the Client message
+-----------------------------------------------------
 
 If a user successfully changes the name and/or description and the values are approved and are different from their defaults,
 the model should become a user generated model and lose its default model property so that the name can be preserved

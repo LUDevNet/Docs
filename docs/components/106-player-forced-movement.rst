@@ -11,11 +11,11 @@ normal movement speed skateboard.
 Component Construction
 ......................
 
-:packet:`raknet/client/replica/player_forced_movement/struct.PlayerForcedMovementConstruction`
+| :packet:`Player Forced Movement <raknet/client/replica/player_forced_movement/struct.PlayerForcedMovementConstruction>`
 
 .. _106-serialization:
 
 Component Serialization
 .......................
 
-:packet:`raknet/client/replica/player_forced_movement/type.PlayerForcedMovementConstruction`
+| :packet:`Player Forced Movement <raknet/client/replica/player_forced_movement/type.PlayerForcedMovementSerialization>`

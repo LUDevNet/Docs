@@ -9,3 +9,18 @@ Relevant Database Tables
 ........................
 
 This component uses the :doc:`../database/ItemComponent` table.
+
+
+.. _011-construction:
+
+Component Construction
+......................
+
+| :packet:`Item <raknet/client/replica/item/struct.ItemConstruction>`
+
+.. _011-serialization:
+
+Component Serialization
+.......................
+
+| :packet:`Item <raknet/client/replica/item/type.ItemSerialization>`
