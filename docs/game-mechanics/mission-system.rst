@@ -150,6 +150,10 @@ Place Model (25)
 
 The player needs to place models :samp:`targetValue` times.
 
+Add Behavior (27)
+
+The player needs to add behaviors to models :samp:`targetValue` times.
+
 VisitProperty (30)
 ^^^^^^^^^^^^^^^^^^
 
