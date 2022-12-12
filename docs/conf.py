@@ -103,10 +103,20 @@ explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
 lu_packet_base_url = 'https://lcdruniverse.org/lu_packets/lu_packets/'
 
+wiki_regex = re.compile(r"(.*)<([A-Za-z_]+)>")
+
 def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
-    ref = wiki_base_url + text
+    match = wiki_regex.match(text)
+    title = text
+    page_title = text
+    if match:
+        title = match.group(1).strip()
+        page_title = match.group(2)
+    else:
+        title = text.replace(" ", "_")
+    ref = wiki_base_url + page_title
     set_classes(options)
-    title = utils.unescape(text)
+    title = utils.unescape(title)
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 
