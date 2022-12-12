@@ -67,6 +67,10 @@ The player needs to trigger :samp:`targetValue` skill(s) from the comma-delimite
 
 Example :mis:`mission <755>`.
 
+If :samp:`target` or :samp:`targetGroup` are present, then the skills in :samp:`taskParam1` must be used on those target LOTs
+
+Example :mis:`mission <1140>`.
+
 ObtainItem (11)
 ^^^^^^^^^^^^^^^
 
