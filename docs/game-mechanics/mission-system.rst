@@ -120,6 +120,11 @@ EarnReputation (17)
 
 The player needs to earn :samp:`targetValue` reputation.
 
+CollectPowerup (21)
+^^^^^^^^^^^^^^^^^^^
+
+The player needs to collect :samp:`targetValue` powerups of the :samp:`target` or :samp:`targetGroup` LOTs.
+
 TamePet (22)
 ^^^^^^^^^^^^
 
