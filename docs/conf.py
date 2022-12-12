@@ -112,6 +112,8 @@ def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     if match:
         title = match.group(1).strip()
         page_title = match.group(2)
+    else:
+        title = text.replace(" ", "_")
     ref = wiki_base_url + page_title
     set_classes(options)
     title = utils.unescape(title)

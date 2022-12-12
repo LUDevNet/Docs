@@ -3,7 +3,7 @@ Kit Factions
 
 The game has four so-called *Kit Factions*: **Assembly**, **Paradox**, **Sentinels**
 and **Venture League**. This has nothing to do with the :doc:`../database/Factions` table, which
-specifies which objects can attack each other. The wiki article on :wiki:`Factions <Factions>` describes their
+specifies which objects can attack each other. The wiki article on :wiki:`Factions` describes their
 purpose from a player perspective.
 
 Factions are implemented using the :doc:`flag-system` and the :doc:`mission-system`. While the
