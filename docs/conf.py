@@ -110,11 +110,9 @@ def wiki_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     node = nodes.reference(rawtext, title, refuri=ref, **options)
     return [node], []
 
-packet_matcher = re.compile(r"(.*) <(.*)>")
-# Takes a string like raknet/client/replica/character/struct.CharacterSerialization and returns CharacterSerialization with .findall
-default_name_finder = re.compile(r"((?:[A-Z][^A-Z]*(?!\\))+$)")
-# Takes a string like CharacterSerialization and returns ['Character', 'Serialization'] with .findall
-default_name_splitter = re.compile(r"([A-Z][^A-Z]*)")
+# There is supposed to be a way to do this in Sphinx, but I cannot figure it out.
+# This covers our base cases but should be replaced when the real method is able to be done.
+packet_matcher = re.compile(r'(.*) <(.*)>')
 
 def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
     m = packet_matcher.match(text)
@@ -124,8 +122,10 @@ def lu_packet_role(role, rawtext, text, lineno, inliner, options={}, content=[])
         new_url = m.group(2)
         new_title = m.group(1)
     else:
-        name_split = re.findall(default_name_splitter, re.findall(default_name_finder, text)[0])
-        new_title = " ".join(name_split)
+        name_split = text.split(".")
+        if len(name_split) < 2:
+            raise ValueError('Packet link (%s) is not valid' % text)
+        new_title = name_split[1]
     ref = lu_packet_base_url + '%s.html' % new_url
     set_classes(options)
     title = utils.unescape(new_title)
