@@ -75,11 +75,15 @@ This is usually used to implement quests, asking the player to buy something fro
 
 :samp:`taskParam1` does not affect the mission progression but rather what happens to
 the items at mission turn in.  Depending on :samp:`taskParam1`:
-- 0 or no value: No extra parameters apply.
-- 1: The :samp:`target` item is not taken from the players inventory on mission turn in.
-- 2: The :samp:`target` item is taken from the players inventory on mission turn in.
-- 5: The properties of 1 and 4 are combined.  Items are not taken from the inventory nor will losing these items before mission
 
+| - 0 or no value: No extra parameters apply.
+| - 1: The :samp:`target` item is not taken from the players inventory on mission turn in.
+| - 2: The :samp:`target` item is taken from the players inventory on mission turn in.
+
+.. note ::
+  | Items are only ever removed from the inventory types ITEMS and HIDDEN, should they need to be removed
+
+| - 5: Items are not taken from the inventory nor will losing these items before the mission is completed decrement progress.
 
 Discover (12)
 ^^^^^^^^^^^^^
