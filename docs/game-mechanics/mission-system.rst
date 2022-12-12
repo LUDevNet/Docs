@@ -158,6 +158,15 @@ Flag (24)
 The player needs to activate a count of :samp:`targetValue` of the flags specified by
 :samp:`target` and :samp:`targetGroup`.
 
+Place Model (25)
+^^^^^^^^^^^^^^^^
+
+The player needs to place models :samp:`targetValue` times.
+
+Add Behavior (27)
+
+The player needs to add behaviors to models :samp:`targetValue` times.
+
 VisitProperty (30)
 ^^^^^^^^^^^^^^^^^^
 
