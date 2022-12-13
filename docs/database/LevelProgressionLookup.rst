@@ -5,7 +5,7 @@ This table contains a level and the uscore required to be that level.
 All :samp:`BehaviorEffect` columns are empty.
 
 .. list-table ::
-   :widths: 15 30
+   :widths: 15 15 30
    :header-rows: 1
 
    * - Column

@@ -3,13 +3,24 @@ PlayerFlags
 
 Configuration for the :doc:`../game-mechanics/flag-system`.
 
-==================================================  ==========
-Column                                              Type      
-==================================================  ==========
-id                                                  INTEGER   
-SessionOnly                                         BOOLEAN   
-OnlySetByServer                                     BOOLEAN   
-SessionZoneOnly                                     BOOLEAN   
-==================================================  ==========
+.. list-table ::
+   :widths: 15 15 20
+   :header-rows: 1
 
-512 Slots
+   * - Column
+     - Type
+     - Description
+   * - id
+     - INTEGER
+     - A flag id.
+   * - SessionOnly
+     - BOOLEAN
+     - Whether or not this flag is set only for a play session.
+   * - OnlySetByServer
+     - BOOLEAN
+     - Whether or not this flag is only set by the server.
+   * - SessionZoneOnly 
+     - BOOLEAN
+     - Whether or not this flag is only set for the session in the current zone(?)
+
+Allocated space: 512 Slots

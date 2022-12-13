@@ -205,6 +205,7 @@ Known Flags
     1107, AG Launch Binoc Intro, 1.1.18 client
     1108, AG Launch Binoc Bison, 1.1.18 client
     1109, AG Launch Binoc Shark, 1.1.18 client
+    1110, Set when a player has dug once on a property, 1.10.64 client
     1201, NS Binoc Concert Transition, 1.1.18 client
     1202, NS Binoc Race Place Transition, 1.1.18 client
     1203, NS Binoc Brick Annex Transition, 1.1.18 client
@@ -340,6 +341,7 @@ Known Flags
     1975, Paradox Pet, 1.4.49 client
     1976, Paradox Assembly Spy, 1.4.49 client
     1977, Paradox Venture Spy, 1.4.49 client
+    2099, Player has the Sensei wu daily dragon mission, 1.10.64 client
     11001, SS Plaque 1, 1.1.18 client
     11002, SS Plaque 2, 1.1.18 client
     11003, SS Plaque 3, 1.1.18 client
