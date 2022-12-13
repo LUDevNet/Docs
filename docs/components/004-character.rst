@@ -41,12 +41,13 @@ Relevant Game Messages
 
 Server received
 _______________
+| :gm:server:`SetTooltipFlag`
 | :gm:server:`ModifyPlayerZoneStatistic`
 | :gm:server:`UpdatePlayerStatistic`
 | :gm:server:`SetEmotesEnabled`
 
 Component XML Format
-............................
+....................
 
 |   :samp:`char` - Character Component data
 |   :samp:`attr acct` - account ID
@@ -147,3 +148,8 @@ Character Statistics Format
 | RacingSmashablesSmashed
 | RacesFinished
 | FirstPlaceRaceFinishes
+
+Tooltip flags
+.............
+
+.. todo:: bitmask?
