@@ -51,14 +51,45 @@ It is unknown what the following variables are used for:
 BitStream Serialization
 -----------------------
 
-Align to byte boundary.
+Align to the byte boundary
 
-| **[u16]** - Number of bits used for this basic attack serialization.  ex. If the attack was blocked, then this would be 1
+| **[u16]** - Number of bits used for this basic attack serialization and all sub-branches. (referred to as :samp:`allocatedSize`)
+| Save the offset at this position for use later (referred to here as :samp:`startOffset`)
+
+.. note ::
+  | If the target blocked the attack, this value would be a 1. If the target was immune it would be a 2. If the success state branches are reached, then this value also represents the
+  | sum of all the sub behaviors!  
+
 | **[bit]** - True if the attack was blocked, false otherwise.
+| if blocked:
+|   :samp:`on_fail_blocked`
+|   align the bitStream to :samp:`startOffset + allocatedSize` and return
 | **[bit]** - True if the the target is immune, false otherwise.
-| **[bit]** - True if the attack was successful, false otherwise.
-| if successful attack:
-|   **[u32]** - Required BitStream Padding.
-|   **[u32]** - Amount of damage that was dealt.
-|   **[bit]** - True if the target died from the attack.  False otherwise.
+| if immune:
+|   :samp:`on_fail_immune`
+|   align the bitStream to :samp:`startOffset + allocatedSize` and return
+| **[bit]** - True if the attack dealt any damage at all, false otherwise.
+| if any damage was done at all:
+|   **[u32]** - The amount of armor damage that was dealt.
+|   **[u32]** - Amount of life damage that was dealt.
+|   **[bit]** - Whether or not the target died from the basic attack.
 | **[u8]**  - The success state of the attack.
+| if success state == 1:
+|   :samp:`on_success`
+| else if success state == 2:
+|   :samp:`on_fail_armor`
+| else:
+|     if success state != 3:
+|       align the bitStream to :samp:`startOffset + allocatedSize` and return
+|     else:
+|       :samp:`on_fail_immune`
+| align the bitStream to :samp:`startOffset + allocatedSize` and return
+
+.. note ::
+ | For serializing the behavior, the success state is determined as follows:
+ | if *any* health damage was done at all, the success state is 1.
+ | if *zero* health damage was done and armor damage is greater than zero, the success state is 2. Has one caveat mentioned below.
+ | if none of the above are true and any of the following are true, the success state is 3:
+ | - armor damage was dealt but no :samp:`on_fail_armor` behavior was present.
+ | - the attack was not successful i.e. zero damage was done, both in armor and in health
+
