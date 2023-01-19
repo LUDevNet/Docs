@@ -10,6 +10,9 @@ As per :lot:`this test object's description <3050>`,
 the internal name of a component class would have been :file:`LWO{Name}Component` as in
 :samp:`LWOModelBuilderComponent`.
 
+.. note::
+   Some objects have a component id of 0 in the registry. This means the object has that component, but there is no data associated with it. For example, Entity :lot:`3002` must get a ScriptComponent, but it will just be an empty script.  
+
 .. toctree::
    :caption: Components
    :maxdepth: 1
