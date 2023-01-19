@@ -10,7 +10,7 @@ compression process also generated :any:`ff-si0` files to be used when creating 
 Segmented Data (.sd0)
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. note :: There is a decompressor available, see the :any:`tools` section.
+.. note:: There is a decompressor available, see the :any:`tools` section.
 
 | **[L:5]** - header, ‘s’-‘d’-‘0’-01-ff
 | repeated:

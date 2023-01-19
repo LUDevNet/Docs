@@ -6,7 +6,7 @@ Calls different behaviors depending on what the current movement type of the ori
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15
    :header-rows: 1
 

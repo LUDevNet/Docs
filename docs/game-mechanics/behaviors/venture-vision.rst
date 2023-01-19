@@ -7,7 +7,7 @@ Pet digs seem to be disabled altogether however.
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

@@ -1,4 +1,4 @@
 General
 ^^^^^^^
 
-.. kaitai :: ../res/lu_formats/packets/general.ksy
+.. kaitai:: ../res/lu_formats/packets/general.ksy

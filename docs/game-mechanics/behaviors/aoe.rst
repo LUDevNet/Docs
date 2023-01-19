@@ -6,7 +6,7 @@ This behavior calls the specified action on all / a maximum number of entities i
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 

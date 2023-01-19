@@ -6,7 +6,7 @@ Details unknown
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -42,9 +42,9 @@ Parameters
 BitStream Serialization
 -----------------------
 
-.. todo :: investigate
+.. todo:: investigate
 
-.. note ::
+.. note::
    like Attack Delay, this causes SyncSkill messages, which use the behavior handle as ID
    but have the behavior to execute specified in the SyncSkill bitstream
 

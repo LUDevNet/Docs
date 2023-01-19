@@ -6,7 +6,7 @@ This behavior results in a knockback effect on targeted players/enemies
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -27,7 +27,7 @@ Parameters
 Possibly deprecated
 ^^^^^^^^^^^^^^^^^^^
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 

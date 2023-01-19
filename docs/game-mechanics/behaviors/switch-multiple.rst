@@ -6,7 +6,7 @@ Details unknown, mostly used for charge up action
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -24,7 +24,7 @@ Parameters
 BitStream Serialization
 -----------------------
 
-.. todo :: investigate
+.. todo:: investigate
 
 | **[float]** - value
 | if value <= “value_1” parameter:

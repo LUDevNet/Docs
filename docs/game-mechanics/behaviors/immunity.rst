@@ -6,7 +6,7 @@ This behavior grants the player/object immunity against some actions
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15
    :header-rows: 1
 

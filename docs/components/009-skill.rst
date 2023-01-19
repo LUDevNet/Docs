@@ -32,7 +32,7 @@ Relevant Game Messages
 XML Serialization :samp:`<skil>`
 ................................
 
-.. note ::
+.. note::
   What kind of skills, active ones? Why would they be saved? Action bar skills and skill uses are handled using different packets, so what would this be?
 
 This was empty in the packet, if you find a sample that isn't empty please add content.

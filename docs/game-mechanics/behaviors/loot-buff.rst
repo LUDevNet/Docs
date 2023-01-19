@@ -7,7 +7,7 @@ The result of this behavior is serialized in the Controllable Physics Component 
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

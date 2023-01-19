@@ -3,10 +3,10 @@ Database (.fdb)
 
 You can use the tools collection from `assembly <https://crates.io/crates/assembly-data>`_ to work with FDB files.
 
-.. note ::
+.. note::
 	There is a converter from fdb to sqlite available, see the :ref:`tools` section. This file type has no relation to firebird database files of the same extension.
 
-.. note ::
+.. note::
 	It seems like:
 		* Tables are sorted by their name in ascii representation. Uppercase letters then underscore then lowercase letters.
 		* Tables themselves are hash maps. Use `id % row_count` to get the appropriate `row_info`, then follow the `linked_row_info` until all entries with that ID are found.
@@ -15,7 +15,7 @@ You can use the tools collection from `assembly <https://crates.io/crates/assemb
 
 .. kaitai:: ../res/lu_formats/files/fdb.ksy
 
-.. note ::
+.. note::
 	* Address pointers can be -1 which most likely means an invalid address (just skip those)
 	* Strings types (TEXT and VARCHAR) are always null-terminated (with some over allocated bytes afterwards it seems, apparently string length are filled to be modulo 4 = 0?)
 	* Strings and int64 (BIGINT) types are always stored with an additional address pointer, like this: [pointer]->[data]
@@ -26,7 +26,7 @@ SQLite Conversion
 lcdr's tools rely on https://www.sqlite.org/datatype3.html#determination_of_column_affinity to assign the type
 of columns in SQLite while preserving the original type:
 
-.. code-block :: py
+.. code-block:: python
 
 	SQLITE_TYPE = {}
 	SQLITE_TYPE[0] = "none"

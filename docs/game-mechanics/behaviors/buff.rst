@@ -6,7 +6,7 @@ Increases the player stats while the behavior is active
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 

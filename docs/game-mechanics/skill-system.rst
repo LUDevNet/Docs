@@ -26,7 +26,7 @@ When a behavior is not completed immediately, it will serialize a :samp:`handleI
 later be used to identify a :gm:server:`SyncSkill` message that serializes the continued execution. It
 is possible that this happens multiple times for a single skill execution.
 
-.. uml ::
+.. uml::
 
    @startuml
    Client -> Server: StartSkill

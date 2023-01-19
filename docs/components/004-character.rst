@@ -102,7 +102,7 @@ Component XML Format
 
 .. _lzid_foot_note:
 
-.. note ::
+.. note::
   | :samp:`lzid` a binary concatenation of world ID, world instance and world clone, e.g:
   | lzid = :samp:`2341502167811299`
   | hex representation of lzid = :samp:`00 08 51 95 74 f4 04 e3`

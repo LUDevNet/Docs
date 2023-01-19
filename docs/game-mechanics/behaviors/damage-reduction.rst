@@ -3,7 +3,7 @@ Damage Reduction (60)
 
 Details unknown
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -15,4 +15,4 @@ Details unknown
 BitStream Serialization
 -----------------------
 
-.. todo :: investigate
+.. todo:: investigate

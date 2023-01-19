@@ -1,10 +1,10 @@
 Replica Packets
 =============== 
 
-.. note ::
+.. note::
 	This is a read-the-docs port of the original google docs `lu_replica_packets <https://docs.google.com/document/d/1V_yhtj91QG0VBfMnmD5zC44DXwCRqjbBN98HoXXC7qs>`_, written by humanoid, lcdr and others, ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
-.. note ::
+.. note::
 	- most structures can be omitted if they are optional, so you do not have to implement everything
 	- grey colored structs didn’t occur in a packet yet
 	- for investigations in raw replica packets, an advanced hex editor that can do bit operations on the data is very much recommended since there tend to be a lot of bit shifts in one packet

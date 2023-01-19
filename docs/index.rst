@@ -6,7 +6,7 @@
 Welcome to the LEGO Universe technical documentation!
 =====================================================
 
-.. note ::
+.. note::
 	This is a read-the-docs port of `lu_packet_structs <https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc>`_, written by humanoid, lcdr and others on Google Docs. It was ported by `@Xiphoseer <https://twitter.com/Xiphoseer>`_. This is currently a proof of concept and is not guaranteed to reflect the latest changes.
 
 The purpose of this documentation is to list and protocol all the information about the network packets of the game LEGO Universe. For organization purposes the contents of the documentation is extended to the following documents:
@@ -58,7 +58,7 @@ The purpose of this documentation is to list and protocol all the information ab
 
 If any of these documents helped you in some way or another for one of your projects, please credit us and/or include a direct link to this document!
 
-.. warning ::
+.. warning::
 
 	Neither the original documentation nor this read-the-docs port is associated or involved with The LEGO Group.
 	Likewise, the creators of the aforementioned documents are not associated or involved with The LEGO Group.

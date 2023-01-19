@@ -6,7 +6,7 @@ This behavior is used to launch a projectile that can hit other objects.
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15
    :header-rows: 1
 

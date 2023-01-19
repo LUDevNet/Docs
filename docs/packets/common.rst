@@ -1,4 +1,4 @@
 Common Structures
 ^^^^^^^^^^^^^^^^^
 
-.. kaitai :: ../res/lu_formats/packets/net.ksy
+.. kaitai:: ../res/lu_formats/packets/net.ksy
