@@ -1,7 +1,7 @@
 And (3)
 =======
 
-This behavior executes all of its component behaviors in parallel.
+This behavior executes all of its component behaviors in order starting at 1.
 
 Parameters
 ----------
@@ -13,5 +13,4 @@ than 10 in the latest database
 BitStream Serialization
 -----------------------
 
-| **[behavior in behaviors]**
-|  -> behavior
+This Behavior does not have any serialization
