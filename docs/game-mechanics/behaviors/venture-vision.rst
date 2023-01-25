@@ -2,7 +2,7 @@ Venture Visison (26)
 ====================
 
 This behavior manages whether or not the player can see minibosses or collectibles on their personal minimap.
-Pet digs seem to be disabled altogether however.
+Pet digs seem to be disabled altogether however.  In the 1.10.64 client, this behavior is referenced as :samp:`ShowMinimapExtrasBehavior`
 
 Parameters
 ----------
