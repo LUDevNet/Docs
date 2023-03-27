@@ -31,7 +31,7 @@ Possible Values (EventIDs)
 	* OnTimerDone
 	* OnRebuildComplete
 	* OnActivated
-	* OnDectivated
+	* OnDectivated [sic]
 	* OnArrived
 	* OnArrivedAtEndOfPath
 	* OnZoneSummaryDismissed
