@@ -1,7 +1,7 @@
 Catalog (.pki)
 ^^^^^^^^^^^^^^
 
-.. note ::
+.. note::
 
 	* The game had the majority of its data files packed in a custom dynamic archive. Within that system, each file was identified by the CRC-32 value of its filename relative to the installation root.
 	* The crc value uses the standard CRC-32 polynomial `0x04C11DB7`, an init value of `0xFFFFFFFF`, no output XOR and reverses neither input nor output. The filenames are processed in lowercase, with Win32 ``\`` delimiters and a padding of 4 `0x00` bytes at the end.

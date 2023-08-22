@@ -7,7 +7,7 @@ Pet digs seem to be disabled altogether however.  In the 1.10.64 client, this be
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

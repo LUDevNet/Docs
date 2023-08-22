@@ -11,4 +11,4 @@ This behavior has no parameters
 BitStream Serialization
 -----------------------
 
-.. todo :: investigate
+.. todo:: investigate

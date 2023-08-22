@@ -4,7 +4,7 @@ VendorComponent
 This table tells a Vendor Component information about the vendor.
 The loot matrix index is the items the vendor sells, for example.
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 20
    :header-rows: 1
 

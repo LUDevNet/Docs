@@ -25,7 +25,7 @@ gate_version                                        TEXT
 Column :samp:`type`
 ^^^^^^^^^^^^^^^^^^^
 
-.. csv-table ::
+.. csv-table::
     :widths: 10,90
 
     0, Item Equipped

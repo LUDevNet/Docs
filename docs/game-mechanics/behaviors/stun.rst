@@ -6,7 +6,7 @@ Temporarily removes the characters ability to do certain things
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -36,7 +36,7 @@ Parameters
 Possibly deprecated
 ^^^^^^^^^^^^^^^^^^^
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -56,7 +56,7 @@ Possibly deprecated
 Likely typos
 ^^^^^^^^^^^^
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 

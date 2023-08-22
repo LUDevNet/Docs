@@ -19,7 +19,7 @@ plain text, xml structure
 Possible Values (EventIDs)
 --------------------------
 
-.. hlist ::
+.. hlist::
 	:columns: 3
 
 	* OnDestroy

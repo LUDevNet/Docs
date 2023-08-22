@@ -6,7 +6,7 @@ This behavior is used to deal damage to a target.
 Parameters 
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -56,7 +56,7 @@ Align to the byte boundary
 | **[u16]** - Number of bits used for this basic attack serialization and all sub-branches. (referred to as :samp:`allocatedSize`)
 | Save the offset at this position for use later (referred to here as :samp:`startOffset`)
 
-.. note ::
+.. note::
   | If the target blocked the attack, this value would be a 1. If the target was immune it would be a 2. If the success state branches are reached, then this value also represents the
   | sum of all the sub behaviors!  
 
@@ -85,7 +85,7 @@ Align to the byte boundary
 |       :samp:`on_fail_immune`
 | align the bitStream to :samp:`startOffset + allocatedSize` and return
 
-.. note ::
+.. note::
  | For serializing the behavior, the success state is determined as follows:
  | if *any* health damage was done at all, the success state is 1.
  | if *zero* health damage was done and armor damage is greater than zero, the success state is 2. Has one caveat mentioned below.

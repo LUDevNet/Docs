@@ -6,7 +6,7 @@ This behavior interrupts a :samp:`target` which is either the actual target of t
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

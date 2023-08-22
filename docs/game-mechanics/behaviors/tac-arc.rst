@@ -7,7 +7,7 @@ fit the given parameters.
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15
    :header-rows: 1
 

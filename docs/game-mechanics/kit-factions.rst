@@ -19,7 +19,7 @@ Missions
 
 The following missions control the faction missions:
 
-.. csv-table ::
+.. csv-table::
 
     venture, :mis:`555`, :mis:`556`, :mis:`778`
     assembly, :mis:`544`, :mis:`545`, :mis:`778`

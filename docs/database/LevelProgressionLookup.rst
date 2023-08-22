@@ -4,7 +4,7 @@ LevelProgressionLookup
 This table contains a level and the uscore required to be that level.
 All :samp:`BehaviorEffect` columns are empty.
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

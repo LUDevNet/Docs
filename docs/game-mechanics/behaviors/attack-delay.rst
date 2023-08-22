@@ -13,7 +13,7 @@ See the diagram in :doc:`../skill-system` for a diagram on how this interaction 
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 30
    :header-rows: 1
 

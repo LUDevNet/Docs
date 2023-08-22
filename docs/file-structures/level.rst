@@ -1,7 +1,7 @@
 Level (.lvl)
 ^^^^^^^^^^^^
 
-.. note ::
+.. note::
 
 	* It seems the structure is split in chunks marked by “CHNK”, somewhat similar to the IFF file format
 	* It seems Chunks can only begin on addresses % 16 == 0, if the chunk wouldn’t start on one padding is inserted until it matches 

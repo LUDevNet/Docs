@@ -6,7 +6,7 @@ This behavior is used to restore imagination for an object.
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -18,4 +18,4 @@ Parameters
 BitStream Serialization
 -----------------------
 
-.. todo :: Figure out serialization
+.. todo:: Figure out serialization

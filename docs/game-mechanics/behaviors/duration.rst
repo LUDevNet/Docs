@@ -6,7 +6,7 @@ This behavior describes that the subsequent ones are active (only) for some stre
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -22,7 +22,7 @@ Parameters
 Possibly deprecated
 ^^^^^^^^^^^^^^^^^^^
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
@@ -36,7 +36,7 @@ Possibly deprecated
 Likely errors
 ^^^^^^^^^^^^^
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 

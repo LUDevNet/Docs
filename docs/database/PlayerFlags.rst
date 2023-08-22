@@ -3,7 +3,7 @@ PlayerFlags
 
 Configuration for the :doc:`../game-mechanics/flag-system`.
 
-.. list-table ::
+.. list-table::
    :widths: 15 15 20
    :header-rows: 1
 

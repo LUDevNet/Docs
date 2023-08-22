@@ -3,7 +3,7 @@ Mission Component (84)
 
 This component is responsible for missions and achievements.
 
-.. note ::
+.. note::
   This component is not attached to any object in the game database.
 
 Relevant Game Messages

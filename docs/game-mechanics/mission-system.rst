@@ -84,7 +84,7 @@ the items at mission turn in.  Depending on :samp:`taskParam1`:
 | - 1: The :samp:`target` item is not taken from the players inventory on mission turn in.
 | - 2: The :samp:`target` item is taken from the players inventory on mission turn in.
 
-.. note ::
+.. note::
   | Items are only ever removed from the inventory types ITEMS and HIDDEN, should they need to be removed
 
 | - 5: Items are not taken from the inventory nor will losing these items before the mission is completed decrement progress.
@@ -150,7 +150,7 @@ Depending on :samp:`taskParam1`:
 | - 14: Win :samp:`targetValue` races at the world specified by :samp:`target`.
 | - 15: Win :samp:`targetValue` races at the worlds specified by :samp:`targetGroup`.
 
-.. note ::
+.. note::
   | Task type 15 is a bitflag!  The number of bits that are on dictates the progress of the mission.
 
 | - 16: Finish in last place :samp:`targetValue` times in :samp:`targetGroup` race worlds.

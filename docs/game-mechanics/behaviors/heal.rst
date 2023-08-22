@@ -6,7 +6,7 @@ This behavior is used to heal an object.
 Parameters
 ----------
 
-.. list-table ::
+.. list-table::
    :widths: 15 30
    :header-rows: 1
 
