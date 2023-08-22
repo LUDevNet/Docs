@@ -23,7 +23,7 @@ This component uses the following tables:
 Relevant Game Messages
 ......................
 
-* `gm-echo-start-skill`
+* :gm:client:`EchoStartSkill`
 * :gm:server:`StartSkill`
 * :gm:server:`SelectSkill`
 * :gm:client:`AddSkill`

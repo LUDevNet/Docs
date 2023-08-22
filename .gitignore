@@ -2,3 +2,4 @@
 venv
 _build
 __pycache__
+docs/.DS_Store

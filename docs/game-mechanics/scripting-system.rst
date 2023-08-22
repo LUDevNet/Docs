@@ -85,6 +85,9 @@ UI
 --
 
 - UI:SendMessage(msg: string, data: NDGfxValue)
+- UI:SendChat(ChatString: string, ChatType: int, Timestamp: int)
+- UI:DisplayToolTip(strDialogText: string, strImageName: string, bShow: boolean, iTime: int)
+- UI:CallService(serviceName: string, data: NDGFxValue)
 
 Timer
 -----
