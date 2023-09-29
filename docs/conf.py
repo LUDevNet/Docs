@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'LU Documentation'
-copyright = '2015-2021 humanoid & lcdr with contributions from Alanzote, Avery, jon002, Simon Nitzsche, Raine, Knightoffaith, pwjones, Xiphoseer and others – CC-NC-SA 4.0'
+copyright = '2015-2023 humanoid & lcdr with contributions from Alanzote, Avery, jon002, Simon Nitzsche, Raine, Knightoffaith, pwjones, Xiphoseer, EmosewaMC and others – CC-NC-SA 4.0'
 author = 'humanoid & lcdr'
 
 # The version info for the project you're documenting, acts as replacement for
