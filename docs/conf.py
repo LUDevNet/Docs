@@ -91,13 +91,10 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # a list of builtin themes.
 #
 
+html_theme = "sphinx_rtd_theme"
 if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    html_theme = 'default'
-
 
 explorer_base_url = 'https://explorer.lu/'
 wiki_base_url = 'https://legouniverse.fandom.com/wiki/'
