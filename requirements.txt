@@ -1,5 +1,4 @@
-sphinx<2.0
-sphinxcontrib-plantuml>=0.11
+sphinx
+sphinxcontrib-plantuml
 sphinx-rtd-theme
 pyyaml
--e git+https://github.com/pieterlexis/sphinx-lua.git#egg=sphinx-lua
