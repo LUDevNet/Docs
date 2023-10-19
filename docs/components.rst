@@ -140,3 +140,7 @@ the internal name of a component class would have been :file:`LWO{Name}Component
   :maxdepth: 1
 
   components/xxx-mount-control
+
+.. note::
+	If an object has the LDF key :samp:`is_smashable` set to 1, or it is configured at the :samp:`lvl` level to have :samp:`is_smashable` set, then this object should get a :samp:`Destroyable Component`
+	if it does not already have one. If :samp:`is_smashable` is set at the :samp:`lvl` level, then you need to insert and set :samp:`is_smashable` to true.
