@@ -45,7 +45,7 @@ the internal name of a component class would have been :file:`LWO{Name}Component
    components/026-pet
    components/027-platform-boundary
    components/028-module
-   components/029-arcade
+   components/029-jet-pack-pad
    components/030-vehicle-physics
    components/031-movement-ai
    components/032-exhibit
