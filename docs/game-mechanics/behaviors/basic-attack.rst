@@ -57,7 +57,7 @@ Align to the byte boundary
 | Save the offset at this position for use later (referred to here as :samp:`startOffset`)
 
 .. note::
-  | If the target blocked the attack, this value would be a 1. If the target was immune it would be a 2. If the success state branches are reached, then this value also represents the
+  | If the target blocked the attack, :samp:`allocatedSize` would be a 1. If the target was immune it would be a 2. If the success state branches are reached, then this value also represents the
   | sum of all the sub behaviors!  
 
 | **[bit]** - True if the attack was blocked, false otherwise.
